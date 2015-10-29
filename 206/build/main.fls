@@ -375,6 +375,7 @@ INPUT /home/annika/.local/texlive/2015/texmf-dist/fonts/tfm/public/amsfonts/symb
 INPUT /home/annika/.local/texlive/2015/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT ./content/durchfuehrung.tex
 INPUT ./content/durchfuehrung.tex
+INPUT messapparatur.png
 INPUT ./content/auswertung.tex
 INPUT ./content/auswertung.tex
 INPUT ./content/diskussion.tex
