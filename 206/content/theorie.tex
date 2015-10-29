@@ -89,14 +89,68 @@
   Funktionsweise. Der Reiniger entfernt verbliebene Gasreste aus dem flüssigen
   Medium, die Steuerungsvorrichtung regelt den Durchlass des Drosselventils.
 
+
   \subsection{Kenngrößen einer Wärmepumpe}
   Zur Beurteilung einer Wärmepumpe ist ihre Güteziffer $v$, der Massendurchsatz
   $\frac{\symup{d}m}{\symup{d}t}$ des Transportmediums und der Wirkungsgrad des
   Kompressors von Interesse. Wie diese Kenngrößen aus den Messwerten bestimmt werden
   können wird nachfolgend beschrieben.
   \subsubsection{Bestimmung der realen Güteziffer $v$}
+  Aus den gemessenen Temperaturen $T_1$ pro Zeitintervall $\Delta t$ berechnet man
+  die pro Zeitintervall gewonnene Wärmemenge
+  \begin{equation}
+    \frac{\Delta Q_1}{\Delta t} = (m_1 c_w + m_k c_k) \frac{\Delta T_1}{\Delta t}.
+    \label{eqn:waermeprozeit1}
+  \end{equation}
+  Dabei ist $m_1 c_w$ die Wärmekapazität des Wassers in Reservoir 1 und $m_k c_k$
+  die Wärmekapazität der Kupferschlange und des Behälters gemeinsam.
+  Mit der über $\Delta t$ gemittelten Leistungsaufnahme des Kompressors N ergibt
+  sich für die Güteziffer mit \eqref{eqn:waermeprozeit1}
+  \begin{equation}
+    v = \frac{\Delta Q_1}{N\Delta t} = \frac{m_1 c_w + m_k c_k}{N} \frac{\Delta T_1}{\Delta t}
+    \label{eqn:berechnung_gueteziffer}
+  \end{equation}
+
 
   \subsubsection{Bestimmung des Massendurchsatzes}
-  \subsubsection{Bestimmung der mechanischen Kompressorleistung $N_\symup{mech}$}
+  Gleichung \eqref{eqn:waermeprozeit1} lässt sich analog für Reservoir 2 für
+  $\Delta T_2$ aufstellen:
+  \begin{equation}
+    \frac{\Delta Q_2}{\Delta t} = (m_2 c_w + m_k c_k) \frac{\Delta T_2}{\Delta t}.
+    \label{eqn:waermeprozeit2}
+  \end{equation}
+  Die Wärmeentnahme geschieht in Form der Verdampfungswärme $L$ pro Massen- und
+  Zeiteinheit. Der Massendurchsatz lässt sich mit \eqref{eqn:waermeprozeit2} berechnen,
+  wenn $L$ bekannt ist:
+  \begin{equation}
+    \frac{\Delta m}{\Delta t} = \frac{\Delta Q_2}{L\Delta t}
+    = \frac{m_2 c_w + m_k c_k}{L} \frac{\Delta T_2}{\Delta t}
+    \label{eqn:massendurchsatz}
+  \end{equation}
 
+
+  \subsubsection{Bestimmung der mechanischen Kompressorleistung $N_\symup{mech}$}
+  Die Arbeit $A_\symup{mech}$, die von dem Kompressor verrichtet wird, wenn er ein
+  Gasvolumen $V_\symup{a}$ auf das Volumen $V_\symup{b}$ verdichtet, ist
+  \begin{equation}
+    A_\symup{mech} = - \int_{V_\symup{a}}^{V_\symup{b}} \!p \,\symup{d}V
+    \label{eqn:arbeit_kompressor}
+  \end{equation}
+  Unter der idealisierten Annahme, dass die Kompression des Gases adiabatisch erfolgt,
+  gilt die Poissonsche Gleichung
+  \begin{equation}
+    p_\symup{a} V_\symup{a}^\kappa = p_\symup{b} V_\symup{b}^\kappa = p V^\kappa
+    \label{eqn:poissongl}
+  \end{equation}
+  mit $\kappa = \frac{C_\symup{p}}{C_\symup{v}}$, $\kappa > 1$ und den Molwärmen
+  $C_\symup{p}$ (für konstanten Druck) und $C_\symup{V}$ (für konstantes Volumen).
+  Dies kann man nach $p$ umformen und in Gleichung \eqref{eqn:arbeit_kompressor}
+  einsetzen. Für $A_\symup{mech}$ erhält man dann
+  \begin{equation}
+    A_\symup{mech} = - p_\symup{a} V_\symup{a}^\kappa
+    \int_{V_\symup{a}}^{V_\symup{b}} V^{-\kappa} \symup{d}V
+    = \frac{1}{\kappa - 1}\left(p_\symup{b} \sqrt[\kappa]{\frac{p_\symup{a}}{p_\symup{b}}}
+    - p_\symup{a} \right) V_\symup{a}
+    \label{eqn:arbeit2}
+  \end{equation}
 \cite{sample}

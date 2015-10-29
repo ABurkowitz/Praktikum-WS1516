@@ -9,7 +9,7 @@
 \contentsline {subsubsection}{\numberline {2.3.1}Bestimmung der realen Güteziffer $v$}{5}{subsubsection.2.3.1}
 \contentsline {subsubsection}{\numberline {2.3.2}Bestimmung des Massendurchsatzes}{5}{subsubsection.2.3.2}
 \contentsline {subsubsection}{\numberline {2.3.3}Bestimmung der mechanischen Kompressorleistung $N_\symup {mech}$}{5}{subsubsection.2.3.3}
-\contentsline {section}{\numberline {3}Durchführung}{5}{section.3}
-\contentsline {section}{\numberline {4}Auswertung}{5}{section.4}
-\contentsline {section}{\numberline {5}Diskussion}{5}{section.5}
-\contentsline {section}{\nonumberline Literatur}{5}{section*.3}
+\contentsline {section}{\numberline {3}Durchführung}{6}{section.3}
+\contentsline {section}{\numberline {4}Auswertung}{6}{section.4}
+\contentsline {section}{\numberline {5}Diskussion}{6}{section.5}
+\contentsline {section}{\nonumberline Literatur}{6}{section*.3}
