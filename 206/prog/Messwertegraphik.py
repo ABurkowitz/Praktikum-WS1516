@@ -22,5 +22,5 @@ plt.tight_layout()
 plt.legend(loc='best')
 plt.savefig('Temperaturgraphik.pdf')
 
-np.savetxt('ausglkurve_T1.txt',parameters1, header="A,B,C")
-np.savetxt('ausglkurve_T2.txt',parameters1, header="a,b,c")
+np.savetxt('daten/ausglkurve_T1.txt',parameters1, header="A,B,C")
+np.savetxt('daten/ausglkurve_T2.txt',parameters1, header="a,b,c")
