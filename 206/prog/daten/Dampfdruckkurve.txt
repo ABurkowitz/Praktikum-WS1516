@@ -1,4 +1,4 @@
-Druck   Temperatur
+#Druck   Temperatur
  0.0      -30.0
  0.5      -20.0
  1.0      -12.0
