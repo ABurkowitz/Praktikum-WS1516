@@ -10,14 +10,14 @@ def f(t,A,B,C):
 def g(t,a,b,c):
  return a * t **2 + b * t +c
 
-plt.plot(t, T1 , 'rx', label="Temperatur1")
-plt.plot(t, T2 , 'bx', label="Temperatur2")
+plt.plot(t, T1 , 'rx', label="Temperatur T1")
+plt.plot(t, T2 , 'bx', label="Temperatur T2")
 parameters1, pocv = curve_fit(f, t, T1)
 parameters2, pocv = curve_fit(g, t, T2)
 plt.plot(t, f(t, *parameters1), 'r-', label='Fit T1')
 plt.plot(t, f(t, *parameters2), 'b-', label='Fit T2')
-plt.xlabel(r'$Zeit$')
-plt.ylabel(r'$Tempratur()$')
+plt.xlabel(r'$Zeit / min$')
+plt.ylabel(r'$Tempratur / K$')
 plt.tight_layout()
 plt.legend(loc='best')
 plt.savefig('Temperaturgraphik.pdf')
