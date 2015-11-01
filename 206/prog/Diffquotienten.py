@@ -1,6 +1,6 @@
 import numpy as np
-Paras1= np.genfromtxt('daten/ausglkurve_T1.txt', unpack=True)
-Paras2= np.genfromtxt('daten/ausglkurve_T2.txt', unpack=True)
+Paras1= np.genfromtxt('daten/ausglkurve_T1.txt', float, unpack=True)
+Paras2= np.genfromtxt('daten/ausglkurve_T2.txt', float, unpack=True)
 A=Paras1[0]
 B=Paras1[1]
 C=Paras1[2]
@@ -10,8 +10,8 @@ c=Paras2[2]
 
 
 
-T1diffq = np.array([5 ,10 ,15 ,19])
-T2diffq = np.array([5 ,10 ,15 ,19])
+T1diffq = np.array([5 ,10 ,15 ,19],float)
+T2diffq = np.array([5 ,10 ,15 ,19],float)
 T1diffq=2*A *T1diffq +B
 T2diffq=2*a *T2diffq +b
 
