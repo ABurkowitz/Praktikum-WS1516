@@ -378,10 +378,3 @@ INPUT ./content/durchfuehrung.tex
 INPUT messapparatur.png
 INPUT ./content/auswertung.tex
 INPUT ./content/auswertung.tex
-INPUT ./content/diskussion.tex
-INPUT ./content/diskussion.tex
-INPUT build/main.aux
-INPUT build/main.aux
-INPUT build/main.toc
-INPUT build/main.run.xml
-OUTPUT build/main.run.xml

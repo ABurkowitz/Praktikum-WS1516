@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015) (rev 5238)  (format=lualatex 2015.10.29)  2 NOV 2015 20:57
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015) (rev 5238)  (format=lualatex 2015.10.29)  2 NOV 2015 23:14
  restricted \write18 enabled.
 **main.tex
 (./main.tex
@@ -278,7 +278,7 @@ Lua-only attribute luaotfload@cursbase = 6
 Lua-only attribute luaotfload@curscurs = 7
 Lua-only attribute luaotfload@cursdone = 8
 Lua-only attribute luaotfload@state = 9
-luaotfload | main : fontloader loaded in 0.017 seconds
+luaotfload | main : fontloader loaded in 0.018 seconds
 Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
 Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
 Inserting `luaotfload.find_vf_file' at position 1 in `find_vf_file'.
@@ -2133,7 +2133,7 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 15.
 \openout4 = main.toc
  [2
 
-] (./content/zielsetzung.tex) (./content/theorie.tex [3] <aufbau_waermepumpe.png, id=62, 505.89pt x 416.55624pt>
+] (./content/zielsetzung.tex) (./content/theorie.tex [3] <aufbau_waermepumpe.png, id=40, 505.89pt x 416.55624pt>
 File: aufbau_waermepumpe.png Graphic file (type png)
  <use aufbau_waermepumpe.png>
 Package pdftex.def Info: aufbau_waermepumpe.png used on input line 68.
@@ -2180,46 +2180,25 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 132.
 
-[5]) (./content/durchfuehrung.tex <messapparatur.png, id=90, 672.5125pt x 641.39626pt>
+[5]) (./content/durchfuehrung.tex <messapparatur.png, id=73, 672.5125pt x 641.39626pt>
 File: messapparatur.png Graphic file (type png)
  <use messapparatur.png>
 Package pdftex.def Info: messapparatur.png used on input line 5.
 (pdftex.def)             Requested size: 250.95587pt x 239.33878pt.
-) (./content/auswertung.tex [6<./messapparatur.png>]) (./content/diskussion.tex)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 27.
- [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 27.
- (./build/main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 27.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 27.
-Package rerunfilecheck Info: File `main.aux' has not changed.
-(rerunfilecheck)             Checksum: 9BAE30B9B14A33E136B59B9C4479C0F4;9450.
-Package rerunfilecheck Info: File `main.toc' has not changed.
-(rerunfilecheck)             Checksum: 67BEDB3BA11D5E1C94B33570A66AE233;1227.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package logreq Info: Writing requests to 'main.run.xml'.
-
-\openout1 = main.run.xml
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 27.
-)
+) (./content/auswertung.tex [6<./messapparatur.png>]
+! Missing $ inserted.
+<inserted text> 
+$
+l.24 
+   
 
 Here is how much of LuaTeX's memory you used:
- 43951 strings out of 494897
+ 43914 strings out of 494897
  100000,1648299 words of node,token memory allocated
- 597 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 16 kern, 20 attribute, 62 glue_spec, 20 attribute_list, 1 write nodes
-   avail lists: 1:4,2:6250,3:126,4:604,5:191,6:2114,7:360,8:16,9:225,10:303,11:1
- 46310 multiletter control sequences out of 65536+600000
- 113 fonts using 35133995 bytes
- 69i,7n,104p,1248b,2071s stack positions out of 5000i,500n,10000p,200000b,100000s
-</home/phillip/.local/texlive/2015/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/phillip/.local/texlive/2015/texmf-dist/fonts/opentype/public/xits/xits-math.otf></home/phillip/.local/texlive/2015/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/phillip/.local/texlive/2015/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/phillip/.local/texlive/2015/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/phillip/.local/texlive/2015/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/phillip/.local/texlive/2015/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/phillip/.local/texlive/2015/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/phillip/.local/texlive/2015/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/phillip/.local/texlive/2015/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on main.pdf (7 pages, 129756 bytes).
-
-PDF statistics: 210 PDF objects out of 1000 (max. 8388607)
- 167 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 131072)
- 97 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 15809 words of node memory still in use:
+   64 hlist, 3 vlist, 4 rule, 123 disc, 28 math, 188 glue, 93 kern, 32 penalty, 1 choice, 63 noad, 2 fraction, 54 math_char, 4 sub_box, 10 sub_mlist, 6 margin_kern, 947 glyph, 1877 attribute, 112 glue_spec, 964 attribute_list, 1 temp, 3 write, 6 local_par, 2 dir, 8 pdf_dest nodes
+   avail lists: 1:4,2:3448,3:26,4:268,5:111,6:1159,7:358,8:8,9:166,10:180,11:1
+ 46296 multiletter control sequences out of 65536+600000
+ 112 fonts using 35009255 bytes
+ 69i,7n,104p,1248b,870s stack positions out of 5000i,500n,10000p,200000b,100000s
+!  ==> Fatal error occurred, no output PDF file produced!
