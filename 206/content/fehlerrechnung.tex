@@ -1,0 +1,28 @@
+\section{Fehlerrechnung}
+\label{sec:Fehlerrechnung}
+
+\begin{equation}
+  v_i= \frac{1}{n}\sum\nolimits_{i=1}^n x_i
+  \label{eqn:gl11}
+\end{equation}
+\begin{equation}
+  \label{eqn:gl12}
+  s_1= \sqrt{\frac{1}{N-1}\sum\nolimits_{j=1}^N(v_j-v_i)^2}
+\end{equation}
+\begin{equation}
+  \label{eqn:gl13}
+  \sigma_i=\frac{s_i}{\sqrt{N}}=
+  \frac{\sqrt{\frac{1}{N-1}\sum\nolimits_{j=1}^N(v_j-\bar{v_i})^2}}{\sqrt{N}}
+\end{equation}
+\begin{equation}
+  \Delta x_k = \frac{df}{dk} \cdot \sigma_k
+\end{equation}
+\begin{equation}
+  \Delta x_{k,rel}=1 \pm \frac{\Delta x_k}{|x|}*100 \%
+\end{equation}
+\begin{equation}
+  \Delta x_k = \frac{df}{dk} \cdot \sigma_k
+\end{equation}
+\begin{equation}
+  \sigma^2=\sum\nolimits_{k=1}^n [y_k-(\bar{B}x_k+\bar{A})]^2
+\end{equation}
