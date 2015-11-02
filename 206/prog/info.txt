@@ -11,3 +11,11 @@ Quellen
 #et=on&Digits=5&ID=C7732185&Action=Load&Type=IsoTherm&TUnit=K&PUnit=bar&D
 #Unit=mol%2Fl&HUnit=kJ%2Fmol&WUnit=m%2Fs&VisUnit=uPa*s&STUnit=N%2Fm&RefState=DEF
 #Dichte 55.389mol/l (294.85 K,1Bar)
+
+Dampfdruckkurve_array
+folgende werte wurden entfernt damit der plot funktionier (Keine Messdaten)
+0.0 -30.0
+0.5 -20.0
+1.0 -12.0
+1.5  -6.0
+2.0   0.0

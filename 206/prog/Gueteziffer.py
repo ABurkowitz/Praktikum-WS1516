@@ -42,4 +42,4 @@ vr[1]=((dTdt10[0] *( m1cw + mkck ))/N[10])
 vr[2]=((dTdt15[0] *( m1cw + mkck ))/N[15])
 vr[3]=((dTdt19[0] *( m1cw + mkck ))/N[19])
 
-np.savetxt('daten/gueteziffer_re.txt',vr, header="Gueteziffer-re_vorlaeufig")
+np.savetxt('daten/gueteziffer_re.txt',vr, header="Gueteziffer-re")
