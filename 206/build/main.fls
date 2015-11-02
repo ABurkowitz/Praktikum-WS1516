@@ -380,8 +380,6 @@ INPUT ./content/auswertung.tex
 INPUT ./content/auswertung.tex
 INPUT ./content/diskussion.tex
 INPUT ./content/diskussion.tex
-INPUT ./content/fehlerrechnung.tex
-INPUT ./content/fehlerrechnung.tex
 INPUT build/main.aux
 INPUT build/main.aux
 INPUT build/main.toc
