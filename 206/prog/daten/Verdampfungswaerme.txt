@@ -1,0 +1,2 @@
+#Verdampfungswaerme
+L= 23406.2040997 J/mol
