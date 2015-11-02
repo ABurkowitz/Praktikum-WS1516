@@ -12,8 +12,10 @@ c=Paras2[2]
 
 T1diffq = np.array([5 ,10 ,15 ,19],float)
 T2diffq = np.array([5 ,10 ,15 ,19],float)
-T1diffq=2*A *T1diffq +B
-T2diffq=2*a *T2diffq +b
+#dT/dt=2A*t+B
+#t von min nach sekunden
+T1diffq=2*A *T1diffq*60 +B
+T2diffq=2*a *T2diffq*60 +b
 
 
 np.savetxt( 'daten/Diffquo.txt' ,(T1diffq ,T2diffq),

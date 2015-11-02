@@ -1,0 +1,13 @@
+reihenfolge der ausführung der py datein
+Messwertegrafik.py
+Diffquotienten.py
+Gueterziffer.py
+
+Quellen
+#1.11.2015 23:48
+#http://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Units=SI&Mask=7&Type=JANAFL&Table=on#JANAFL
+#spezifische wärmecapazität Cp=75.38(J/mol*K)
+#http://webbook.nist.gov/cgi/fluid.cgi?T=294.85&PLow=1&PHigh=2&PInc=&Appl
+#et=on&Digits=5&ID=C7732185&Action=Load&Type=IsoTherm&TUnit=K&PUnit=bar&D
+#Unit=mol%2Fl&HUnit=kJ%2Fmol&WUnit=m%2Fs&VisUnit=uPa*s&STUnit=N%2Fm&RefState=DEF
+#Dichte 55.389mol/l (294.85 K,1Bar)
