@@ -1,120 +1,126 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-In der folgenden Tabelle sind alle Messwerte aufgeführt
+In der folgenden Tabelle sind alle Messwerte aufgeführt \\
 \begin{table}
   \centering
-  \caption{Messdatentabelle.}
-  \label{tab:Data}
   \begin{tabular}{c c c c c c}
     \toprule
-    $Zeit/s$ & $T_1/K$ & $T_2/$ & $p_a/\text{bar}$ & $p_b/\text{bar}$ & $N/W$ \\
+    Zeit/min & $T_1/K$ & $T_2/$ & $p_a/\text{bar}$ & $p_b/\text{bar}$ & $N/W$ \\
     \midrule
-    0  &  21.7  &  21.9  &  4.1  &   4.2  &  170 \\
-    1  &  22.1  &  21.8  &  1.4  &   6.0  &  170 \\
-    2  &  23.3  &  21.8  &  1.8  &   6.2  &  180 \\
-    3  &  24.6  &  20.9  &  2.0  &   6.7  &  190 \\
-    4  &  26.2  &  19.4  &  2.1  &   7.2  &  195 \\
-    5  &  28.0  &  17.6  &  2.1  &   7.3  &  200 \\
-    6  &  29.9  &  15.8  &  2.1  &   8.0  &  200 \\
-    7  &  32.0  &  14.1  &  2.1  &   9.0  &  205 \\
-    8  &  35.1  &  12.3  &  2.1  &   9.5  &  205 \\
-    9  &  37.5  &  10.7  &  2.1  &   9.9  &  208 \\
-   10  &  36.9  &   9.0  &  2.1  &   9.4  &  210 \\
-   11  &  38.8  &   7.4  &  2.1  &  10.7  &  208 \\
-   12  &  40.4  &   6.0  &  2.1  &  10.0  &  208 \\
-   13  &  42.1  &   4.4  &  2.1  &  10.4  &  210 \\
-   14  &  43.6  &   3.0  &  2.1  &  10.9  &  210 \\
-   15  &  45.2  &   1.6  &  2.2  &  11.0  &  210 \\
-   16  &  46.7  &   0.5  &  2.2  &  11.5  &  210 \\
-   17  &  48.0  &  -0.3  &  2.2  &  12.0  &  210 \\
-   18  &  49.5  &  -0.7  &  2.2  &  12.1  &  210 \\
-   19  &  50.7  &  -1.0  &  2.2  &  12.5  &  210 \\
+    0 &  21.7  & 21.9 &  5.1 &  5.2  & 170 \\
+    1 &  22.1  & 21.8 &  2.4 &  7.0  & 170 \\
+    2 &  23.3  & 21.8 &  2.8 &  7.2  & 180 \\
+    3 &  24.6  & 20.9 &  3.0 &  7.7  & 190 \\
+    4 &  26.2  & 19.4 &  3.1 &  8.2  & 195 \\
+    5 &  28.0  & 17.6 &  3.1 &  8.3  & 200 \\
+    6 &  29.9  & 15.8 &  3.1 &  9.0  & 200 \\
+    7 &  32.0  & 14.1 &  3.1 & 10.0  & 205 \\
+    8 &  35.1  & 12.3 &  3.1 & 10.5  & 205 \\
+    9 &  37.5  & 10.7 &  3.1 & 10.9  & 208 \\
+   10 &  36.9  &  9.0 &  3.1 & 10.4  & 210 \\
+   11 &  38.8  &  7.4 &  3.1 & 11.7  & 208 \\
+   12 &  40.4  &  6.0 &  3.1 & 11.0  & 208 \\
+   13 &  42.1  &  4.4 &  3.1 & 11.4  & 210 \\
+   14 &  43.6  &  3.0 &  3.1 & 11.9  & 210 \\
+   15 &  45.2  &  1.6 &  3.2 & 12.0  & 210 \\
+   16 &  46.7  &  0.5 &  3.2 & 12.5  & 210 \\
+   17 &  48.0  & -0.3 &  3.2 & 13.0  & 210 \\
+   18 &  49.5  & -0.7 &  3.2 & 13.1  & 210 \\
+   19 &  50.7  & -1.0 &  3.2 & 13.5  & 210 \\
    \bottomrule
- \end{tabular}
-\end{tabel}
+  \end{tabular}
+  \caption{Messdatentabelle.}
+  \label{tab:Data}
+\end{table}
 
 Die Temperaturverläufe sind in dem folgenden Diagramm dargestellt und mit einer
 linearen Ausgleichstrechnung approximiert.
-\subsection{Aufgabe. a}
+\subsection{Temperaturausgleichskurve}
 \begin{figure}
 \includegraphics[height=13cm]{Temperaturgraphik.pdf}
+\caption{Temperturausgleichskurve.}
 \end{figure}
-%\usepackage{pdfpages}
-%  \includepdf[pages=-]{Temperaturgraphik.pdf}
+
 Die Näherung wurde mit scientific Python gemacht und ist gegeben durch
 \begin{equation}
   T(t)=At^2+Bt+C .
 \end{equation}
 Die Parameter für erwärmte Reservoir $T_1$ sind
-\begin{equation}
-  A=(  -0.000002485)\frac{K}{s^2}
-  B=(   0.029925168)\frac{K}{s}
-  C=( 293.312793014)K
-\end{equation}
-Die Parameter für den anderen Behälter$T_2$ sind
-\begin{equation}
-  A=(  0.000002259)\frac{K}{s^2}
-  B=( -0.026112097)\frac{K}{s}
-  C=(297.339350549)K
 
-\end{equation}
+  $A=(-0.000002485)\frac{K}{s^2}$
+
+  $B=(0.029925168)\frac{K}{s}$
+
+  $C=(293.312793014)K$
+
+Die Parameter für den anderen Behälter $T_2$ sind
+
+  $A=(0.000002259)\frac{K}{s^2}$
+
+  $B=(-0.026112097)\frac{K}{s}$
+
+  $C=(297.339350549)K$
+
 Die dazugehörigen Differentialquotienten erhält man durch die folgende Gleichung
 \begin{equation}
-\frac{dT}{dt}=At^2+B
+\frac{dT}{dt}=2At+B
 \end{equation}
 
 \begin{table}
   \centering
-  \caption{Differentialquotienten.}
-  \label{tab:Diffquo}
   \begin{tabular}{c c c}
     \toprule
     $Zeit/s$ & $dT_1 /dt$ & $dT_2 /dt$ \\
     \midrule
-    300  &  0.02843375268378217635 & -0.02475643627514830664  \\
-    600  &  0.02694233722154850894 & -0.02340077471351255378  \\
-    900  &  0.02545092175931483805 & -0.02204511315187679746  \\
-   1140  &  0.02425778938952790134 & -0.02096058390256819171  \\
+    300  &  0.028 & -0.024  \\
+    600  &  0.027 & -0.023  \\
+    900  &  0.025 & -0.022  \\
+   1140  &  0.024 & -0.020  \\
    \bottomrule
  \end{tabular}
-\end{tabel}
+ \caption{Differentialquotienten.}
+ \label{tab:Diffquo}
+\end{table}
+\subsection{Güteziffer}
 Als nächstes soll die Güteziffer bestimmt werden dafür Nutzt man die Gleichung
 \eqref{eqn:gueteziffer_ideal} für die ideale Güteziffer und die Gleichung
 \eqref{eqn:gueteziffer_real}
 \begin{table}
   \centering
-  \caption{Güteziffer}
-  \label{tab:Gütez}
+
   \begin{tabular}{c c c}
     \toprule
-    $Zeit/s$ & $v_id$ &  $v_re$ \\
+    $Zeit/s$ & $v_\symup{ideal}$ &  $v_\symup{real}$ \\
     \midrule
-      300  &  28.95673076923083045  &  1.874590179809934698 \\
-      600  &  11.11290322580645906  &  1.691679648289791338 \\
-      900  &  7.301605504587160844  &  1.598035315808215895 \\
-     1140  &  6.264023210831721755  &  1.523119849822955674 \\
+      300  &  28.956  &  1.875 \\
+      600  &  11.112  &  1.692 \\
+      900  &  7.301  &  1.598 \\
+     1140  &  6.264  &  1.523 \\
    \bottomrule
  \end{tabular}
-\end{tabel}
-Wenn man die Werte in Gleichung \eqrref{eqn:massendurchsatz} einsetzt erhält man
+ \caption{Güteziffer}
+ \label{tab:Gütez}
+\end{table}
+\subsection{Massendurchsatz}
+Wenn man die Werte in Gleichung \eqref{eqn:massendurchsatz} einsetzt erhält man
 den Massendurchsatz.
-\begin{tabel}
+\begin{table}
   \centering
-  \caption{Massendurchsatz}
-  \label{tab:Massend}
-\begin{tabular}{c c}
+\begin{tabular}{c c c}
   \toprule
-  $Zeit /s$ & $dQ_2 /dt$ & $dm/dt (mol/s)$  \\
+  $Zeit /s$ & $\frac{dQ_2}{dt}$ & $\frac{dm}{dt} /\frac{mol}{s}$  \\
   \midrule
-  300  &   -326.4301609752228615  & -0.01394630925991996971  \\
-  600  &   -308.5548570795280057  & -0.01318260986553914521  \\
-  900  &   -290.6795531838330362  & -0.01241891047115831551  \\
- 1140  &   -276.3793100672771175  & -0.01180795095565365452  \\
+  300  &   -326.430  & -0.014  \\
+  600  &   -308.554  & -0.013  \\
+  900  &   -290.679  & -0.012  \\
+ 1140  &   -276.379  & -0.012  \\
  \bottomrule
 \end{tabular}
-\end{tabel}
-
-Die Dichte \roh ,die für die Berechnung mechanischen Kompressorleistung
+\caption{Massendurchsatz}
+\label{tab:Massend}
+\end{table}
+\subsection{Mechanischekompressorleistung}
+Die Dichte $\rho$, die für die Berechnung mechanischen Kompressorleistung
 benötigt wird, kann berechnet werden, indem man die Gleichung der idealen Gase
 umstellt.
 \begin{equation}
@@ -125,12 +131,28 @@ Damit ergibt sich, da die Stoffmenge $n$ konstant bleibt,
   n_1=n_2
   \frac{p_0 V_0}{T_0}=\frac{p_2 V_2}{T_2}
 \end{equation}
-Da $ \roh V=m$ \leftrightarrow $V= \frac{m}{\roh}$ lässt sich \roh bestimmen wobei
-$\roh_2=\roh$ und $p_2=p_a$.
+Da $ \rho V=m$ \leftrightarrow $V= \frac{m}{\rho}$ lässt sich \rho bestimmen wobei
+$\rho_2=\rho$ und $p_2=p_a$.
 \begin{equation}
-  \roh=\frac{\roh_0 T_0 p_a}{T_2 p_0}
+  \rho=\frac{\rho_0 T_0 p_a}{T_2 p_0}
 \end{equation}
 Und mit Gleichung \eqref{eqn:kompressorleistung}
 \begin{equation}
-N_mech=\frac{1}{\kappa-1}\left(p_b \sqrt[\kappa]{\frac{p_a}{p_b}}-p_a\right)\frac{1}{\frac{\roh_0 T_0 p_a}{T_2 p_0}}\frac{dm}{dt}
+N_\symup{mech}=\frac{1}{\kappa-1}\left(p_b \sqrt[\kappa]{\frac{p_a}{p_b}}-p_a\right)\frac{1}{\frac{\rho_0 T_0 p_a}{T_2 p_0}}\frac{dm}{dt}
 \end{equation}
+
+\begin{table}
+  \centering
+\begin{tabular}{c c c}
+  \toprule
+  $Zeit /s$ & Dichte$\rho/\frac{g}{m^3}$ & Leistung$N_\symup{mech} /W$  \\
+  \midrule
+  300  &   15.49  &  -0.0026 \\
+  600  &   15.05  &  -0.0031 \\
+  900  &   15.13  &  -0.0033 \\
+ 1140  &   21.65  &  -0.0024 \\
+ \bottomrule
+\end{tabular}
+\caption{Massendurchsatz}
+\label{tab:Massend}
+\end{table}

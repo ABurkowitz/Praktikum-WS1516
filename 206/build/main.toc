@@ -1,0 +1,19 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {german}
+\contentsline {section}{\numberline {1}Zielsetzung}{3}{section.1}
+\contentsline {section}{\numberline {2}Theorie}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Prinzip einer Wärmepumpe und ihre Güteziffer}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Aufbau und Funktionsweise einer Wärmepumpe}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Kenngrößen einer Wärmepumpe}{5}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Bestimmung der realen Güteziffer $v$}{5}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Bestimmung des Massendurchsatzes}{5}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Bestimmung der mechanischen Kompressorleistung $N_\symup {mech}$}{5}{subsubsection.2.3.3}
+\contentsline {section}{\numberline {3}Durchführung}{6}{section.3}
+\contentsline {section}{\numberline {4}Auswertung}{7}{section.4}
+\contentsline {subsection}{\numberline {4.1}Temperaturausgleichskurve}{7}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Güteziffer}{9}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Massendurchsatz}{9}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Mechanischekompressorleistung}{10}{subsection.4.4}
+\contentsline {section}{\numberline {5}Diskussion}{10}{section.5}
+\contentsline {section}{\nonumberline Literatur}{11}{section*.10}
