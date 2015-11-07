@@ -4,9 +4,9 @@
 Die zu Beginn des Versuchs gemessene Offsetspannung beträg $U_0=0,0062 \,\si{\milli\volt}$.
 Da die Ansprechzeit der verwendeten Geräte sehr gering ist, entfällt die Messung
 der Anprechzeit der Themosäule.
-Es werden die Thermospannungen für die vier Oberflächen des Lesliewürfels als
+Es werden die Thermospannungen für die vier Oberflächen des Leslie-Würfels als
 Funktion der Temperatur gemessen, nachdem die Temperatur von der Anfangstemperatur
-$T_\symup{max}=365,85 K$ um weitere $5 K$ gefallen ist.
+$T_\symup{max}=365,85 K$ um je weitere $5 K$ gefallen ist.
 \begin{table}
   \centering
   \begin{tabular}{c c c c c}
@@ -31,8 +31,12 @@ $T_\symup{max}=365,85 K$ um weitere $5 K$ gefallen ist.
   \caption{Thermospannungen in Abhänigkeit der Temperatur und Oberfläche.}
 \end{table}
 
-Die erneut gemessene Offestspannung ergibt nach Ende der Messung einen Wert von
-$U_0=0.0081 \,\si{\milli\volt}$. Der Mittelwert der Offsetspannung, der nach (x)
+Die erneut gemessene Offestspannung ergibt nach Ende der Messreihe einen Wert von
+$U_0=0.0081 \,\si{\milli\volt}$. Der Mittelwert der Offsetspannung, der nach
+\begin{equation}
+  \bar{x} = \frac{1}{N} \sum_{\symup{i}=1}^{N} x_\symup{i}
+  \label{eqn:mittelwert}
+\end{equation}
 berechnet wird, ergibt sich zu $\bar{U_0} = 0.0072 \,\si{\milli\volt}$.
 
 Die Thermospannung wird als Funktion von $T^4 - T_0^4$ aufgetragen, wobei $T_0 = 294,15 K$
@@ -44,17 +48,17 @@ die Raumtemperatur ist.
   \label{fig:thermospannung}
 \end{figure}
 \newline
-Die Fits werden mit linearer Regression der Form $f(x) = a * x + b $ mit Python
+Die Fits werden mit linearer Regression der Form $f(x) = a \cdot x + b $ mit Python
 berechnet.
 Für die Parameter ergeben sich folgende Werte:
 \begin{align*}
-  a_\symup{schwarz}   &= \,(1.047\pm0.007)*10^{-10} \si{\frac{\volt}{\kelvin^4}} \\
+  a_\symup{schwarz}   &= \,(1.047\pm0.007)\cdot10^{-10} \si{\frac{\volt}{\kelvin^4}} \\
   b_\symup{schwarz}   &= (-0.836\pm0.010) \si{\volt} \\
-  a_\symup{glaenzend} &= \,(7.3\pm0.5)*10^{-12} \si{\frac{\volt}{\kelvin^4}} \\
+  a_\symup{glaenzend} &= \,(7.3\pm0.5)\cdot10^{-12} \si{\frac{\volt}{\kelvin^4}} \\
   b_\symup{glaenzend} &= (-0.062\pm0.006) \si{\volt} \\
-  a_\symup{weiss}     &= \,(9.95\pm0.06)*10^{-11} \si{\frac{\volt}{\kelvin^4}} \\
+  a_\symup{weiss}     &= \,(9.95\pm0.06)\cdot10^{-11} \si{\frac{\volt}{\kelvin^4}} \\
   b_\symup{weiss}     &= (-0.794\pm0.008) \si{\volt} \\
-  a_\symup{matt}      &= \,(1.67\pm0.07)*10^{-11} \si{\frac{\volt}{\kelvin^4}} \\
+  a_\symup{matt}      &= \,(1.67\pm0.07)\cdot10^{-11} \si{\frac{\volt}{\kelvin^4}} \\
   b_\symup{matt}      &= (-0.131\pm0.009) \si{\volt}
 \end{align*}
 Es wird nun angenommen, dass die schwarze Oberfläche ein schwarzer Strahler ist
@@ -71,7 +75,13 @@ und man erhält als Ergebnis für die Emissionsvermögen $\epsilon_\symup{i}$:
   \epsilon_\symup{weiss}     &= (0.951\pm0.009) \\
   \epsilon_\symup{matt}      &= (0.159\pm0.006).
 \end{align*}
-Der Fehler berechnet sich dabei nach der Gaußschen Fehlerfortpflanzung (x).
+Der Fehler berechnet sich dabei nach der Gaußschen Fehlerfortpflanzung
+\begin{equation}
+  \Delta f(x_\symup{i}) = \sqrt{\sum_{\symup{i}=1}^N
+  \left(\frac{\partial f}{\partial x_\symup{i}}\right)^2 \cdot
+  (\Delta x_\symup{i})^2}
+\end{equation}
+für Funktionen mit den fehlerbehafteten Größen $\Delta x_\symup{i}$.
 
 
 \subsection{Strahlungsleistung als Funktion des Abstands}
@@ -107,3 +117,8 @@ Als grafische Darstellung erhält man
   \caption{Strahlenintensität in Abhängigkeit des Abstands.}
   \label{fig:strahlintensitaet}
 \end{figure}
+mit den Fitparametern c und d für die lineare Regression der Form $f(x) = c \cdot x + d $
+\begin{align*}
+  c &= (-0,00583\pm0.00011) \si{\frac{\milli\volt}{\centi\meter}} \\
+  d &= (0,3289\pm0.0016) \si{\milli\volt}
+\end{align*}
