@@ -35,9 +35,49 @@ Die erneut gemessene Offestspannung ergibt nach Ende der Messung einen Wert von
 $U_0=0.0081 \,\si{\milli\volt}$. Der Mittelwert der Offsetspannung, der nach (x)
 berechnet wird, ergibt sich zu $\bar{U_0} = 0.0072 \,\si{\milli\volt}$.
 
+Die Thermospannung wird als Funktion von $T^4 - T_0^4$ aufgetragen, wobei $T_0 = 294,15 K$
+die Raumtemperatur ist.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.82\textwidth]{thermospannung.pdf}
+  \caption{Messwerte und Fits für die Thermospannung in Abhängigkeit von $T^4 - T_0^4$.}
+  \label{fig:thermospannung}
+\end{figure}
+\newline
+Die Fits werden mit linearer Regression der Form $f(x) = a * x + b $ mit Python
+berechnet.
+Für die Parameter ergeben sich folgende Werte:
+\begin{align*}
+  a_\symup{schwarz}   &= \,(1.047\pm0.007)*10^{-10} \si{\frac{\volt}{\kelvin^4}} \\
+  b_\symup{schwarz}   &= (-0.836\pm0.010) \si{\volt} \\
+  a_\symup{glaenzend} &= \,(7.3\pm0.5)*10^{-12} \si{\frac{\volt}{\kelvin^4}} \\
+  b_\symup{glaenzend} &= (-0.062\pm0.006) \si{\volt} \\
+  a_\symup{weiss}     &= \,(9.95\pm0.06)*10^{-11} \si{\frac{\volt}{\kelvin^4}} \\
+  b_\symup{weiss}     &= (-0.794\pm0.008) \si{\volt} \\
+  a_\symup{matt}      &= \,(1.67\pm0.07)*10^{-11} \si{\frac{\volt}{\kelvin^4}} \\
+  b_\symup{matt}      &= (-0.131\pm0.009) \si{\volt}
+\end{align*}
+Es wird nun angenommen, dass die schwarze Oberfläche ein schwarzer Strahler ist
+und demnach $\epsilon_\symup{schwarz} = 1$ gilt.
+Dann lassen sich die Emissionsvermögen der anderen Oberflächen wie folgt berechnen:
+\begin{equation}
+  \epsilon_\symup{i} = \frac{a_\symup{i}}{a_\symup{schwarz}},
+  \label{eqn:epsilon}
+\end{equation}
+und man erhält als Ergebnis für die Emissionsvermögen $\epsilon_\symup{i}$:
+\begin{align*}
+  \epsilon_\symup{schwarz}   &= 1 \\
+  \epsilon_\symup{glaenzend} &= (0.069\pm0.004) \\
+  \epsilon_\symup{weiss}     &= (0.951\pm0.009) \\
+  \epsilon_\symup{matt}      &= (0.159\pm0.006).
+\end{align*}
+Der Fehler berechnet sich dabei nach der Gaußschen Fehlerfortpflanzung (x).
 
 
 \subsection{Strahlungsleistung als Funktion des Abstands}
+In einer weiteren Messreihe werden die Thermospannungen bei konstanter Temperatur
+$T=320,25\si{\kelvin}$ und veränderlichem Abstand für die schwarze Oberfläche
+gemessen. Die Ergebnisse sind in nachfolgender Tabelle dargestellt.
 \begin{table}
   \centering
   \begin{tabular}{c c}
@@ -59,3 +99,11 @@ berechnet wird, ergibt sich zu $\bar{U_0} = 0.0072 \,\si{\milli\volt}$.
   \end{tabular}
  \caption{Thermospannungen der schwarzen Fläche\\in Abhänigkeit des Abstands.}
 \end{table}
+\newpage
+Als grafische Darstellung erhält man
+\begin{figure}
+
+  \includegraphics[width=0.9\textwidth]{strahlintensitaet.pdf}
+  \caption{Strahlenintensität in Abhängigkeit des Abstands.}
+  \label{fig:strahlintensitaet}
+\end{figure}
