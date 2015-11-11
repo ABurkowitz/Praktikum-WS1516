@@ -3,10 +3,10 @@
   \subsection{Prinzip einer Wärmepumpe und ihre Güteziffer}
   Nach dem zweiten Hauptsatz der Themodynamik, der besagt, dass die Entropie in
   einem abgeschlossenen System niemals abnehmen kann, verläuft ein Wärmeaustausch
-  zwischen zwei Reservoiren unterschiedlicher Temperatur immer vom Wärmeren zum
-  Kälteren hin.
-  Es ist jedoch möglich die Richtung des Wärmetransports umzukehren, wenn man
-  dem System Energie in Form von mechanischer Arbeit zuführt. Ist dies der Fall,
+  zwischen zwei Reservoiren unterschiedlicher Temperatur von selbst immer vom
+  Wärmeren zum Kälteren hin.
+  Es ist jedoch möglich die Richtung des Wärmetransports umzukehren, wenn dem
+  System Energie in Form von mechanischer Arbeit zuführt wird. Ist dies der Fall,
   so spricht man von einer Wärmepumpe.
 
   Aus dem Verhältnis der aufzuwendenden Arbeit A und der an das wärmere Reservoir
@@ -58,30 +58,29 @@
   \end{equation}
   Daraus kann man leicht erkennen, dass die Wärmepumpe einen besseren Wirkungsgrad
   hat, je geringer die Temperaturdifferenz zwischen den Reservoiren ist.
-  Wärmepumpen werden beispielsweise in der Heiztechnik verwendet und haben dabei
-  gegenüber anderen Verfahren den großen Vorteil, dass die gewonnene Wärmemenge
-  auch größer als die geleistete mechanische Arbeit sein kann.
-  < Gleichung? >
+
+
+
   \subsection{Aufbau und Funktionsweise einer Wärmepumpe}
   \begin{figure}
     \centering
     \includegraphics[width=0.65\textwidth]{aufbau_waermepumpe.png}
-    \caption{Aufbau einer Wärmepumpe ($p_\symup{b} > p_\symup{a}; T_1 > T_2$).}
+    \caption{Aufbau einer Wärmepumpe\cite{sample}.}
     \label{fig:aufbau}
   \end{figure}
   In Abbildung \ref{fig:aufbau} ist der schematische Aufbau einer Wärmepumpe zu
   sehen. Wichtige Elemente sind die Reservoire 1 und 2, welche mit einer genau
   definierten Menge Wasser gefüllt sind, und in denen sich Kupferspiralen für den
   Wärmeaustausch zwischen Transportmedium und Wasser befinden. Bei dem Transportmedium
-  handelt es sich um ein reales Gas, welches eine möglichs hohe Kondensationswärme
-  besitzt. In unserem Fall wurde Dicholordiflourmethan ($\ce{Cl2F2C}$) verwendet.
+  handelt es sich um ein reales Gas, welches eine möglichst hohe Kondensationswärme
+  besitzt. In unserem Fall wurde Dichlordiflourmethan ($\ce{Cl2F2C}$) verwendet.
   Das Gas ist bei Temperatur $T_1$ und dem Druck $p_\symup{b}$ flüssig und bei
   $T_2$ und Druck $p_\symup{a}$ gasförmig. Das flüssige Gas verdampft in Reservoir
-  2 und entzieht diesem die Verdampfungswärme L pro Gramm. Infolgedessen sinkt die
+  2 und entzieht diesem die Verdampfungswärme L. Infolgedessen sinkt die
   Temperatur $T_2$ in Reservoir 2.
   Der Kompressor K komprimiert das Gas, wodurch der Druck $p_\symup{b}$ steigt,
   so dass das Gas in Reservoir 1 kondensiert und dabei die zuvor aufgenommene
-  Verdampfungswärme als Kondensationswärme L pro Gramm abgibt. Dadurch steigt die
+  Verdampfungswärme als Kondensationswärme L abgibt. Dadurch steigt die
   Temperatur $T_1$ in Reservoir 1.
   Zwischen den Reservoiren liegt das Drosselventil D, welches durch Strömungswiderstände
   den Druckunterschied zwischen $p_\symup{b}$ und $p_\symup{a}$ erzeugt.
@@ -95,19 +94,19 @@
   $\frac{\symup{d}m}{\symup{d}t}$ des Transportmediums und der Wirkungsgrad des
   Kompressors von Interesse. Wie diese Kenngrößen aus den Messwerten bestimmt werden
   können wird nachfolgend beschrieben.
-  \subsubsection{Bestimmung der realen Güteziffer $v$}
-  Aus den gemessenen Temperaturen $T_1$ pro Zeitintervall $\Delta t$ berechnet man
-  die pro Zeitintervall gewonnene Wärmemenge
+  \subsubsection{Bestimmung der realen Güteziffer $v_\symup{real}$}
+  Aus den gemessenen Temperaturen $T_1$ pro Zeitintervall $\Delta t$ wird die pro
+  Zeitintervall gewonnene Wärmemenge
   \begin{equation}
-    \frac{\Delta Q_1}{\Delta t} = (m_1 c_w + m_k c_k) \frac{\Delta T_1}{\Delta t}.
+    \frac{\Delta Q_1}{\Delta t} = (m_1 c_w + m_k c_k) \frac{\Delta T_1}{\Delta t}
     \label{eqn:waermeprozeit1}
   \end{equation}
-  Dabei ist $m_1 c_w$ die Wärmekapazität des Wassers in Reservoir 1 und $m_k c_k$
-  die Wärmekapazität der Kupferschlange und des Behälters gemeinsam.
+  berechnet. Dabei ist $m_1 c_w$ die Wärmekapazität des Wassers in Reservoir 1
+  und $m_k c_k$ die Wärmekapazität der Kupferschlange und des Behälters gemeinsam.
   Mit der über $\Delta t$ gemittelten Leistungsaufnahme des Kompressors N ergibt
   sich für die Güteziffer mit \eqref{eqn:waermeprozeit1}
   \begin{equation}
-    v = \frac{\Delta Q_1}{N\Delta t} = \frac{m_1 c_w + m_k c_k}{N} \frac{\Delta T_1}{\Delta t}
+    v_\symup{real} = \frac{\Delta Q_1}{N\Delta t} = \frac{m_1 c_w + m_k c_k}{N} \frac{\Delta T_1}{\Delta t}.
     \label{eqn:berechnung_gueteziffer}
   \end{equation}
 
@@ -144,8 +143,8 @@
   \end{equation}
   mit $\kappa = \frac{C_\symup{p}}{C_\symup{v}}$, $\kappa > 1$ und den Molwärmen
   $C_\symup{p}$ (für konstanten Druck) und $C_\symup{V}$ (für konstantes Volumen).
-  Dies kann man nach $p$ umformen und in Gleichung \eqref{eqn:arbeit_kompressor}
-  einsetzen. Für $A_\symup{mech}$ erhält man dann
+  Dies wird nach $p$ umgeformt und in Gleichung \eqref{eqn:arbeit_kompressor}
+  eingesetzt. Für $A_\symup{mech}$ ergibt sich dann
   \begin{equation}
     A_\symup{mech} = - p_\symup{a} V_\symup{a}^\kappa
     \int_{V_\symup{a}}^{V_\symup{b}} V^{-\kappa} \symup{d}V
