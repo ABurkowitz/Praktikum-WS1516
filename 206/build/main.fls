@@ -379,6 +379,11 @@ INPUT messapparatur.png
 INPUT ./content/auswertung.tex
 INPUT ./content/auswertung.tex
 INPUT /home/phillip/.local/texlive/2015/texmf-var/luatex-cache/generic/fonts/otf/lmroman8-regular.luc
+INPUT /home/phillip/.local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmmi5.tfm
+INPUT /home/phillip/.local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
+INPUT /home/phillip/.local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
+INPUT /home/phillip/.local/texlive/2015/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /home/phillip/.local/texlive/2015/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /home/phillip/.local/texlive/2015/texmf-var/luatex-cache/generic/fonts/otf/lmroman6-regular.luc
 INPUT Temperaturgraphik.pdf
 INPUT ./content/diskussion.tex

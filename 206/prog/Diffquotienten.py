@@ -2,7 +2,7 @@ import numpy as np
 import sympy
 Paras1= np.genfromtxt('daten/ausglkurve_T1.txt', float, unpack=True)
 Paras2= np.genfromtxt('daten/ausglkurve_T2.txt', float, unpack=True)
-A=ufloatParas1[0]
+A=Paras1[0]
 B=Paras1[1]
 C=Paras1[2]
 a=Paras2[0]
