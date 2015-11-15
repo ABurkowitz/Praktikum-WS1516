@@ -93,13 +93,18 @@ vr[0]=((T1diffq[0]  *( m1cw + mkck ))/N[5])
 vr[1]=((T1diffq[1] *( m1cw + mkck ))/N[10])
 vr[2]=((T1diffq[2] *( m1cw + mkck ))/N[15])
 vr[3]=((T1diffq[3] *( m1cw + mkck ))/N[19])
-print (vr)
+
 np.savetxt('datenf/gueteziffer_ref.txt',(unp.nominal_values(vr),unp.std_devs(vr)), header="Gueteziffer-re")
 #print (vr)
 
+
+#Verdampfungswärme///////////////////////////////////////////
+
+
 p,T = np.genfromtxt('daten/Dampfdruckkurve_array.txt', unpack=True)
 #R=8.314 4598 J mol-1 K-1
-R=8.3144598
+#+-0.000 0048 J mol-1 K-1
+R=ufloat(8.3144598,0.0000048)
 T=T+273.15
 T=1/T
 def f(m,T,C):
@@ -107,18 +112,64 @@ def f(m,T,C):
 
 lnp=np.log(p)
 plt.plot(T, lnp , 'rx', label="Temperatur T1")
-parameters1, pocv = curve_fit(f, T, lnp)
+parameters1, covL = curve_fit(f, T, lnp)
 
 plt.plot(T, f(T, *parameters1), 'r-', label='Fit T1')
-
 plt.xlabel(r'$\frac{1}{T}/\frac{1}{K}$')
 plt.ylabel(r'$ln(\frac{p}{p_0})$')
 plt.tight_layout()
 plt.legend(loc='best')
 plt.savefig('daten/Dampfdruckkurve.pdf')
+fehlerL= np.sqrt(np.diag(covL))
+m= ufloat(parameters1[0],fehlerL[0])
+np.savetxt('datenf/ausglkurve_pTf.txt',parameters1, header="m,T,C")
+L=- m *R
+#print (L)
+np.savetxt('datenf/Verdampfungswaerme.txt', (unp.nominal_values(L),unp.std_devs(L)) , header="Verdampfungswaerme_L")
+#print(fehlerL)
+#print(parameters1)
 
-np.savetxt('daten/ausglkurve_pT.txt',parameters1, header="m,T,C")
-m=parameters1[0]
-L= - m *R
-print (L)
-#np.savetxt('daten/Verdampfungswaerme.txt', L , header="Verdampfungswaerme_L")
+
+import numpy as np
+#universelle (molare)Gaskonstante
+#R=8.314 4598 J mol-1 K-1
+#+-0.000 0048 J mol-1 K-1
+#ln p = L/(R*T)+const
+#R*T*ln(p)-R*T*const=L
+
+
+#1.11.2015 23:48
+#http://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Units=SI&Mask=7&Type=JANAFL&Table=on#JANAFL
+#spezifische wärmecapazität Cp=75.38(J/mol*K)
+#1.11.2015 23:48
+#http://webbook.nist.gov/cgi/fluid.cgi?T=294.85&PLow=1&PHigh=2&PInc=&Appl
+#et=on&Digits=5&ID=C7732185&Action=Load&Type=IsoTherm&TUnit=K&PUnit=bar&D
+#Unit=mol%2Fl&HUnit=kJ%2Fmol&WUnit=m%2Fs&VisUnit=uPa*s&STUnit=N%2Fm&RefState=DEF
+#Dichte wasser 55.389mol/l (294.85 K,1Bar)
+
+Dichte=55.389
+Cp=75.38
+#Wärmecapazität wasser
+m1cw=Dichte*3*Cp
+#m1cw=12525.668459999999
+
+#Wärmecapazität Kupferspirale Behälter?
+mkck=660
+
+
+
+Q2dt=(T2diffq  *( m1cw + mkck ))
+
+np.savetxt('datenf/Q2dt.txt',(unp.nominal_values(Q2dt),unp.std_devs(Q2dt)), header="Q2dt")
+
+#L= 23406.2040997 J/mol
+
+dmdtm=-Q2dt/L
+#molecularweight 18.0153
+#Molare Masse of Cl2F2C is 120,9135 g/mol
+#6.022140857 x 10^23 mol-1
+#0.000000074 x 10^23 mol-1
+mw=ufloat(120.9135,0)
+dmdtg=dmdtm*mw
+np.savetxt('datenf/Massendurchsatzm.txt',(unp.nominal_values(dmdtm),unp.std_devs(dmdtm)), header="dm/dt")
+np.savetxt('datenf/Massendurchsatzg.txt',(unp.nominal_values(dmdtg),unp.std_devs(dmdtg)), header="dm/dt")
