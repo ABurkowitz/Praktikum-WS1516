@@ -19,23 +19,25 @@ def f(t,A,B,C):
  return A * t **2 + B * t + C
 def g(t,a,b,c):
  return a * t **2 + b * t +c
-plt.plot(t, T1 , 'rx', label="Temperatur T1")
-plt.plot(t, T2 , 'bx', label="Temperatur T2")
+#plt.plot(t, T1 , 'rx', label="Temperatur T1")
+#plt.plot(t, T2 , 'bx', label="Temperatur T2")
 parameters1, cov1 = curve_fit(f, t, T1)
 parameters2, cov2 = curve_fit(g, t, T2)
 fehler1= np.sqrt(np.diag(cov1))
 fehler2= np.sqrt(np.diag(cov2))
-plt.plot(t, f(t, *parameters1), 'r-', label='Fit T1')
-plt.plot(t, f(t, *parameters2), 'b-', label='Fit T2')
-plt.xlabel(r'$Zeit / s$')
-plt.ylabel(r'$Tempratur / K$')
-plt.tight_layout()
-plt.legend(loc='best')
-plt.savefig('Temperaturgraphik.pdf')
-np.savetxt('datenf/ausglkurve_T1.txt',parameters1 , header="A,B,C")
-np.savetxt('datenf/ausglkurve_T2.txt',parameters2, header="a,b,c")
-np.savetxt('datenf/ausglkurve_T1f.txt',fehler1 , header="fehler ABC")
-np.savetxt('datenf/ausglkurve_T2f.txt',fehler2 , header="fehler abc")
+#plt.plot(t, f(t, *parameters1), 'r-', label='Fit T1')
+#plt.plot(t, f(t, *parameters2), 'b-', label='Fit T2')
+#plt.xlabel(r'$Zeit / s$')
+#plt.ylabel(r'$Tempratur / K$')
+#plt.tight_layout()
+#plt.legend(loc='best')
+#plt.savefig('Temperaturgraphik.pdf')
+paras1=unp.uarray(parameters1,fehler1)
+paras2=unp.uarray(parameters2,fehler2)
+np.savetxt('datenf/ausglkurve_T1.txt',unp.nominal_values(paras1), header="A,B,C")
+np.savetxt('datenf/ausglkurve_T2.txt',unp.nominal_values(paras2), header="a,b,c")
+np.savetxt('datenf/ausglkurve_T1f.txt',unp.std_devs(paras1) , header="fehler ABC")
+np.savetxt('datenf/ausglkurve_T2f.txt',unp.std_devs(paras2) , header="fehler abc")
 paras1=unp.uarray(parameters1,fehler1)
 paras2=unp.uarray(parameters2,fehler2)
 #print (paras1)
@@ -107,22 +109,22 @@ p,T = np.genfromtxt('daten/Dampfdruckkurve_array.txt', unpack=True)
 R=ufloat(8.3144598,0.0000048)
 T=T+273.15
 T=1/T
-def f(m,T,C):
+def h(m,T,C):
  return m * T + C
 
 lnp=np.log(p)
 plt.plot(T, lnp , 'rx', label="Temperatur T1")
-parameters1, covL = curve_fit(f, T, lnp)
+parameters3, covL = curve_fit(h, T, lnp)
 
-plt.plot(T, f(T, *parameters1), 'r-', label='Fit T1')
+plt.plot(T, h(T, *parameters3), 'r-', label='Fit T1')
 plt.xlabel(r'$\frac{1}{T}/\frac{1}{K}$')
 plt.ylabel(r'$ln(\frac{p}{p_0})$')
 plt.tight_layout()
 plt.legend(loc='best')
 plt.savefig('daten/Dampfdruckkurve.pdf')
 fehlerL= np.sqrt(np.diag(covL))
-m= ufloat(parameters1[0],fehlerL[0])
-np.savetxt('datenf/ausglkurve_pTf.txt',parameters1, header="m,T,C")
+m= ufloat(parameters3[0],fehlerL[0])
+np.savetxt('datenf/ausglkurve_pTf.txt',parameters3, header="m,T,C")
 L=- m *R
 #print (L)
 np.savetxt('datenf/Verdampfungswaerme.txt', (unp.nominal_values(L),unp.std_devs(L)) , header="Verdampfungswaerme_L")
@@ -130,7 +132,6 @@ np.savetxt('datenf/Verdampfungswaerme.txt', (unp.nominal_values(L),unp.std_devs(
 #print(parameters1)
 
 
-import numpy as np
 #universelle (molare)Gaskonstante
 #R=8.314 4598 J mol-1 K-1
 #+-0.000 0048 J mol-1 K-1
@@ -165,11 +166,75 @@ np.savetxt('datenf/Q2dt.txt',(unp.nominal_values(Q2dt),unp.std_devs(Q2dt)), head
 #L= 23406.2040997 J/mol
 
 dmdtm=-Q2dt/L
+#print(dmdtm)
+#print(L)
 #molecularweight 18.0153
 #Molare Masse of Cl2F2C is 120,9135 g/mol
-#6.022140857 x 10^23 mol-1
-#0.000000074 x 10^23 mol-1
 mw=ufloat(120.9135,0)
 dmdtg=dmdtm*mw
 np.savetxt('datenf/Massendurchsatzm.txt',(unp.nominal_values(dmdtm),unp.std_devs(dmdtm)), header="dm/dt")
 np.savetxt('datenf/Massendurchsatzg.txt',(unp.nominal_values(dmdtg),unp.std_devs(dmdtg)), header="dm/dt")
+
+
+pb1=ufloat(8.3,0.1)
+pb2=ufloat(10.4,0.1)
+pb3=ufloat(12.0,0.1)
+pb4=ufloat(13.5,0.1)
+pa1=ufloat(3.1,0.1)
+pa2=ufloat(3.1,0.1)
+pa3=ufloat(3.2,0.1)
+pa4=ufloat(3.2,0.1)
+
+
+
+#pa=pa+1   #Kg/(ms²)
+#pb=pb+1   #Kg/(ms²)
+p=1       #Kg/(ms²)
+T0=ufloat(273.15,0) #K
+k=1.14    #
+k1=ufloat(1/k,0)
+p0=ufloat(1,0)      #Kg/(m²)
+roh0=ufloat(5.51,0) #g/l kg/m³
+#druck
+#5  2.1  	 7.3
+#10  2.1  	 9.4
+#15  2.2  	11.0
+#19  2.2  	12.5
+
+roh1=(pa1*roh0*T0/(T1f[5]*p0))   #15.492861198738169
+roh2=(pa2*roh0*T0/(T1f[10]*p0))   #15.048137880986937
+roh3=(pa3*roh0*T0/(T1f[15]*p0))   #15.12857169781687
+roh4=(pa4*roh0*T0/(T1f[19]*p0))   #21.65062171274444
+#dmdt1=-1.394630925991996971e-02
+#dmdt2=-1.318260986553914521e-02
+#dmdt3=-1.241891047115831551e-02
+#dmdt4=-1.180795095565365452e-02
+np.savetxt('datenf/Dichte.txt',(unp.nominal_values(roh1),unp.std_devs(roh1),
+unp.nominal_values(roh2),unp.std_devs(roh2),
+unp.nominal_values(roh3),unp.std_devs(roh3),
+unp.nominal_values(roh4),unp.std_devs(roh4)), header="N_mech")
+
+Nmech1=1/(k-1)*(pb1*(pa1/pb1)**k1-pa1)/roh1*dmdtg[0]
+Nmech2=1/(k-1)*(pb2*(pa2/pb2)**k1-pa2)/roh2*dmdtg[1]
+Nmech3=1/(k-1)*(pb3*(pa3/pb3)**k1-pa3)/roh3*dmdtg[2]
+Nmech4=1/(k-1)*(pb4*(pa4/pb4)**k1-pa4)/roh4*dmdtg[3]
+print (roh1)
+#print (dmdtm)
+#print (dmdtg)
+#print (Nmech1)
+#print (Nmech2)
+#print (Nmech3)
+#print (Nmech4)
+np.savetxt('datenf/Mech_Kompressorleistung.txt',(unp.nominal_values(Nmech1),unp.std_devs(Nmech1),
+unp.nominal_values(Nmech2),unp.std_devs(Nmech2),
+unp.nominal_values(Nmech3),unp.std_devs(Nmech3),
+unp.nominal_values(Nmech4),unp.std_devs(Nmech4)), header="N_mech")
+#15.492861198738169
+#15.048137880986937
+#15.12857169781687
+#21.65062171274444
+
+#-0.002562619075583121
+#-0.003108734012963867
+#-0.0033067864314812686
+#-0.0024106078604203382
