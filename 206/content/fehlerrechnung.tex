@@ -1,30 +1,21 @@
 \section{Fehlerrechnung}
 \label{sec:Fehlerrechnung}
-Der Mittelwert kann mit
+Die Fehlerrechnung wird mit nachfolgenden Formeln und mit Python durchgeführt.
+Der Mittelwert wird mit
 \begin{equation}
-  v_i= \frac{1}{n}\sum\nolimits_{i=1}^n x_i
-  \label{eqn:gl11}
+  \bar{x}= \frac{1}{N}\sum_{i=1}^N x_i
+  \label{eqn:mittelwert}
 \end{equation}
-berechnet werden. Die standardabweichung mit der Formel
+berechnet und Standardabweichung des Mittelwerts berechnet sich nach
 \begin{equation}
-  \label{eqn:gl12}
-  s_1= \sqrt{\frac{1}{N-1}\sum\nolimits_{j=1}^N(v_j-v_i)^2} .
+  \Delta\bar{x} = \sqrt{\frac{1}{n(n-1)}\sum_{i=1}^n(x_i-\bar{x_i})^2} .
+  \label{eqn:standardabweichung}
 \end{equation}
-
+Der Gaußsche Fehler einer Funktion $f(x_i)$, die von den fehlerbehafteten Variablen
+$x_i$ abhängt, berechnet sich nach der Formel
 \begin{equation}
-  \label{eqn:gl13}
-  \sigma_i=\frac{s_i}{\sqrt{N}}=
-  \frac{\sqrt{\frac{1}{N-1}\sum\nolimits_{j=1}^N(v_j-\bar{v_i})^2}}{\sqrt{N}}
+  \Delta f = \sqrt{\sum_{i=1}^N \left(\frac{\partial f}{\partial x_i}\right)^2
+  \cdot (\Delta x_i)^2}.
+  \label{eqn:fehlerfortpflanzung}
 \end{equation}
-\begin{equation}
-  \Delta x_k = \frac{df}{dk} \cdot \sigma_k
-\end{equation}
-\begin{equation}
-  \Delta x_{k,rel}=1 \pm \frac{\Delta x_k}{|x|}*100 \%
-\end{equation}
-\begin{equation}
-  \Delta x_k = \frac{df}{dk} \cdot \sigma_k
-\end{equation}
-\begin{equation}
-  \sigma^2=\sum\nolimits_{k=1}^n [y_k-(\bar{B}x_k+\bar{A})]^2
-\end{equation}
+Dabei ist $\Delta x_i$ der Fehler von $x_i$.
