@@ -1,5 +1,16 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+Für die Auswertung werden die folgende Größen benötigt.
+\begin{align*}
+  &\text{spezifische Wärmekapazität}\, Cp=75.38(\si{\frac{\joule}{\mol\kelvin}})  \\
+  &\text{Dichte Wasser}\, 55.389\si{\frac{\mol}{\liter}} (294.85 \si{\kelvin,1\bar)}     \\
+  &\text{molare Masse von} \, Cl_2F_2C \, (120,9135 \si{\frac{\gram}{\mol}})       \\
+  &p_0=1       \si{\frac{\kilo\gram}{\meter^2}}      \\
+  &\rho_0=5.51  \si{\frac{\kilo\gram}{\meter^3}}     \\
+  &T_0=273.15  \si{\kelvin}                          \\
+  &m_2c_w=12525.66845 \si{\frac{\joule}{\kelvin}}    \\
+  &m_kc_k=660   \si{\frac{\joule}{\kelvin}}
+\end{align*}
 In der folgenden Tabelle sind alle Messwerte aufgeführt.
 \begin{table}
   \centering
@@ -34,32 +45,32 @@ In der folgenden Tabelle sind alle Messwerte aufgeführt.
 \end{table}
 
 Die Temperaturverläufe sind in dem folgenden Diagramm dargestellt und mit einer
-linearen Ausgleichstrechnung approximiert.
+Ausgleichsrechnung approximiert.
 \subsection{Temperaturausgleichskurve}
 \begin{figure}
 \includegraphics[height=13cm]{Temperaturgraphik.pdf}
-\caption{Temperturausgleichskurve.}
+\caption{Temperaturausgleichskurve.}
 \end{figure}
 
-Die Näherung wurde mit scientific Python gemacht und ist gegeben durch
+Die Näherung entsteht mit scientific Python und ist gegeben durch
 \begin{equation}
   T(t)=At^2+Bt+C .
 \end{equation}
 Die Parameter für erwärmte Reservoir $T_1$ sind
 
-  $A=(-0.000002485)\si{\frac{\kelvin}{\sekunden^2}}$
+  $A=(-2.4857\cdot10^{-6}\pm1.6839\cdot10^{-6})\si{\frac{\kelvin}{\second^2}} $
 
-  $B=(0.029925168)\si{\frac{\kelvin}{\sekunden}}$
+  $B=(2.99251681\cdot10^{-2}\pm1.9886040\cdot10^{-3})\si{\frac{\kelvin}{\second}}$
 
-  $C=(293.312793014)\si{\kelvin}$
+  $C=(2.933127930141\cdot10^{2}\pm4.890916772\cdot10^{-1})\si{\kelvin}$
 
 Die Parameter für den anderen Behälter $T_2$ sind
 
-  $A=(0.000002259)\si{\frac{\kelvin}{\sekunden^2}}$
+  $A=(2.2594\cdot10^{-6}\pm2.1868\cdot10^{-6})\si{\frac{\kelvin}{\second^2}}$
 
-  $B=(-0.026112097)\si{\frac{\kelvin}{\sekunden}}$
+  $B=(-2.6112098\cdot10^{-2}\pm2.5825637\cdot10^{-3})\si{\frac{\kelvin}{\second}}$
 
-  $C=(297.339350549)\si{\kelvin}$$
+  $C=(2.973393505497\cdot10^{2}\pm6.351744996\cdot10^{-1})\si{\kelvin}$
 
 Die dazugehörigen Differentialquotienten erhält man durch die folgende Gleichung
 \begin{equation}
@@ -68,52 +79,61 @@ Die dazugehörigen Differentialquotienten erhält man durch die folgende Gleichu
 
 \begin{table}
   \centering
-  \begin{tabular}{c c c}
+  \begin{tabular}{c c c c c}
     \toprule
-    $Zeit/s$ & $dT_1 /dt$ & $dT_2 /dt$ \\
+    $Zeit/s$ & $dT_1 /dt$ & Fehler & $dT_2 /dt$ &Fehler \\
     \midrule
-    300  &  0.028 & -0.024  \\
-    600  &  0.027 & -0.023  \\
-    900  &  0.025 & -0.022  \\
-   1140  &  0.024 & -0.020  \\
+    300  &  0.02843  &  \pm0.002230  & -0.02475  &  \pm0.002896  \\
+    600  &  0.02694  &  \pm0.002835  & -0.02340  &  \pm0.003681  \\
+    900  &  0.02545  &  \pm0.003625  & -0.02204  &  \pm0.004707  \\
+   1140  &  0.02425  &  \pm0.004323  & -0.02096  &  \pm0.005615  \\
    \bottomrule
  \end{tabular}
  \caption{Differentialquotienten.}
  \label{tab:Diffquo}
 \end{table}
 \subsection{Güteziffer}
-Als nächstes soll die Güteziffer bestimmt werden dafür Nutzt man die Gleichung
+Als nächstes soll die Güteziffer bestimmt werden. Dafür nutzt man die Gleichung
 \eqref{eqn:gueteziffer_ideal} für die ideale Güteziffer und die Gleichung
-\eqref{eqn:gueteziffer_real}
+\eqref{eqn:berechnung_gueteziffer}
 \begin{table}
   \centering
 
-  \begin{tabular}{c c c}
+  \begin{tabular}{c c c c c}
     \toprule
-    $Zeit/s$ & $v_\symup{ideal}$ &  $v_\symup{real}$ \\
+    $Zeit/s$ & $v_\symup{ideal}$ &  Fehler  &  $v_\symup{real}$  &  Fehler\\
     \midrule
-      300  &  28.956  &  1.875 \\
-      600  &  11.112  &  1.692 \\
-      900  &  7.301  &  1.598 \\
-     1140  &  6.264  &  1.523 \\
+      300  &  28.956730  &  \pm0.3870202  &  1.874590  &  \pm0.154343  \\
+      600  &  11.112903  &  \pm0.0538550  &  1.691679  &  \pm0.182511  \\
+      900  &  7.3016055  &  \pm0.0221212  &  1.598035  &  \pm0.230776  \\
+     1140  &  6.2640232  &  \pm0.0158262  &  1.523119  &  \pm0.273894  \\
    \bottomrule
  \end{tabular}
  \caption{Güteziffer}
  \label{tab:Gütez}
 \end{table}
 \subsection{Massendurchsatz}
-Wenn man die Werte in Gleichung \eqref{eqn:massendurchsatz} einsetzt erhält man
-den Massendurchsatz.
+Für den Massendurchsatz wird die Verdampfungswärme $L=(2.341\pm0.021)\cdot10^{4}$
+benötigt. Diese errechnet sich der Steigung einer Approximation der
+Dampfdruckkurvenwertepaare.
+\begin{figure}
+\includegraphics[height=13cm]{prog/daten/Dampfdruckkurve.pdf}
+\caption{Verdampfungswärme.}
+\end{figure}
+Wenn die Werte in Gleichung \eqref{eqn:massendurchsatz}
+einsetzt werden, ergibt sich der Massendurchsatz.
+
 \begin{table}
   \centering
-\begin{tabular}{c c c}
+\begin{tabular}{c c c c c c c}
   \toprule
-  $Zeit /s$ & $\frac{dQ_2}{dt}$ & $\frac{dm}{dt} /\frac{mol}{s}$  \\
+  $Zeit /s$ & $\frac{dQ_2}{dt}/\si{\joule}$ &  Fehler  & $\frac{dm}{dt}/\si{\frac{\mol}{\second}}$
+   & Fehler  &  $\frac{dm}{dt} /\si{\frac{\gram}{\second}}$  & Fehler\\
   \midrule
-  300  &   -326.430  & -0.014  \\
-  600  &   -308.554  & -0.013  \\
-  900  &   -290.679  & -0.012  \\
- 1140  &   -276.379  & -0.012  \\
+  300  &   -326.43016  &  \pm38.19584  & 0.01394  &  \pm0.001636  &  1.68629  &  \pm0.19790  \\
+  600  &   -308.55485  &  \pm48.54797  & 0.01318  &  \pm0.002077  &  1.59395  &  \pm0.25120  \\
+  900  &   -290.67955  &  \pm62.07691  & 0.01241  &  \pm0.002654  &  1.50161  &  \pm0.32097  \\
+ 1140  &   -276.37931  &  \pm74.03976  & 0.01180  &  \pm0.003165  &  1.42774  &  \pm0.38269  \\
  \bottomrule
 \end{tabular}
 \caption{Massendurchsatz}
@@ -143,14 +163,14 @@ N_\symup{mech}=\frac{1}{\kappa-1}\left(p_b \sqrt[\kappa]{\frac{p_a}{p_b}}-p_a\ri
 
 \begin{table}
   \centering
-\begin{tabular}{c c c}
+\begin{tabular}{c c c c c}
   \toprule
-  $Zeit /s$ & Dichte$\rho/\frac{g}{m^3}$ & Leistung$N_\symup{mech} /W$  \\
+  $Zeit /s$ & Dichte$\rho/\frac{g}{m^3}$ & Fehler & Leistung$N_\symup{mech} /W$  &  Fehler  \\
   \midrule
-  300  &   15.49  &  -0.0026 \\
-  600  &   15.05  &  -0.0031 \\
-  900  &   15.13  &  -0.0033 \\
- 1140  &   21.65  &  -0.0024 \\
+  300  &   15.49286  &  \pm0.49979  &  0.30985  &  \pm0.038141  \\
+  600  &   15.04813  &  \pm0.48544  &  0.37588  &  \pm0.060299  \\
+  900  &   15.12857  &  \pm0.47279  &  0.39983  &  \pm0.086119  \\
+ 1140  &   14.87164  &  \pm0.46476  &  0.42433  &  \pm0.114210  \\
  \bottomrule
 \end{tabular}
 \caption{Massendurchsatz}
