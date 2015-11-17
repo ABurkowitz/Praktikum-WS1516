@@ -11,7 +11,7 @@ x = np.linspace(0, 7)
 V , phi = np.genfromtxt('daten/Messung_or.txt', unpack=True)
 phi=phi/360*2*np.pi
 C=12
-A=12
+A=6.2*np.pi/2
 def f(A,x,C):
  return A * np.cos(x) + C
 plt.plot(phi, V , 'rx', label="Messdaten")
@@ -19,7 +19,7 @@ plt.plot(phi, V , 'rx', label="Messdaten")
 #fehler1= np.sqrt(np.diag(cov1))
 #plt.plot(phi, f(phi, *parameters1), 'r-', label='Fit T1')
 plt.plot(x,f(A,x,C), 'r-',label="Theoriekurve")
-plt.xlabel(r'$Zeit / s$')
+plt.xlabel(r'$Phasenwinkel / rad$')
 plt.ylabel(r'$Spannung / V$')
 plt.tight_layout()
 plt.legend(loc='best')

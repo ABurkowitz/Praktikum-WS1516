@@ -16,7 +16,7 @@ def f(A,x):
 plt.plot(phi, V , 'rx', label="Messdaten")
 
 plt.plot(x,f(A,x), 'r-',label="Theoriekurve")
-plt.xlabel(r'$Zeit / s$')
+plt.xlabel(r'$Phasenwinkel / rad$')
 plt.ylabel(r'$Spannung / V$')
 plt.tight_layout()
 plt.legend(loc='best')

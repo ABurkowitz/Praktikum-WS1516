@@ -1,57 +1,70 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{Signale ohne Rauschen}
+\label{sec:Signale ohne Rauschen}
 Der rechte Ausgang des Referenc/Oscillator gibt es eine konstante Spannung
-von $2.4\si{\volt}$ der linke Ausgang liefert eine variable Spannung die
+von $2.4\si{\volt}$ ab. Der linke Ausgang liefert eine variable Spannung, die
 als Rechteck oder sinusförmige Spannung abgegeben werden kann. Für verschiedene
-Phasenverschiebung sehen die Signale wie in den folgenden
-Bildern aus.
+Phasenverschiebung sehen die Signale wie in der folgenden
+Abbildung\eqref{fig:Signale ohne Rauschen} aus, wobei die Offsetphasenverschiebung
+ $190°$ beträgt.
 \begin{figure}
 \centering
 \begin{subfigure}{0.48\textwidth}
 \centering
-\includegraphics[height=5cm]{Bilder/or/or10.JPG}
+\includegraphics[height=4cm]{Bilder/or/or10.JPG}
 \caption{Phasenwinkel $10°$.}
 \label{fig:orp10}
 \end{subfigure}
 \begin{subfigure}{0.48\textwidth}
 \centering
-\includegraphics[height=5cm]{Bilder/or/or100.JPG}
-\caption{Phasenwinkel $100°$Das TU-Logo.}
+\includegraphics[height=4cm]{Bilder/or/or100.JPG}
+\caption{Phasenwinkel $100°$.}
 \label{fig:orp100}
 \end{subfigure}
 \begin{subfigure}{0.48\textwidth}
 \centering
-\includegraphics[height=5cm]{Bilder/or/or150.JPG}
+\includegraphics[height=4cm]{Bilder/or/or150.JPG}
 \caption{Phasenwinkel $150°$.}
 \label{fig:orp150}
 \end{subfigure}
 \begin{subfigure}{0.48\textwidth}
 \centering
-\includegraphics[height=5cm]{Bilder/or/or190.JPG}
+\includegraphics[height=4cm]{Bilder/or/or190.JPG}
 \caption{Phasenwinkel $190°$.}
 \label{fig:orp190}
 \end{subfigure}
 \begin{subfigure}{0.48\textwidth}
 \centering
-\includegraphics[height=5cm]{Bilder/or/or280.JPG}
+\includegraphics[height=4cm]{Bilder/or/or280.JPG}
 \caption{Phasenwinkel $280°$.}
 \label{fig:orp280}
 \end{subfigure}
+\caption{Signale ohne Rauschen.}
+\label{fig:Signale ohne Rauschen}
 \end{figure}
-Wenn das Ausgangssignal über den Tiefpass für $\Phi=$ integriert wird sieht das
-Signal aus wie in dem folgenden Bild.
+Die Abbildung\eqref{fig:orp190} zeigt das Ergebnis nach dem Mischen, wenn $U_{sig}$
+und $U_{ref}$ in Phase sind. Wie in der Theorie ist hier der Betrag einer sinus
+Schwingung zu sehen.
+Wenn das Ausgangssignal über den Tiefpass integriert wird, sieht das
+Signal aus wie in der Abblidung\eqref{fig:int}.
 \begin{figure}
   \centering
   \includegraphics[height=5cm]{Bilder/int/INT.JPG}
-  \caption{Phasenwinkel $280°$.}
+  \caption{Phasenwinkel $190°$.}
   \label{fig:int}
 \end{figure}
+\subsection{Messreihe ohne Rauschen}
+\label{sec:Messreihe ohne Rauschen}
 Die Messwerte aus der ersten Messreihe ohne Signalstörungen, sind im folgenden
-Diagramm eingetragen sowie die Theoriekurve
+Diagramm eingetragen sowie die Theoriekurve ,die um den Offset von $12\si{\volt}$
+verschoben wurde.
 \begin{align*}
 U_{out}=\frac{2}{\pi}U_0cos(\phi)
 \end{align*}
-,die um den Offset von $12\si{\volt}$ verschoben wurde.
+ Hierbei ist $U_0=6.2\si{\volt}$. Das Ergebnis der Messreihe ist
+mit der Theoriekurve gut vergleichbar, wenn der Offset nicht beachtet wird.
+Daher lässt sich die Funktion des Lockinverstärkers verifizieren.
 \begin{figure}
   \centering
   \includegraphics[height=8cm]{or_signal.pdf}
@@ -59,44 +72,56 @@ U_{out}=\frac{2}{\pi}U_0cos(\phi)
   \label{fig:Mor}
 \end{figure}
 
-
-
-
-
+\subsection{Signale mit Rauschen}
+\label{sec:Signale mit Rauschen}
+Die folgende Abbildung\eqref{fig:Signale mit Rauschen} zeigt stark verrauschte
+Ausgangssignale des Mischers. Es lässt nur noch grob mit den unverrauschten
+Signalen vergleichen. Der Offsetphasenwinkel hat sich um $180°$ verschoben. Die
+Abbildung\eqref{fig:rp10} zeigt das Ausgangssignal bei dem $U_{sig}$ und
+$U_{ref}$ in Phase sind.
 
 \begin{figure}
 \centering
 \begin{subfigure}{0.48\textwidth}
 \centering
-\includegraphics[height=5cm]{Bilder/r/r10.JPG}
+\includegraphics[height=4cm]{Bilder/r/r10.JPG}
 \caption{Phasenwinkel $10°$.}
 \label{fig:rp10}
 \end{subfigure}
 \begin{subfigure}{0.48\textwidth}
 \centering
-\includegraphics[height=5cm]{Bilder/r/r100.JPG}
+\includegraphics[height=4cm]{Bilder/r/r100.JPG}
 \caption{Phasenwinkel $100°$.}
 \label{fig:rp100}
 \end{subfigure}
 \begin{subfigure}{0.48\textwidth}
 \centering
-\includegraphics[height=5cm]{Bilder/r/r150.JPG}
+\includegraphics[height=4cm]{Bilder/r/r150.JPG}
 \caption{Phasenwinkel $150°$.}
 \label{fig:rp150}
 \end{subfigure}
 \begin{subfigure}{0.48\textwidth}
 \centering
-\includegraphics[height=5cm]{Bilder/r/r190.JPG}
+\includegraphics[height=4cm]{Bilder/r/r190.JPG}
 \caption{Phasenwinkel $190°$.}
 \label{fig:rp190}
 \end{subfigure}
 \begin{subfigure}{0.48\textwidth}
 \centering
-\includegraphics[height=5cm]{Bilder/r/r280.JPG}
+\includegraphics[height=4cm]{Bilder/r/r280.JPG}
 \caption{Phasenwinkel $280°$.}
 \label{fig:rp280}
 \end{subfigure}
+\caption{Signale mit Rauschen.}
+\label{fig:Signale mit Rauschen}
 \end{figure}
+
+\subsection{Messreihe mit Rauschen}
+\label{sec:Messreihe mit Rauschen}
+Bei der Messreihe mit verrauschten Signalen, gab es keinen messbaren Offset. Die
+Messwerte stimmen mit der Theoriekurve überein bis auf eine kleine Verschiebung
+im Phasenwinkel. Daher lasst sich bestätigen das der Lockinverstärker fähig ist,
+stark verrauschte signale zu filtern.
 \begin{figure}
   \centering
   \includegraphics[height=8cm]{r_signal.pdf}
@@ -104,6 +129,14 @@ U_{out}=\frac{2}{\pi}U_0cos(\phi)
   \label{fig:Mr}
 \end{figure}
 
+\subsection{Messreihe zur LED intensität}
+\label{sec:Messreihe zur LED intensität}
+Bei der Messreihe zur LED Intensität in Abhängigkeit zum Abstand lässt sich das
+Licht bis zu einer Entfernung von $1.66\si{\meter}$ nachweisen. Im Diagramm
+\eqref{fig:LED}lässt sich erkennen, dass die Messdaten wie die Theoriekurve mit
+$ 4\pi r^2$ abfallen. Da der Sensor auch das Licht der Raumbeleuchtung auf nimmt,
+ lässt sich mit diesem Ergebnis die Funktion stark verrauschte Signale zu
+Filtern bestätigen.
 
 \begin{figure}
   \centering
