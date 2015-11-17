@@ -7,7 +7,7 @@ import uncertainties.unumpy as unp
 from uncertainties import correlated_values, correlation_matrix
 from uncertainties import ufloat
 import math
-x = np.linspace(6, 180)
+x = np.linspace(5.1, 180)
 g , d, v = np.genfromtxt('daten/LED_abstand.txt', unpack=True)
 v=v/g
 r=x*x
