@@ -7,18 +7,18 @@ import uncertainties.unumpy as unp
 from uncertainties import correlated_values, correlation_matrix
 from uncertainties import ufloat
 import math
-
+x = np.linspace(0, 7)
 V , phi = np.genfromtxt('daten/Messung_or.txt', unpack=True)
 phi=phi/360*2*np.pi
 C=12
 A=12
-def f(A,phi,C):
- return A * np.cos(phi) + C
-plt.plot(phi, V , 'rx', label="Temperatur T1")
+def f(A,x,C):
+ return A * np.cos(x) + C
+plt.plot(phi, V , 'rx', label="Messdaten")
 #parameters1, cov1 = curve_fit(f, phi, V)
 #fehler1= np.sqrt(np.diag(cov1))
 #plt.plot(phi, f(phi, *parameters1), 'r-', label='Fit T1')
-plt.plot(phi,f(A,phi,C))
+plt.plot(x,f(A,x,C), 'r-',label="Theoriekurve")
 plt.xlabel(r'$Zeit / s$')
 plt.ylabel(r'$Spannung / V$')
 plt.tight_layout()
