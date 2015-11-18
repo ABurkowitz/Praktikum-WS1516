@@ -17,7 +17,7 @@ T+=273.15
 T=(T**4-21**4)
 def f(m,x,c):
  return m * x + c
-
+#np.savetxt('werte.txt',np.column_stack((T,Us,Ug,Uw,Um)), header='T^4-T0^4, Us-U0, Ug-U0, Uw-U0, Um-U0')
 
 plt.plot(T, Us, 'kx', label='U schwarz')
 plt.plot(T, Ug, 'gx', label='U glänzend')
@@ -34,7 +34,7 @@ plt.plot(T, f(T, *parameters2), 'g-', label='Fit glänzend')
 plt.plot(T, f(T, *parameters3), 'r-', label='Fit weiß')
 plt.plot(T, f(T, *parameters4), 'b-', label='Fit matt')
 
-plt.xlabel(r'$T^{4}-T_0^4 / K$')
+plt.xlabel(r'$T^{4}-T_0^4 / K^4$')
 plt.ylabel(r'$U / mV$')
 #plt.yscale('log')
 plt.tight_layout()
