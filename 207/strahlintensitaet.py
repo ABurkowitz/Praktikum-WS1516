@@ -10,12 +10,13 @@ def f(c,x,d):
 parameters1, pcov = curve_fit(f, x, U, p0=[6,0.2])
 
 plt.xlim(0.5, 21)
-plt.ylim(0, 0.5)
-x_plot = np.linspace(0.5,21)
-plt.plot(x_plot, f(x_plot, *parameters1), 'y-', label='Fit')
+plt.ylim(0,1)
 z = np.linspace(0.5,21)
-plt.plot(z, (1/(4*np.pi*z**2))+0.24)
-plt.plot(z, (8.5/z**2)+0.2)
+#plt.plot(x_plot, f(x_plot, *parameters1), 'y-', label='Fit')
+plt.plot(z, (7.54252/z**2)+0.202731, 'g-', label='Fit')
+# per Gnuplot geplottet und
+#c               = 7.54252          +/- 0.8747       (11.6%)
+#d               = 0.202731         +/- 0.00492      (2.427%)
 
 plt.plot(x, U, 'rx', label='Messwerte Thermospannung')
 
