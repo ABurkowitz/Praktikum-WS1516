@@ -1,2 +1,140 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{Wheatstonesche Brücke}
+Es werden die unbekannten Widerstände mit den Werten $R_\symup{x}=\text{Wert 11}$
+und $R_\symup{x}=\text{Wert 14}$ ausgemessen. Dabei treten unsystematische Fehler
+bei dem Verhältnis $\frac{R_3}{R_4}$ von bis zu $\pm 0.5\%$ auf, welcher auch in
+den folgenden Messungen auftritt. Da der Fehler von $R_2$ unbekannt ist, wird
+dieser Widerstand dreimal variiert.
+\begin{table}
+  \centering
+  \begin{tabular}{c c c | c c c}
+  \toprule
+  \multicolumn {3}{c|} {Messung für $R_{11}$} & \multicolumn {3}{c} {Messung für $R_{14}$} \\
+  $R_2$ in \si{\ohm} & $R_3$ in \si{\ohm} & $R_4$ in \si{\ohm} &
+  $R_2$ in \si{\ohm} & $R_3$ in \si{\ohm} & $R_4$ in \si{\ohm}\\
+  \midrule
+  1000 & 331 & 669  &   1000 & 475 & 525 \\
+   300 & 625 & 375  &    300 & 755 & 245 \\
+   644 & 427 & 573  &    644 & 577 & 423 \\
+  \bottomrule
+\end{tabular}
+\caption{Messwerte für die Berechnung von $R_{11}$ und $R_{14}$.}
+\label{tab:messwerte1}
+\end{table}
+
+Mit den bekannten Werten aus Tabelle \ref{tab:messwerte1} lassen sich mit der
+Gleichung (x) die Werte der unbekannten Widerstände ausrechnen. Es ergibt sich
+\begin{align*}
+  R_{11} &= (491.6\pm1.4)\, \si{\ohm} \\
+  R_{14} &= (902.6\pm2.6)\, \si{\ohm}.
+\end{align*}
+
+
+\subsection{Kapazitätsmessbrücke}
+Nun werden mit einer Kapazitätsmessbrücke die unbekannten Kapazitäten
+$C_\symup{x} = \text{ Wert 1}$ und $C_\symup{x} = \text{ Wert 6}$ zweier Kondensatoren,
+sowie die Kapazität und der Widerstand $C_\symup{x}, R_\symup{x} = \text{ Wert 8}$
+eines verlustbehafteten Kondensators bestimmt. Die Berechnung erfolgt aus den Messdaten,
+die in den Tabellen \ref{tab:messwerte2} und \ref{tab:messwerte3} zu sehen sind,
+und der Gleichung (x) für die Berechnung des Widerstands und der Gleichung (x)
+für die Berechnung der Kapazität. Für den unbekannten Fehler von $C_2$ wird diese
+Kapazität variiert.
+\begin{table}
+  \centering
+  \begin{tabular}{c c c c | c c c c}
+  \toprule
+  \multicolumn {4}{c|} {Messung für $R_1$ und $C_{1}$} &
+  \multicolumn {4}{c} {Messung für $R_6$ und $C_{6}$} \\
+  $C_2$ in \si{\nano\farad} & $R_2$ in \si{\ohm} & $R_3$ in \si{\ohm} & $R_4$ in \si{\ohm} &
+  $C_2$ in \si{\nano\farad} & $R_2$ in \si{\ohm} & $R_3$ in \si{\ohm} & $R_4$ in \si{\ohm}\\
+  \midrule
+  450 & 0 & 407 & 593  &  450 & 0 & 114 & 886 \\
+  597 & 0 & 479 & 521  &  597 & 0 & 146 & 854 \\
+  992 & 0 & 603 & 397  &  992 & 0 & 220 & 780 \\
+  \bottomrule
+\end{tabular}
+\caption{Messwerte für die Berechnung von $R_1$, $C_{1}$ und $R_6$ und $C_{6}$.}
+\label{tab:messwerte2}
+\end{table}
+
+\begin{table}
+  \centering
+  \begin{tabular}{c c c c}
+  \toprule
+  \multicolumn {4}{c} {Messung für $R_8$ und $C_8$} \\
+  $C_2$ in \si{\nano\farad} & $R_2$ in \si{\ohm} & $R_3$ in \si{\ohm} & $R_4$ in \si{\ohm} \\
+  \midrule
+   450 & 940 & 389 & 611 \\
+   597 & 910 & 391 & 609 \\
+   992 & 990 & 376 & 624 \\
+  \bottomrule
+\end{tabular}
+\caption{Messwerte für die Berechnung von $R_8$ und $C_8$.}
+\label{tab:messwerte3}
+\end{table}
+
+Als Ergebnis erhält man
+\begin{align*}
+  R_1 &= 0 \,\si{\ohm} \\
+  C_1 &= (6.53\pm0.02)\cdot10^{-7}\,\si{\farad} \\
+  R_6 &= 0 \,\si{\ohm} \\
+  C_6 &= (3.50\pm0.01)\cdot10^{-6}\,\si{\farad} \\
+  R_8 &= (593.1\pm10.4) \,\si{\ohm} \\
+  C_8 &= (1.094\pm0.003)\cdot10^{-6}\,\si{\farad}.
+\end{align*}
+
+\subsection{Induktivitätsmessbrücke}
+Nachfolgend sind die Ergebnisse der Messung der Induktivität $L_\symup{x}=\text{Wert 19}$
+und des Verlustwiderstands $R_\symup{x}=\text{Wert 19}$ einer unbekannten,
+verlustbehafteten Spule dargestellt. Die Messwerte sind in Tabelle \ref{tab:messwerte4}
+eingetragen. Mit ihnen errechnet sich $R_{19}$ nach Gleichung (x) und $L_{19}$
+nach Gleichung (x).
+
+\begin{table}
+  \centering
+  \begin{tabular}{c c c c}
+  \toprule
+  \multicolumn {4}{c} {Messung 1 für $R_19$ und $L_19$} \\
+  $L_2$ in \si{\milli\henry} & $R_2$ in \si{\ohm} & $R_3$ in \si{\ohm} & $R_4$ in \si{\ohm} \\
+  \midrule
+   14.6 & 66 & 648 & 352 \\
+   20.1 & 78 & 574 & 426 \\
+  \bottomrule
+\end{tabular}
+\caption{Messwerte für die Berechnung von $R_{19}$ und $L_{19}$.}
+\label{tab:messwerte4}
+\end{table}
+
+Somit ergeben sich bei der Messung mit der Induktivitätsmessbrücke folgende Werte:
+\begin{align*}
+  R_{19} &= (113.3\pm2.4)\,\si{\ohm} \\
+  L_{19} &= (0.0270\pm0.0001) \,\si{\henry}
+\end{align*}
+
+\subsection{Maxwell-Brücke}
+Die selbe verlustbehaftete Spule \enquote{Wert 19} wird nun ein zweites Mal mit
+Hilfe einer Maxwell-Brücke ausgemessen. Die dabei gemessenen Werte sind in Tabelle
+\ref{tab:messwerte5} zu sehen. Diesmal wird $R_\symup{x}=\text{Wert 19}$ mit
+Gleichung (x) berechnet und $L_\symup{x}=\text{Wert 19}$ mit Gleichung (x).
+
+\begin{table}
+  \centering
+  \begin{tabular}{c c c c}
+  \toprule
+  \multicolumn {4}{c} {Messung 2 für $R_19$ und $L_19$} \\
+  $L_2$ in \si{\milli\henry} & $R_2$ in \si{\ohm} & $R_3$ in \si{\ohm} & $R_4$ in \si{\ohm} \\
+  \midrule
+   14.6 & 66 & 648 & 352 \\
+   20.1 & 78 & 574 & 426 \\
+  \bottomrule
+\end{tabular}
+\caption{Messwerte für die Berechnung von $R_{19}$ und $L_{19}$.}
+\label{tab:messwerte4}
+\end{table}
+
+Somit ergeben sich bei der Messung mit der Induktivitätsmessbrücke folgende Werte:
+\begin{align*}
+  R_{19} &= (113.3\pm2.4)\,\si{\ohm} \\
+  L_{19} &= (0.0270\pm0.0001) \,\si{\henry}
+\end{align*}
