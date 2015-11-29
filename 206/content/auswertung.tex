@@ -15,14 +15,14 @@ Für die Auswertung werden die folgende Größen benötigt.
 \end{align*}
 Die Werte zur Wasser Dichte und zur spezifischen Wärmekapazität stammen von
 http://www.nist.gov/ (15.11.2015) und molare Masse von http://de.webqc.org/molecular-weight-of-Cl2F2C.html (15.11.2015).
-die restlichen Werte stammen aus \cite{sample}
+Die restlichen Werte stammen aus \cite{sample}
 In der untenstehenden Tabelle sind alle Messwerte aufgeführt.
 \begin{table}
   \centering
   \begin{tabular}{c c c c c c}
     \toprule
-    Zeit in min & $T_1 \text{in} \si{\kelvin}$ & $T_2 \text{in} \si{\kelvin}$
-    & $p_a \text{in} \si{\bar}$ & $p_b \text{in} \si{\bar}$ & $N \text{in} \si{\watt}$ \\
+    Zeit in min & $T_1 \text{in}\, \si{\kelvin}$ & $T_2 \text{in}\, \si{\kelvin}$
+    & $p_a \text{in} \,\si{\bar}$ & $p_b \text{in} \,\si{\bar}$ & $N \text{in} \si{\watt}$ \\
     \midrule
     0 & 294.8\pm0.1 & 295.0\pm0.1 &  5.1\pm0.1 &  5.2\pm0.1  & 170\pm5 \\
     1 & 295.2\pm0.1 & 294.9\pm0.1 &  2.4\pm0.1 &  7.0\pm0.1  & 170\pm5 \\
@@ -65,16 +65,16 @@ Die Näherung der Ausgleichskurven entstehen mit scientific Python und sind gege
 \end{equation}
 Die Parameter für das erwärmte Reservoir $T_1$ sind
 \begin{align*}
-  A &=(-2.49\pm1.68)\cdot10^{-6}\si{\frac{\kelvin}{\second^2}}, \\
-  B &=(2.99\pm0.20)\cdot10^{-2}\si{\frac{\kelvin}{\second}}, \\
-  C &=(2.93\pm0.000489)\cdot10^{2}\si{\kelvin}.
+  A &=(-2.\pm1)\cdot10^{-6}\si{\frac{\kelvin}{\second^2}}, \\
+  B &=(3.0\pm0.2)\cdot10^{-2}\si{\frac{\kelvin}{\second}}, \\
+  C &=(2.9331\pm0.0005)\cdot10^{2}\si{\kelvin}.
 \end{align*}
 
 Die Parameter für den anderen Behälter $T_2$ sind
 \begin{align*}
-  A &= (2.26\pm2.19)\cdot10^{-6}\si{\frac{\kelvin}{\second^2}}, \\
-  B &= (-2.61\pm0.258)\cdot10^{-2}\si{\frac{\kelvin}{\second}}, \\
-  C &= (2.97\pm0.000635)\cdot10^{2}\si{\kelvin}.
+  A &= (2\pm2)\cdot10^{-6}\si{\frac{\kelvin}{\second^2}}, \\
+  B &= (-2.6\pm0.3)\cdot10^{-2}\si{\frac{\kelvin}{\second}}, \\
+  C &= (2.9734\pm0.0006)\cdot10^{2}\si{\kelvin}.
 \end{align*}
 
 Die dazugehörigen Differentialquotienten für vier verschiedene Zeiten erhält man
@@ -88,8 +88,8 @@ und die Ergebnisse sind in nachfolgender Tabelle aufgeführt.
   \centering
   \begin{tabular}{c c c}
     \toprule
-    Zeit in s & $\frac{\symup{d}T_1}{\symup{d}t}$
-    & $\frac{\symup{d}T_2}{\symup{d}t}$ \\
+    Zeit in s & $\frac{\symup{d}T_1}{\symup{d}t}/\frac{\si{\kelvin}}{\si{\second}}$
+    & $\frac{\symup{d}T_2}{\symup{d}t}/\frac{\si{\kelvin}}{\si{\second}}$ \\
     \midrule
     300  &  0.028\pm0.002  & -0.025\pm0.003  \\
     600  &  0.027\pm0.003  & -0.023\pm0.004  \\
@@ -108,7 +108,7 @@ Als nächstes soll die Güteziffer bestimmt werden. Dafür nutzt man die Gleichu
 \eqref{eqn:berechnung_gueteziffer} für die reale Güteziffer.
 Die relative Abweichung von $v_\symup{real}$ zu $v_\symup{ideal}$ wird durch
 \begin{equation}
-  \Delta v_\symup{rel} = \frac{v_\symup{real} - v_\symup{ideal}}{x_\symup{ideal}}
+  \Delta v_\symup{real} = \frac{v_\symup{real} - v_\symup{ideal}}{x_\symup{ideal}}
 \end{equation}
 berechnet. Das Ergebnis ist in untenstehender Tabelle zu sehen.
 \begin{table}
@@ -129,10 +129,11 @@ berechnet. Das Ergebnis ist in untenstehender Tabelle zu sehen.
 
 
 \subsection{Massendurchsatz}
-Für den Massendurchsatz wird die Verdampfungswärme $L=(2.341\pm0.021)\cdot10^{4}
-\si{\frac{\joule\second}{\mol\,\kelvin}}$ benötigt. Diese errechnet sich als
-$L= -m \cdot R$ aus der Steigung einer Approximationgeraden der Wertepaare (p,T)
-der Dampfdruckkurve.
+Für den Massendurchsatz wird die Verdampfungswärme $L=(1.998\pm0.007)\cdot10^{4}
+\si{\frac{\joule}{\mol}}$ benötigt. Diese errechnet sich als
+$L= -m \cdot R$ aus der Steigung einer Approximationgeraden $m=-2403\pm9$
+der Wertepaare (p,T) der Dampfdruckkurve, multipliziert mit der universellen
+Gaskonstante $R=8.314460\pm0.000005$.
 \begin{figure}
   \centering
   \includegraphics[width=0.9\textwidth]{prog/daten/Dampfdruckkurve.pdf}
@@ -149,10 +150,10 @@ Wenn die Werte in Gleichung \eqref{eqn:massendurchsatz} einsetzt werden, ergibt 
   & $\frac{\symup{d}m}{\symup{d}t}\text{ in }\si{\frac{\mol}{\second}}$
    & $\frac{\symup{d}m}{\symup{d}t} \text{ in }\si{\frac{\gram}{\second}}$\\
   \midrule
-  300  &  -326.43\pm38.20  & 0.014\pm0.002  &  1.686\pm0.198  \\
-  600  &  -308.55\pm48.55  & 0.013\pm0.002  &  1.594\pm0.251  \\
-  900  &  -290.68\pm62.08  & 0.012\pm0.003  &  1.502\pm0.321  \\
- 1140  &  -276.38\pm74.04  & 0.012\pm0.003  &  1.428\pm0.383  \\
+  300  &  -326.43\pm38.20  & 0.016\pm0.002  &  2.0\pm0.2  \\
+  600  &  -308.55\pm48.55  & 0.015\pm0.002  &  1.9\pm0.3  \\
+  900  &  -290.68\pm62.08  & 0.015\pm0.003  &  1.8\pm0.3  \\
+ 1140  &  -276.38\pm74.04  & 0.014\pm0.004  &  1.7\pm0.4  \\
  \bottomrule
 \end{tabular}
 \caption{Massendurchsatz.}
@@ -160,7 +161,7 @@ Wenn die Werte in Gleichung \eqref{eqn:massendurchsatz} einsetzt werden, ergibt 
 \end{table}
 
 \newpage
-\subsection{Mechanischekompressorleistung}
+\subsection{Mechanische Kompressorleistung}
 Die Dichte $\rho$, die für die Berechnung mechanischen Kompressorleistung
 benötigt wird, kann berechnet werden, indem man die Gleichung der idealen Gase
 umstellt
@@ -189,13 +190,13 @@ N_\symup{mech}=\frac{1}{\kappa-1}\left(p_\symup{b} \sqrt[\kappa]
   \centering
 \begin{tabular}{c c c}
   \toprule
-  Zeit in s & Dichte $\rho \text{ in }\frac{\si{\gram}}{\si{\meter}^3}$
+  Zeit in s & Dichte $\rho \text{ in }\frac{\si{\kilo\gram}}{\si{\meter}^3}$
   & Leistung $N_\symup{mech} \text{ in } \si{\watt}$   \\
   \midrule
-  300  &   15.49\pm0.50  &  0.31\pm0.04  \\
-  600  &   15.05\pm0.49  &  0.38\pm0.06  \\
-  900  &   15.14\pm0.47  &  0.40\pm0.09  \\
- 1140  &   14.87\pm0.46  &  0.42\pm0.11  \\
+  300  &  16.0\pm0.5   &  35\pm4  \\
+  600  &  16.5\pm0.5   &  40\pm6  \\
+  900  &  17.5\pm0.5   &  40\pm9  \\
+ 1140  &  17.7\pm0.6   &  42\pm11  \\
  \bottomrule
 \end{tabular}
 \caption{Massendurchsatz.}
