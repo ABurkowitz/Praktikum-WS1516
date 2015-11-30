@@ -15,8 +15,8 @@ Für die Auswertung werden die folgende Größen benötigt.
 \end{align*}
 Die Werte zur Wasser Dichte und zur spezifischen Wärmekapazität stammen von
 http://www.nist.gov/ (15.11.2015) und molare Masse von http://de.webqc.org/molecular-weight-of-Cl2F2C.html (15.11.2015).
-Die restlichen Werte stammen aus \cite{sample}
-In der untenstehenden Tabelle sind alle Messwerte aufgeführt.
+Die restlichen Werte stammen aus \cite{sample}.
+In der untenstehenden Tabelle \ref{tab:Data} sind alle Messwerte aufgeführt.
 \begin{table}
   \centering
   \begin{tabular}{c c c c c c}
@@ -49,13 +49,14 @@ In der untenstehenden Tabelle sind alle Messwerte aufgeführt.
   \caption{Messdatentabelle.}
   \label{tab:Data}
 \end{table}
-Die Temperaturverläufe sind in dem folgenden Diagramm dargestellt und mit einer
-Ausgleichsrechnung approximiert.
+Die Temperaturverläufe sind in dem folgenden Diagramm \ref{fig:temperaturgraphik}
+dargestellt und mit einer Ausgleichsrechnung approximiert.
 
 \begin{figure}
   \centering
   \includegraphics[width=0.78\textwidth]{Temperaturgraphik.pdf}
   \caption{Temperaturausgleichskurve.}
+  \label{fig:temperaturgraphik}
 \end{figure}
 \newpage
 \subsection{Temperaturausgleichskurve}
@@ -65,7 +66,7 @@ Die Näherung der Ausgleichskurven entstehen mit scientific Python und sind gege
 \end{equation}
 Die Parameter für das erwärmte Reservoir $T_1$ sind
 \begin{align*}
-  A &=(-2.\pm1)\cdot10^{-6}\si{\frac{\kelvin}{\second^2}}, \\
+  A &=(-2\pm1)\cdot10^{-6}\si{\frac{\kelvin}{\second^2}}, \\
   B &=(3.0\pm0.2)\cdot10^{-2}\si{\frac{\kelvin}{\second}}, \\
   C &=(2.9331\pm0.0005)\cdot10^{2}\si{\kelvin}.
 \end{align*}
@@ -131,7 +132,7 @@ berechnet. Das Ergebnis ist in untenstehender Tabelle zu sehen.
 \subsection{Massendurchsatz}
 Für den Massendurchsatz wird die Verdampfungswärme $L=(1.998\pm0.007)\cdot10^{4}
 \si{\frac{\joule}{\mol}}$ benötigt. Diese errechnet sich als
-$L= -m \cdot R$ aus der Steigung einer Approximationgeraden $m=-2403\pm9$
+$L= -m \cdot R$ aus der Steigung einer Approximationgeraden mit $m=-2403\pm9$
 der Wertepaare (p,T) der Dampfdruckkurve, multipliziert mit der universellen
 Gaskonstante $R=8.314460\pm0.000005$.
 \begin{figure}
