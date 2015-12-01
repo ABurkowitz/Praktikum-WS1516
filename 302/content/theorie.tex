@@ -2,11 +2,16 @@
 \label{sec:Theorie}
 
 \cite{sample}
-Brückenschaltungen werden in der Messtechnik eingesetzt da mit ihnen die Auflösung
+
+Brückenschaltungen werden in der Messtechnik eingesetzt, da mit ihnen die Auflösung
+
 der Messung erhöht werden kann.
 In Abbildung\ref{fig:Brueckenschaltung} ist das Bild einer prinzipiellen Brückenschaltung zu sehen.
+
 Die Potentialdifferenz $U$ wird zwischen den Punkten A und B gemessen. Aus der
 Knotenregel ergibt sich, dass die Summe der Ströme an einer Verzweigung $0$ ist.
+
+
 \begin{figure}
   \centering
   \includegraphics[width=0.4\textwidth]{Bilder/Brueckenschaltung.png}
@@ -24,43 +29,21 @@ der Gleichung $U=RI$.
   \sum \limits_{k} U_k=  \sum \limits_{k} I_k R_k
   \label{eq:Maschenregel}
 \end{equation}
-Wird die Knotenregel\eqref{eq:knotenregel} für C und D angewendet gilt
-\begin{equation}
-  I_1=I_2
-\end{equation}
-\begin{equation}
-  I_1=I_2    .
-\end{equation}
+
 Aus den beiden Maschen in der Abbildung \ref{fig:Brueckenschaltung}, die die Punkte
-A, B, C und D enthalten, lässt sich mit der Maschenregel \eqref{eq:Maschenregel}
+A, B, C und D enthalten, lässt sich mit Den Kirchhoffschen Gesetzen
 der Ausdruck
 \begin{equation}
   U=-R_1 I_1 + R_3 I_3
 \end{equation}
 schreiben. Durch Umformungen folgt schließlich
 \begin{equation}
-  -U=-R_2 I_2 + R_4 I_4   .
-\end{equation}
-\begin{equation}
-  -U=-R_2 I_1 + R_4 I_3   .
-\end{equation}
-\begin{equation}
-  U=\frac{R_2 R_3 - R_1 I_4}{R_3 + R_4}I_1   .
-\end{equation}
-
-\begin{equation}
-  U=I_1 (R_1 + R_2)   .
-\end{equation}
-\begin{equation}
-  U=\frac{R_2 R_3 - R_1 R_4}{R_3 + R_4)(R_4 + R_2) }U_S   .
-\end{equation}
-\begin{equation}
   R_1 R_4 =R_2 R_3   .
   \label{eq:Widerstand}
 \end{equation}
 Komplexe Widerstände lassen sich mit den selben Gleichungen beschreiben.
-Wiederstände von Capazitäten Induktivitäten und Ohmschenwiderständen lassen sich
-wie in den folgenden Gleichungen darsellen.
+Wiederstände von Kapazitäten Induktivitäten und ohmschen Widerständen lassen sich
+wie in den folgenden Gleichungen darstellen.
 \begin{align}
 &\hat{Z}_C = \frac{-i}{\omega}  &  \hat{Z}_L=i\omega L & & \hat{Z}_R = R &
 \end{align}
@@ -80,18 +63,19 @@ Die Wheatstonesche Brückenschaltung kann mit Wechsel und Gleichstrom betrieben 
 da sie nur ohmsche Widerstände enthält. Die bekannten Widerstände $R_3$ $R_2$und $R_4$
  müssen so variiert werden, dass die Potentialdifferenz verschwindet. Mit der
 Gleichung\eqref{eq:Widerstand} erhält man so den unbekannten Widerstand $R_x$
-aus\eqref{eq:Widerstand_Rx}.
+aus\eqref{eq:Widerstand_Rx1}.
 \begin{equation}
 R_x=R_2 \frac{R_3}{R_4}
 \label{eq:Widerstand_Rx1}
 \end{equation}
+\subsection{Kapazitätsmessbrücke}
 Werden die Widerstände $R_1$ und $R_2$ durch zwei Kapazitäten der Form
 \begin{equation}
 \hat{Z}_{C_{real}}=R-\frac{i}{\omega C}  ,
 \end{equation}
-ersetzt, ergibt sich eine Kapazitätsmessbrücke  wie in Abbildung\ref{fig:capbruecke}.
+ersetzt, ergibt sich eine Kapazitätsmessbrücke wie in Abbildung\ref{fig:capbruecke}.
 Mit den Formeln \eqref{eq:Widerstand_Rx2} und \eqref{eq:Kapazitaet_Rx2}ergeben
-sich die unbekannten Widerstände und Capazitäten.
+sich die unbekannten Widerstände und Kapazitäten.
 \begin{equation}
 R_x=R_2\frac{R_3}{R_4}
 \label{eq:Widerstand_Rx2}
@@ -106,13 +90,18 @@ C_x=C_2\frac{R_4}{R_3}
   \caption{Kapazitätsbrücke}
   \label{fig:capbruecke}
 \end{figure}
-Werden die Kapazitäten durch Induktivitäten ausgetauscht, ergibt sich eine
-Induktivitätsmessbrücke wie in Abbildung\ref{fig:indbruecke}.
+\subsection{Induktivitätenmessbrücke}
+Werden die Kapazitäten und die dazugehörigen Widerstände durch Induktivitäten ausgetauscht,
+ ergibt sich eine Induktivitätsmessbrücke wie in Abbildung\ref{fig:indbruecke}.
+Mit den Formeln\ref{eq:Widerstand_Rx3}\ref{eq:Induktivitaet_x2} lassen sich die
+unbekannten Widerstände und Induktivitäten bestimmen.
 \begin{equation}
 R_x=R_2\frac{R_3}{R_4}
+\label{eq:Widerstand_Rx3}
 \end{equation}
 \begin{equation}
 L_x=L_2 \frac{R_3}{R_4}
+\label{eq:Induktivitaet_x2}
 \end{equation}
 \begin{figure}
   \centering
@@ -120,9 +109,11 @@ L_x=L_2 \frac{R_3}{R_4}
   \caption{Induktivitätsbrücke}
   \label{fig:indbruecke}
 \end{figure}
+\subsection{Maxwell-Brücke}
 Mit einer Maxwellbrücke wie in Abbildung\ref{fig:Maxwellb} lassen sich mit
 den Gleichungen\eqref{eq:Widerstand3}\eqref{eq:Induktivitaet} unbekannte
-Induktivitäten und Widerstände bestimmen.
+Induktivitäten und Widerstände bestimmen. Im Gegensatz zur Induktivitätsmessbrücke
+wird keine bekannte Induktivität benötigt.
 \begin{equation}
 R_x= \frac{R_2 R_3}{R_4}
 \label{eq:Widerstand3}
@@ -137,32 +128,38 @@ L_x=R_2 R_3 C_4
   \caption{Maxwellbrücke}
   \label{fig:Maxwellb}
 \end{figure}
-Mit einer Wien-Robinson-Brücke lässt sich eine genaue Messung nur bei einer
-bestimmten Frequenz durchführen. Mit dieser lassen sich bestimmte Frequenzen der
-Form
-\begin{equation}
-\omega_0=\frac{1}{RC}
-\end{equation}
-herausfilter, da die Brückenspannung dann $0$ ist. Bei dieser Brückenschaltung
-gelten die folgenden Gleichungen.
+\subsection{Wien-Robinson-Brücke}
 \begin{figure}
   \centering
   \includegraphics[width=0.7\textwidth]{Bilder/Wien_Robinsonbruecke.png}
   \caption{Wien-Robinson-Brücke}
   \label{fig:WBBruecke}
 \end{figure}
+Mit der Wien-Robinson-Brücke lassen sich bestimmte Frequenzen der Form
 \begin{equation}
-\frac{U_S}{U_{Br}}=\frac{1}{\omega}^2R^2C^2-1\left\{\,3(1-\omega^2 R^2 C^2)
-+9i\omega RC \right\}
+\omega_0=\frac{1}{RC}
 \end{equation}
+herausfilter, da die Brückenspannung dann $0$ ist. Da die Bauteile $C,R$ und $R'$
+sind alle bekannt daher sollten sie eine möglichst geringe Toleranz haben und
+die Kondensatoren einen möglichst geringen Verlust besitzen. Bei dieser
+Brückenschaltung gelten die folgenden Gleichungen.
 \begin{equation}
 \left|\frac{U_{Br}}{U_S}\right|^2=\frac{(\omega^2R^2C^2-1)^2}
 {9\left\{(1-\omega^2 R^2 C^2)^2+9\omega^2R^2C^2\right\}}
+\label{eq:frequenz}
 \end{equation}
+An der Gleichung\eqref{eq:frequenz} ist zu erkennen, dass die Brückenspannung
+für $\omega=\frac{1}{RC}$ verschwindet und ähnliche Frequenzen stark abschwächt.
+Wird folgende Vereinfachung gewählt
 \begin{equation}
 \Omega:=\frac{\omega}{\omega_0}
 \end{equation}
+ergibt sich
 \begin{equation}
 \left|\frac{U_{Br}}{U_S}\right|^2=\frac{1}{9}\frac{(\Omega^2-1)^2}
-{(1-\Omega^2)^2+9\Omega^2}
+{(1-\Omega^2)^2+9\Omega^2}  \; .
 \end{equation}
+Mit der Wien-Robinson-Brücke wird die Güte von Sinusspannungsgeneratoren gemessen.
+Bei der Frequenz $\omega_0$ sollte die Brückenspannung verschwinden doch gibt es
+keine perfekten Sinusspannungsgeneratoren wodurch nur ein Minimum entsteht das nicht
+$0$ ist.
