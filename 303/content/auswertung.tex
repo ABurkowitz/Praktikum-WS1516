@@ -56,7 +56,7 @@ Signal aus wie in der Abblidung \ref{fig:int}.
 \subsection{Messreihe ohne Rauschen}
 \label{sec:Messreihe ohne Rauschen}
 Die Messwerte aus der ersten Messreihe ohne Signalstörungen, sind im folgenden
-Diagramm eingetragen sowie die Theoriekurve, die um den Offset von $12\si{\volt}$
+Diagramm eingetragen sowie die Theoriekurve, die um den Offset von $13\si{\volt}$
 verschoben wurde.
 \begin{align*}
 U_{out}=\frac{2}{\pi}U_0cos(\phi)
@@ -133,9 +133,10 @@ stark verrauschte Signale zu filtern.
 Bei der Messreihe zur LED Intensität in Abhängigkeit zum Abstand lässt sich das
 Licht bis zu einer Entfernung von $1.66\,\si{\meter}$ nachweisen. Im Diagramm
 \ref{fig:LED} lässt sich erkennen, dass die Messdaten wie die Theoriekurve mit
-$ 4\pi r^2$ abfallen. Da der Sensor auch das Licht der Raumbeleuchtung auf nimmt,
- lässt sich mit diesem Ergebnis die Funktion stark verrauschte Signale zu
-Filtern bestätigen.
+$ 4\pi r^2$ abfallen. Die Theoriekurve ist mit python entstanden und lautet
+$f(x)=\frac{150}{4\pi x^2}$ wobei $x$ der Abstand ist. Da der Sensor auch das Licht
+der Raumbeleuchtung auf nimmt, lässt sich mit diesem Ergebnis die Funktion stark
+verrauschte Signale zu Filtern bestätigen.
 
 \begin{figure}
   \centering

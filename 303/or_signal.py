@@ -10,8 +10,8 @@ import math
 x = np.linspace(0, 7)
 V , phi = np.genfromtxt('daten/Messung_or.txt', unpack=True)
 phi=phi/360*2*np.pi
-C=12
-A=6.2*np.pi/2
+C=13
+A=7.4*np.pi/2
 def f(A,x,C):
  return A * np.cos(x) + C
 plt.plot(phi, V , 'rx', label="Messdaten")
