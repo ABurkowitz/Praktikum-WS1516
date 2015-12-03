@@ -180,24 +180,24 @@ np.savetxt('datenf/Massendurchsatzm.txt',(unp.nominal_values(dmdtm),unp.std_devs
 np.savetxt('datenf/Massendurchsatzg.txt',(unp.nominal_values(dmdtg),unp.std_devs(dmdtg)), header="dm/dt")
 
 
-pb1=ufloat(8.3,0.1)
-pb2=ufloat(10.4,0.1)
-pb3=ufloat(12.0,0.1)
-pb4=ufloat(13.5,0.1)
-pa1=ufloat(3.1,0.1)
-pa2=ufloat(3.1,0.1)
-pa3=ufloat(3.2,0.1)
-pa4=ufloat(3.2,0.1)
+pb1=ufloat(830000,10000)
+pb2=ufloat(1040000,10000)
+pb3=ufloat(1200000,10000)
+pb4=ufloat(1350000,10000)
+pa1=ufloat(310000,10000)
+pa2=ufloat(310000,10000)
+pa3=ufloat(320000,10000)
+pa4=ufloat(320000,10000)
 
 
 
 #pa=pa+1   #Kg/(ms²)
 #pb=pb+1   #Kg/(ms²)
-p=1       #Kg/(ms²)
+p=100000       #Kg/(ms²)
 T0=ufloat(273.15,0) #K
 k=1.14    #
 k1=ufloat(1/k,0)
-p0=ufloat(1,0)      #Kg/(m²)
+p0=ufloat(100000,0)      #Kg/(m²)
 roh0=ufloat(5.51,0) #g/l kg/m³
 #druck
 #5  2.1  	 7.3

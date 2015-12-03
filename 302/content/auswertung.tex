@@ -24,7 +24,7 @@ dieser Widerstand dreimal variiert.
 \end{table}
 
 Mit den bekannten Werten aus Tabelle \ref{tab:messwerte1} lassen sich mit der
-Gleichung (x) die Werte der unbekannten Widerstände ausrechnen. Es ergibt sich
+Gleichung \eqref{eq:Widerstand_Rx1} die Werte der unbekannten Widerstände ausrechnen. Es ergibt sich
 \begin{align*}
   R_{11} &= (491.6\pm1.4)\, \si{\ohm} \\
   R_{14} &= (902.6\pm2.6)\, \si{\ohm}.
@@ -37,7 +37,7 @@ $C_\symup{x} = \text{ Wert 1}$ und $C_\symup{x} = \text{ Wert 6}$ zweier Kondens
 sowie die Kapazität und der Widerstand $C_\symup{x}, R_\symup{x} = \text{ Wert 8}$
 eines verlustbehafteten Kondensators bestimmt. Die Berechnung erfolgt aus den Messdaten,
 die in den Tabellen \ref{tab:messwerte2} und \ref{tab:messwerte3} zu sehen sind,
-und der Gleichung (x) für die Berechnung des Widerstands und der Gleichung (x)
+und der Gleichung \eqref{eq:Widerstand_Rx2} für die Berechnung des Widerstands und der Gleichung \eqref{eq:Kapazitaet_Rx2}
 für die Berechnung der Kapazität. Für den unbekannten Fehler von $C_2$ wird diese
 Kapazität variiert.
 \begin{table}
@@ -88,8 +88,8 @@ Als Ergebnis erhält man
 Nachfolgend sind die Ergebnisse der Messung der Induktivität $L_\symup{x}=\text{Wert 19}$
 und des Verlustwiderstands $R_\symup{x}=\text{Wert 19}$ einer unbekannten,
 verlustbehafteten Spule dargestellt. Die Messwerte sind in Tabelle \ref{tab:messwerte4}
-eingetragen. Mit ihnen errechnet sich $R_{19}$ nach Gleichung (x) und $L_{19}$
-nach Gleichung (x).
+eingetragen. Mit ihnen errechnet sich $R_{19}$ nach Gleichung \eqref{eq:Widerstand_Rx3} und $L_{19}$
+nach Gleichung \eqref{eq:Induktivitaet_x2}.
 
 \begin{table}
   \centering
@@ -116,7 +116,8 @@ Somit ergeben sich bei der Messung mit der Induktivitätsmessbrücke folgende We
 Die selbe verlustbehaftete Spule \enquote{Wert 19} wird nun ein zweites Mal mit
 Hilfe einer Maxwell-Brücke ausgemessen. Die dabei gemessenen Werte sind in Tabelle
 \ref{tab:messwerte5} zu sehen. Diesmal wird $R_\symup{x}=\text{Wert 19}$ mit
-Gleichung (x) berechnet und $L_\symup{x}=\text{Wert 19}$ mit Gleichung (x). Da hier
+Gleichung \eqref{eq:Widerstand3} berechnet und $L_\symup{x}=\text{Wert 19}$ mit
+Gleichung \eqref{eq:Induktivitaet}. Da hier
 wieder der Fehler von $R_2$ unbekannt ist, wird $R_2$ variiert.
 
 \begin{table}
@@ -200,7 +201,12 @@ Theoriewert und ist damit gut bestimmt.
   \label{fig:wien-robinson}
 \end{figure}
 In Grafik \ref{fig:wien-robinson} zeigt sich, dass insbesondere in der näheren
-Umgebung um $v_0$, die Messwerte sehr gut mit der Theoriekurve (x) übereinstimmen.
+Umgebung um $v_0$, die Messwerte sehr gut mit der Theoriekurve
+\begin{equation}
+f(\Omega)=\sqrt{\frac{1}{9}\frac{(\Omega^2-1)^2}
+{(1-\Omega^2)^2+9\Omega^2}}
+\end{equation}
+ übereinstimmen.
 Frequenzen mit $v \leq 40 \si{\hertz}$ oder $v \geq 15000 \si{\hertz}$ weichen
 jedoch deutlich von der Theoriekurve ab.
 
@@ -209,12 +215,12 @@ Zur Bestimmung des Klirrfaktor des verwendeten Generators wird die vereinfachend
 Annahme getroffen, dass die Brückenspannung, die bei der Sperrfrequenz
 $v_0=243.8 \si{\hertz}$ noch gemessen werden kann - also die Summe der Amplituden
 der  Oberwellen - nur aus denen zweiten Oberwellen besteht.
-Mit Gleichung (x) wird zunächst die Spannung $U_2$ berechnet:
+Mit Gleichung \eqref{eqn:U2berechnung} wird zunächst die Spannung $U_2$ berechnet:
 \begin{equation*}
   \frac{U_{Br}(v_0)}{f(2)} = \frac{0.02\si{\volt}}{\sqrt{\frac{1}{45}}} = 0.134 \si{\volt}.
   \label{eqn:U2}
 \end{equation*}
-Für den Klirrfaktor ergibt sich damit nach Gleichung (x):
+Für den Klirrfaktor ergibt sich damit nach Gleichung \eqref{eqn:klirr}:
 \begin{equation*}
   k = \frac{U_2}{U_1} = \frac{0.134 \si{\volt}}{7.12\si{\volt}} = 0.0188 \si{\volt}
   \label{eqn:klirrfaktor_berechnung}
