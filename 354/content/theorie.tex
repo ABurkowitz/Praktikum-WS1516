@@ -13,7 +13,7 @@ Kondensator mit der Zeit ab. Ein solcher gedämpfter Schwingkreis ist in Abbildu
 \ref{fig:gedaempfter_schwingkreis} zu sehen.
 \begin{figure}
   \centering
-  \includegraphics[width=0.4\textwidth]{gedaempfter_schwingkreis.png}
+  \includegraphics[width=0.6\textwidth]{gedaempfter_schwingkreis.png}
   \caption{Gedämpfter Schwingkreis mit einer Kapazität C, einem ohmschen Widerstand R
   und einer Induktivität L in einer Reihenschaltung.\cite{sample}}
   \label{fig:gedaempfter_schwingkreis}
@@ -118,5 +118,72 @@ geht, jedoch ohne ins Negative überzuschwingen.
 
 \subsection{Erzwungene Schwinung}
 Wird an den Schwingkreis eine äußere periodische Spannung angelegt, führt dies zu
-einer erzwungenen Schwinung.
+einer erzwungenen Schwinung. Eine schematische Darstellung einer erzwungenen
+Schwingung ist in Abbildung \ref{fig:erz_schwingung} zu sehen.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{erzwungene_schwingung.png}
+  \caption{Eine Spannungsquelle führt dem gedämpften Schwingkreis eine sinusförmige
+  Wechselspannung zu, sodass eine erzwungene Schwingung entsteht.\cite{sampel}.}
+  \label{fig:erz_schwingung}
+\end{figure}
+Die von außen angelegte Spannung führt zu einer Inhomogenität in der Differentialgleichung
+\eqref{eqn:dgl1}, welche nun
+\begin{equation}
+  L C \ddot{U_\symup{C}} + R C \dot{U_\symup{C}} + U_\symup{C} = U_0 e^{i\omega t}
+  \label{eqn:dgl2}
+\end{equation}
+lautet. Als Lösung für die Spannung am Kondensator in Abhängigkeit von der Zeit
+erhält man
+\begin{equation}
+  U(t) = \frac{U_0 (1 - L C \omega^2 - i \omega R C)}{(1 - L C \omega^2)^2 +
+  \omega^2 R^2 C^2}.
+  \label{eqn:loesung2}
+\end{equation}
+Die Phasenverschiebung zwischen Kondensatorspannung und Erregerspannung berechnet
+sich durch
+\begin{equation}
+  \phi(\omega)=\arctan{\frac{Im(U)}{Re(U)}}
+  = \arctan{\frac{-\omega R C}{1-L C \omega^2}}.
+  \label{eqn:phasenverschiebung}
+\end{equation}
+Dieser Gleichung \eqref{eqn:phasenverschiebung} kann man entnehmen, dass die
+Spannungen für kleine Frequenzen $\omega$ in Phase sind und für große Frequenzen
+eine Phasenverschiebung von $\pi$ haben. Bei $\omega_0=\sqrt{\frac{1}{L C}}$ gilt
+$\phi = -\frac{\pi}{2}$.\newline
+Die Kondensatorspannung in Abhänigkeit der Erregerfrequenz $\omega$,
+Resonanzkurve genannt, wird durch
+\begin{equation}
+  U_\symup{C}(\omega) = \frac{U_0}{\sqrt{(1-L C \omega^2)^2 + \omega^2 R^2 C^2}}.
+  \label{eqn:resonanzkurve}
+\end{equation}
+berechnet. Betrachtet man das Verhalten von $U_\symup{C}(\omega)$ für bestimmte
+$\omega$, so stellt man fest, dass $U_\symup{C}$ für $\omega \to \infty$ gegen
+Null geht und für $\omega \to 0$ gegen $U_0$. Bei der Resonanzfrequenz
+\begin{equation}
+  \omega_\symup{res} = \sqrt{\frac{1}{L C}-\frac{R^2}{2L^2}}
+  \label{eqn:resonanzfrequenz}
+\end{equation}
+erreicht $U_\symup{C}$ ein Maximum, welches größer als $U_0$ sein kann.
+Es muss nun wieder zwischen zwei Fällen unterschieden werden:\newline
+Wenn $\frac{1}{L C} >> \frac{R^2}{2 L^2}$ ist, handelt es sich um schwache Dämpfung.
+In diesem Fall nähert sich $\omega_\symup{res}$ $\omega_0$ an. Im Maximum nimmt
+$U_C$ dann den Wert
+\begin{equation}
+  U_\symup{C,max} = \frac{1}{\omega_0 R C} U_0
+  \label{eqn:Ucmax}
+\end{equation}
+an. Der Faktor $\frac{1}{\omega_0 R C}$ ist dabei die Resonanzüberhöhung oder
+Güte $q$ des Schwingkreises. Geht $R$ jetzt gegen 0, so steigt $U_\symup{C,max}$
+ins Undendliche, was dem Fall einer Resonanzkatastrophe entspricht.
+Die Breite der Resonanzkurve bestimmt dabei die Schärfe der Resonanz. Man berechnet
+dazu die Frequenzen $\omega_+$ und $\omega_-$, bei denen $U_\symup{C}$ auf
+$\frac{1}{\sqrt{2}}U_\symup{C,max}$ abgefallen ist. Für die Güte erhält man dann
+\begin{equation}
+  q = \frac{\omega_0}{\omega_+ + \omega_-}.
+  \label{eqn:guete}
+\end{equation}
+Für den Fall der starken Dämpfung, also $\frac{1}{L C} << \frac{R^2}{2 L^2}$, tritt
+keine Resonanzüberhöhung mehr ein. $U_\symup{C}$ geht von $U_0$ monoton fallend
+gegen Null. Dieser Fall kann als Tiefpass genutzt werden.
 \cite{sample}
