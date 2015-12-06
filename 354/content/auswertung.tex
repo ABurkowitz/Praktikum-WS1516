@@ -15,14 +15,16 @@ Die Werte der benutzten Schaltung mit denen gerechnet wird sind
 \end{figure}
 In der Folgenden Tabelle werden die abgelesenden Werte aus dem Thermodruck
 aus Abbildung\ref{fig:termodruck} aufgeführt. Die Ausgleichsrechnung nach Gleichung
-\eqref{} hat die Fitparameter
+\eqref{} hat die Form $A\symup{exp}(Bt)\symup{cos}(Ct+D)+E$ und die Fitparameter
 \begin{align*}
-  A=&-4.427531549455548721e+00  \\
-  B=&-5.533646328962760890e+03  \\
-  C=&2.098829254343213106e+05   \\
-  D=&-6.895212092483836486e+00  \\
-  E=&7.406312432158936032e-02
+  A=&-4.4\pm0.1  \\
+  B=&(-5.5\pm0.2)10^3  \\
+  C=&(2.099\pm0.003)10^5   \\
+  D=&-6.90\pm0.06  \\
+  E=&7.4\pm1.2)10^{-2}\;.
 \end{align*}
+Der Effektive Widerstand $R_{eff}$ ist nach Gleichung\eqref{}
+$4243.8+/-14.4\si{\ohm}$ und die Abklingdauer $T_{ex}(4.765+/-0.008)10^{-6}\si{\second}$.
 \begin{table}
   \centering
   \begin{tabular}{c c}
@@ -67,17 +69,30 @@ aus Abbildung\ref{fig:termodruck} aufgeführt. Die Ausgleichsrechnung nach Gleic
 \end{figure}
 
 Der experimentell bestimmte Widerstandswert für den aperiodischen Grenzfall
-$R_{ap}$ ist $(3300\pm100)\si{\ohm}$ und der theoretische nach Gleichung \eqref{}
-ist $(4390\pm281)\si{\ohm}$.
+$R_{ap}$ ist $(3300\pm100)\si{\ohm}$ und  nach Gleichung \eqref{}
+ $(4390\pm9.0)\si{\ohm}$.
 
-Im folgenden Diagramm \ref{fig:Kondensatorspannung} sind die
+In dem Diagramm \ref{fig:Kondensatorspannung} sind die
 Messwerte zu der Frequenzabhängigkeit der Kondensatorspannung in Abhängigkeit
 von der Frequenz dargestellt. In Abbildung \ref{fig:Resonanzkurve} ist die
-Resonanzkurve linear dargestellt. Die aus \ref{fig:Kondensatorspannung}
-entnommende Resonanzfrequenz ist $  33500.0\si{\hertz}$ und die aus Gleichung
-\eqref{} errechnete $(2.171+/-0.004)10^5\si{\hertz}$. Die Breite der
+Resonanzkurve linear dargestellt. Die aus der Abbildung \ref{fig:Kondensatorspannung}
+entnommende Resonanzfrequenz und die aus Gleichung
+\eqref{} errechnete sind
+\begin{align*}
+\omega_{0e}=&(33500.0\pm0.1)\si{\hertz}\\
+\omega_{0t}=&(2.171\pm0.004)10^5\si{\hertz}\\
+\text{Relativer Fehler}\\
+ &84.6\%\;.
+\end{align*}
+ Die Breite der
 Resonanzkurve $\omega_+-\omega_- $ ist nach Gleichung \eqref{}
-$ (5.040+/-0.016)10^4\si{\hertz}$ und ist experimentell bestimmt $ 40000\si{\hertz}$.
+ und experimentell bestimmt
+\begin{align*}
+ \omega_{+t}-\omega_{-t}=&(5.04\pm0.016)10^4\si{\hertz}\\
+ \omega_{+e}-\omega_{-e}=&(40000.0\pm0.1)\si{\hertz}\\
+ \text{Relativer Fehler}\\
+  &20.6\%\;.
+\end{align*}
 \begin{figure}
   \centering
   \includegraphics[width=0.78\textwidth]{Kondensatorspannung.pdf}
@@ -96,12 +111,12 @@ aufgelistet.
   \centering
   \begin{tabular}{c c c c}
     \toprule
-    Frequenz in $\si{\hertz}$ & Spannung in $\si{\volt}$ & Abstand der Nulldurchgänge in $\si{\micro\second}$ & Phasenverschiebung in $\si{\rad}\\
+    \omega/$\si{\hertz}$ & $U/U_c$ & $a/\si{\micro\second}$ & $\phi/\si{\radian}$ \\
     \midrule
-         517.2  &  0.750  &  0     & 0.        \\
-        1017.0  &  0.750  &  0     & 0.        \\
-        2031.0  &  0.760  &  0     & 0.        \\
-        5000.0  &  0.770  &  0     & 0.        \\
+         517.2  &  0.750  &  0     & 0.0       \\
+        1017.0  &  0.750  &  0     & 0.0       \\
+        2031.0  &  0.760  &  0     & 0.0       \\
+        5000.0  &  0.770  &  0     & 0.0       \\
        10000.0  &  0.850  &  1,50  & 0.09424777\\
        20000.0  &  1.130  &  1.56  & 0.19603538\\
        22000.0  &  1.240  &  1.80  & 0.24881414\\
@@ -138,14 +153,37 @@ aufgelistet.
        70000.0  &  0.235  &  7.00  & 3.0787608 \\
       100000.0  &  0.140  &  4.80  & 3.01592895\\
       200000.0  &  0.040  &  2.20  & 2.76460154\\
-      500000.0  &  0.015  &  0.88  & \\
+      500000.0  &  0.015  &        & \\
   \end{tabular}
-  \caption{}
+  \caption{In der Tabelle sind die Frequenz $\omega$in $\si{\hertz}$, die normierte
+  Kondensatorspannung, der Abstand der Nulldurchgänge $a$ in $\si{\micro\second}$
+  und die Phasenverschiebung $\phi$ in $\si{\radian}$ angegeben. Die Fehler sind
+  $\pm\si{\hertz}$,$ \pm0.001$, $\pm0.01\si{\micro\second}$ und $\pm0.01\si{\radian}.$
+  }
+
   \label{fig:Messwerte}
 \end{table}
 In der Abblidung \ref{fig:phasenverschiebung} ist der Phasenwinkel in Abhängingkeit
-von der Frequenz dargestellt und der Bereich um $\phi=90°$ ist linear in Abbildung
-\ref{} dargestellt.
+von der Frequenz dargestellt und im Bereich um $\phi=90°$ nocheinmal linear in
+Abbildung \ref{fig:linphasenverschiebung} . Die Frequenzen $\omega_{1,2}$ nach Gleichung \eqref{} und
+experimenteller Bestimmung sind
+\begin{align*}
+  \omega_{1t}=&(2.438 \pm0.005)10^5\si{\hertz}\\
+  \omega_{2t}=&(1.934 \pm0.004)10^5\si{\hertz}\\
+  \omega_{1e}=&2.98 \cdot10^4\si{\hertz}\\
+  \omega_{2e}=&3.9 \cdot10^4\si{\hertz}\\
+  \text{Relativer Fehler}\\
+   &87.8\%\\
+   &79.8\%\;.
+\end{align*}
+Die Resonanzfrequenz wird bestimmt durch $\omega_0=\sqrt{\frac{1}{LC}}$.
+Der berechnete und der im Experiment bestimmte Wert sind
+\begin{align*}
+\omega_{0t}=&(2.171\pm0.004)10^5\si{\hertz}\\
+\omega_{0e}=&(3.4\pm0.01)10^4\si{\hertz}\\
+\text{Relativer Fehler}\\
+84.3\%\;.
+\end{align*}
 \begin{figure}
   \centering
   \includegraphics[width=0.78\textwidth]{phasenverschiebung.pdf}

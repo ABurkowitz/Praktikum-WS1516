@@ -32,7 +32,15 @@ print (rdiffomega)
 print (romegares)
 rguete=romegares/rdiffomega
 print (rguete)
-
 #(rdiffomega)(5.040+/-0.016)e+04
 #(romegares)(2.171+/-0.004)e+05
 #(rguete)4.309+/-0.010
+omega0=unp.sqrt(1/(L*C))
+omega1=R/(L*2)+unp.sqrt(R**2/(4*L**2)+1/(L*C))
+omega2=-R/(L*2)+unp.sqrt(R**2/(4*L**2)+1/(L*C))
+print(omega0)
+print(omega1)
+print(omega2)
+#omega0=(2.171+/-0.004)e+05
+#omega1=(2.438+/-0.005)e+05
+#omega2=(1.934+/-0.004)e+05
