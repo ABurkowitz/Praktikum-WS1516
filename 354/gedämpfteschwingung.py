@@ -29,7 +29,7 @@ np.savetxt('dämpfungparas.txt',parameters1, header="a,b,c")
 fehler1= np.sqrt(np.diag(pocv))
 print (parameters1)
 print (fehler1)
-pi2ny=ufloat(parameters1[2],fehler1[2])
+pi2ny=ufloat(parameters1[1],fehler1[1])
 #L(10.11e-3,0.03e-3)
 #C(2.098e-9,0.006e-9)
 #R1(48.1,0.1)
@@ -39,30 +39,27 @@ pi2ny=ufloat(parameters1[2],fehler1[2])
 #1.15649731e-02
 
 L=ufloat(10.11e-3,0.03e-3)
+C=ufloat(2.098e-9,0.006e-9)
 Reff=2*L*pi2ny
 
 print ('pi2ny')
 print (pi2ny)
-#(2.0988+/-0.0035)e+05
-C=ufloat(2.098e-9,0.006e-9)
+#pi2ny(-5.53+/-0.16)e+03
+
 print ('Reff')
 print(Reff)
-#Reff4243.8+/-14.4
+#Reff-111.9+/-3.3
 Rap=unp.sqrt(4*L/C)
 print('Rap')
 print (Rap)
 #Rap4390.4+/-9.0
 
-#RAP=np.sqrt(unp.nominal_values(Rap))
-#RAPf=np.sqrt(unp.std_devs(Rap))
-#Rap=np.sqrt(Rap)
-#print ('Raperiodischer')
-#print(RAP)
-#print(RAPf)
 
-#RAP=4390.38728094
-#RAPf=281.846851114
+
 Tex=1/pi2ny
 print('Tex')
 print(Tex)
-#Tex(4.765+/-0.008)e-06
+#Tex-0.000181+/-0.000005
+#print ('Refft')
+
+#print ('Text')

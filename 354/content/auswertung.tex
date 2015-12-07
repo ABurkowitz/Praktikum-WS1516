@@ -10,21 +10,32 @@ Die Werte der benutzten Schaltung mit denen gerechnet wird sind
 \begin{figure}
   \centering
   \includegraphics[width=0.78\textwidth]{Thermodruck.JPG}
-  \caption{gedaempfteschwingung}
+  \caption{Thermodruck einer gedämpften Schwingung aus der die Werte für
+  die Tabelle \ref{fig:gedaempfteschwingung} sowie für die Ausgleichsrechnung
+  nach Gleichung \eqref{} zur Berechnung von $R_{eff}$ und $T_{ex}$.}
   \label{fig:termodruck}
 \end{figure}
 In der Folgenden Tabelle werden die abgelesenden Werte aus dem Thermodruck
 aus Abbildung\ref{fig:termodruck} aufgeführt. Die Ausgleichsrechnung nach Gleichung
-\eqref{} hat die Form $A\symup{exp}(Bt)\symup{cos}(Ct+D)+E$ und die Fitparameter
+\eqref{eqn:gedaempfte_schwingung} hat die Form $A\symup{exp}(Bt)\symup{cos}(Ct+D)+E$
+und die Fitparameter
 \begin{align*}
-  A=&-4.4\pm0.1  \\
-  B=&(-5.5\pm0.2)10^3  \\
-  C=&(2.099\pm0.003)10^5   \\
-  D=&-6.90\pm0.06  \\
-  E=&7.4\pm1.2)10^{-2}\;.
+  A&=A_0=-4.4\pm0.1  \\
+  B&=-2\pi\mu=0(-5.5\pm0.2)10^3  \\
+  C&=-2\pi\nu=(2.099\pm0.003)10^5   \\
+  D&=\eta=-6.90\pm0.06  \\
+  E&=7.4\pm1.2)10^{-2}\;.
 \end{align*}
-Der Effektive Widerstand $R_{eff}$ ist nach Gleichung\eqref{}
-$4243.8+/-14.4\si{\ohm}$ und die Abklingdauer $T_{ex}(4.765+/-0.008)10^{-6}\si{\second}$.
+Der Fitparameter $E$ wurde hinzugefügt, da es eine Offsetspannung gibt.
+Der effektive Widerstand $R_{eff}$ ist nach Gleichung\eqref{} zu berechnen und
+die Abklingdauer $T_{ex}$ nach Gleichung \eqref{}. Die berechneten Werte sind
+\begin{align*}
+    R_{eff}=&111.9\pm3.3\si{\ohm}\\
+    T_{ex}=&(1.81\pm0.05)10^{-4}\si{\second}\;.
+\end{align*}
+Die Werte weichen von dem verbauten Widerstand $R_1=48.1\si{\ohm}$ um $63.8\si{\ohm}$
+ab. Dies lässt sich durch den Innenwiderstand des Generator von $50\si{\ohm}$ erklären.
+In den folgenden Berechnungen mitbetrachtet.
 \begin{table}
   \centering
   \begin{tabular}{c c}
@@ -57,30 +68,37 @@ $4243.8+/-14.4\si{\ohm}$ und die Abklingdauer $T_{ex}(4.765+/-0.008)10^{-6}\si{\
            Es sind die ersten $20$ Extrema der Schwingungskurve. Die Zeit ist
             in  $\si{\micro\second}$ angegeben und die Spannung in $\si{\volt}$.
             Bei der Spannung liegt ein Fehler von $0.1\si{\volt}$ und ber der Zeit
-            ein Fehler von $1\si{\micro\second}$ vor.
-           Die Werte werden für die Ausgleichsrechnung in \ref{fig:gedaempfteschwingung}
-           verwendet.}
+            ein Fehler von $1\si{\micro\second}$ vor. Die Werte werden für die
+            Ausgleichsrechnung in \ref{fig:gedaempfteschwingung} verwendet.}
 \end{table}
 \begin{figure}
   \centering
   \includegraphics[width=0.78\textwidth]{dämpfungschwingung.pdf}
-  \caption{gedaempfteschwingung}
+  \caption{Darstellung der aus Abbildung\ref{fig:termodruck} entnommenden Werte,
+           sowie der Graph der Ausgleichsrechnung, bei der die Spannung in
+           Abhängigkeit von der Zeit gegeben ist.}
   \label{fig:gedaempfteschwingung}
 \end{figure}
 
 Der experimentell bestimmte Widerstandswert für den aperiodischen Grenzfall
-$R_{ap}$ ist $(3300\pm100)\si{\ohm}$ und  nach Gleichung \eqref{}
- $(4390\pm9.0)\si{\ohm}$.
+und  der nach Gleichung \eqref{} sind
+\begin{align*}
+  R_{ap_e}=&(3350\pm10)\si{\ohm}\\
+  R_{ap_t}=&(4390\pm9.0)\si{\ohm}\\
+  \text{Relativer Fehler}\\
+   &24.8\%\;.
+\end{align*}
 
-In dem Diagramm \ref{fig:Kondensatorspannung} sind die
+
+In Abbildung \ref{fig:Kondensatorspannung} sind die
 Messwerte zu der Frequenzabhängigkeit der Kondensatorspannung in Abhängigkeit
 von der Frequenz dargestellt. In Abbildung \ref{fig:Resonanzkurve} ist die
 Resonanzkurve linear dargestellt. Die aus der Abbildung \ref{fig:Kondensatorspannung}
 entnommende Resonanzfrequenz und die aus Gleichung
 \eqref{} errechnete sind
 \begin{align*}
-\omega_{0e}=&(33500.0\pm0.1)\si{\hertz}\\
-\omega_{0t}=&(2.171\pm0.004)10^5\si{\hertz}\\
+\omega_{0_e}=&(33500.0\pm0.1)\si{\hertz}\\
+\omega_{0_t}=&(2.171\pm0.004)10^5\si{\hertz}\\
 \text{Relativer Fehler}\\
  &84.6\%\;.
 \end{align*}
@@ -88,11 +106,14 @@ entnommende Resonanzfrequenz und die aus Gleichung
 Resonanzkurve $\omega_+-\omega_- $ ist nach Gleichung \eqref{}
  und experimentell bestimmt
 \begin{align*}
- \omega_{+t}-\omega_{-t}=&(5.04\pm0.016)10^4\si{\hertz}\\
- \omega_{+e}-\omega_{-e}=&(40000.0\pm0.1)\si{\hertz}\\
+ \omega_{+_t}-\omega_{-_t}=&(5.04\pm0.016)10^4\si{\hertz}\\
+ \omega_{+_e}-\omega_{-_e}=&(10000.0\pm0.1)\si{\hertz}\\
  \text{Relativer Fehler}\\
-  &20.6\%\;.
+  &80.1\%\;.
 \end{align*}
+Für $\omega_{+_e}-\omega_{-_e}$ wurden die Frequenzen $28000.0\si{\hertz}$ und
+$38000.0\si{\hertz}$ verwendet.
+Die Güte der Resonanzkurve ist nach Gleichung \eqref{} $q=3.923\pm0.009$.
 \begin{figure}
   \centering
   \includegraphics[width=0.78\textwidth]{Kondensatorspannung.pdf}
@@ -109,69 +130,69 @@ Die zu dem Diagramm zugehörigen Messwerte sind in der Tabelle \ref{fig:Messwert
 aufgelistet.
 \begin{table}
   \centering
-  \begin{tabular}{c c c c}
+  \begin{tabular}{c c c}
     \toprule
-    \omega/$\si{\hertz}$ & $U/U_c$ & $a/\si{\micro\second}$ & $\phi/\si{\radian}$ \\
+    \omega/$\si{\hertz}$ & $U/U_c$ & $a/\si{\micro\second}$ \\
     \midrule
-         517.2  &  0.750  &  0     & 0.0       \\
-        1017.0  &  0.750  &  0     & 0.0       \\
-        2031.0  &  0.760  &  0     & 0.0       \\
-        5000.0  &  0.770  &  0     & 0.0       \\
-       10000.0  &  0.850  &  1,50  & 0.09424777\\
-       20000.0  &  1.130  &  1.56  & 0.19603538\\
-       22000.0  &  1.240  &  1.80  & 0.24881414\\
-       25400.0  &  1.530  &  2.60  & 0.42474333\\
-       26000.0  &  1.600  &  2.60  & 0.41494156\\
-       27000.0  &  1.730  &  2.80  & 0.47500881\\
-       28000.0  &  1.940  &  3.20  & 0.5629734 \\
-       28380.0  &  2.000  &  3.60  & 0.64194048\\
-       28500.0  &  2.040  &  3.60  & 0.64465481\\
-       28800.0  &  2.100  &  4.00  & 0.72382295\\
-       29000.0  &  2.120  &  3.80  & 0.69240702\\
-       29500.0  &  2.220  &  3.90  & 0.72288047\\
-       29800.0  &  2.300  &  3.80  & 0.7115079 \\
-       30000.0  &  2.320  &  4.00  & 0.75398224\\
-       30400.0  &  2.400  &  4.20  & 0.8022371 \\
-       31000.0  &  2.520  &  4.60  & 0.89598222\\
-       31500.0  &  2.620  &  5.20  & 1.02918575\\
-       32000.0  &  2.720  &  5.60  & 1.12594681\\
-       32500.0  &  2.770  &  6.00  & 1.22522113\\
-       33000.0  &  2.800  &  6.20  & 1.28553971\\
-       33500.0  &  2.820  &  7.00  & 1.47340695\\
-       34000.0  &  2.800  &  7.60  & 1.62357508\\
-       34500.0  &  2.720  &  7.80  & 1.69080517\\
-       35000.0  &  2.650  &  8.20  & 1.80327418\\
-       35500.0  &  2.540  &  8.40  & 1.87364586\\
-       36000.0  &  2.440  &  8.80  & 1.99051311\\
-       37000.0  &  2.200  &  9.40  & 2.18529185\\
-       38000.0  &  1.940  &  9.20  & 2.19660158\\
-       39000.0  &  1.720  &  9.20  & 2.25440689\\
-       40000.0  &  1.520  & 10.20  & 2.56353961\\
-       42000.0  &  1.240  & 10.00  & 2.63893783\\
-       50000.0  &  0.650  &  9.20  & 2.89026524\\
-       60000.0  &  0.400  &  8.00  & 3.01592895\\
-       70000.0  &  0.235  &  7.00  & 3.0787608 \\
-      100000.0  &  0.140  &  4.80  & 3.01592895\\
-      200000.0  &  0.040  &  2.20  & 2.76460154\\
-      500000.0  &  0.015  &        & \\
+         517.2  &  0.750  &  0     \\
+        1017.0  &  0.750  &  0     \\
+        2031.0  &  0.760  &  0     \\
+        5000.0  &  0.770  &  0     \\
+       10000.0  &  0.850  &  1,50  \\
+       20000.0  &  1.130  &  1.56  \\
+       22000.0  &  1.240  &  1.80  \\
+       25400.0  &  1.530  &  2.60  \\
+       26000.0  &  1.600  &  2.60  \\
+       27000.0  &  1.730  &  2.80  \\
+       28000.0  &  1.940  &  3.20  \\
+       28380.0  &  2.000  &  3.60  \\
+       28500.0  &  2.040  &  3.60  \\
+       28800.0  &  2.100  &  4.00  \\
+       29000.0  &  2.120  &  3.80  \\
+       29500.0  &  2.220  &  3.90  \\
+       29800.0  &  2.300  &  3.80  \\
+       30000.0  &  2.320  &  4.00  \\
+       30400.0  &  2.400  &  4.20  \\
+       31000.0  &  2.520  &  4.60  \\
+       31500.0  &  2.620  &  5.20  \\
+       32000.0  &  2.720  &  5.60  \\
+       32500.0  &  2.770  &  6.00  \\
+       33000.0  &  2.800  &  6.20  \\
+       33500.0  &  2.820  &  7.00  \\
+       34000.0  &  2.800  &  7.60  \\
+       34500.0  &  2.720  &  7.80  \\
+       35000.0  &  2.650  &  8.20  \\
+       35500.0  &  2.540  &  8.40  \\
+       36000.0  &  2.440  &  8.80  \\
+       37000.0  &  2.200  &  9.40  \\
+       38000.0  &  1.940  &  9.20  \\
+       39000.0  &  1.720  &  9.20  \\
+       40000.0  &  1.520  & 10.20  \\
+       42000.0  &  1.240  & 10.00  \\
+       50000.0  &  0.650  &  9.20  \\
+       60000.0  &  0.400  &  8.00  \\
+       70000.0  &  0.235  &  7.00  \\
+      100000.0  &  0.140  &  4.80  \\
+      200000.0  &  0.040  &  2.20  \\
+      500000.0  &  0.015  &        \\
   \end{tabular}
   \caption{In der Tabelle sind die Frequenz $\omega$in $\si{\hertz}$, die normierte
-  Kondensatorspannung, der Abstand der Nulldurchgänge $a$ in $\si{\micro\second}$
-  und die Phasenverschiebung $\phi$ in $\si{\radian}$ angegeben. Die Fehler sind
-  $\pm\si{\hertz}$,$ \pm0.001$, $\pm0.01\si{\micro\second}$ und $\pm0.01\si{\radian}.$
+  Kondensatorspannung und der Abstand der Nulldurchgänge $a$ in $\si{\micro\second}$
+   angegeben. Die Fehler sind
+  $\pm0.1\si{\hertz}$,$ \pm0.001$ und $\pm0.01\si{\micro\second}$.
   }
 
   \label{fig:Messwerte}
 \end{table}
 In der Abblidung \ref{fig:phasenverschiebung} ist der Phasenwinkel in Abhängingkeit
 von der Frequenz dargestellt und im Bereich um $\phi=90°$ nocheinmal linear in
-Abbildung \ref{fig:linphasenverschiebung} . Die Frequenzen $\omega_{1,2}$ nach Gleichung \eqref{} und
-experimenteller Bestimmung sind
+Abbildung \ref{fig:linphasenverschiebung} . Die Frequenzen $\omega_{1}$ und
+$\omega_{2}$ nach Gleichung \eqref{} und experimenteller Bestimmung sind
 \begin{align*}
-  \omega_{1t}=&(2.438 \pm0.005)10^5\si{\hertz}\\
-  \omega_{2t}=&(1.934 \pm0.004)10^5\si{\hertz}\\
-  \omega_{1e}=&2.98 \cdot10^4\si{\hertz}\\
-  \omega_{2e}=&3.9 \cdot10^4\si{\hertz}\\
+  \omega_{1_t}=&( 2.466\pm0.005)10^5\si{\hertz}\\
+  \omega_{2_t}=&(1.934\pm0.004)10^5\si{\hertz}\\
+  \omega_{1_e}=&2.98 \cdot10^4\si{\hertz}\\
+  \omega_{2_e}=&3.9 \cdot10^4\si{\hertz}\\
   \text{Relativer Fehler}\\
    &87.8\%\\
    &79.8\%\;.
@@ -179,8 +200,8 @@ experimenteller Bestimmung sind
 Die Resonanzfrequenz wird bestimmt durch $\omega_0=\sqrt{\frac{1}{LC}}$.
 Der berechnete und der im Experiment bestimmte Wert sind
 \begin{align*}
-\omega_{0t}=&(2.171\pm0.004)10^5\si{\hertz}\\
-\omega_{0e}=&(3.4\pm0.01)10^4\si{\hertz}\\
+\omega_{res_t}=&(2.171\pm0.004)10^5\si{\hertz}\\
+\omega_{res_e}=&(3.4\pm0.01)10^4\si{\hertz}\\
 \text{Relativer Fehler}\\
 84.3\%\;.
 \end{align*}
