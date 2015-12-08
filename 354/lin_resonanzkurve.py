@@ -14,11 +14,14 @@ f, uc , a = np.genfromtxt('lin_resonanzkurve.txt', unpack=True)
 #R2(509.5,0.5)
 #Rap(3.3e3)
 
-plt.plot(f, uc , 'bx', label="Kondensatorspannung")
+plt.plot(f, uc , 'b.', label="Kondensatorspannung")
 
 plt.xlabel(r'$Frequenz / Hz$')
 plt.ylabel(r'$Spannung / V$')
 
+errX=0.1
+errY=0.001
+plt.errorbar(f,uc,xerr=errX, yerr=errY,fmt='none')
 plt.tight_layout()
 plt.legend(loc='best')
 plt.savefig('Resonanzkurve.pdf')

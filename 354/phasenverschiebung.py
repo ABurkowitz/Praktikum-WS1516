@@ -8,9 +8,12 @@ b=1/f
 def phi(a,b):
     return (a/b)*2*np.pi
 plt.xscale('log')
-plt.plot(f,phi(a,b),'rx')
+plt.plot(f,phi(a,b),'r.')
 plt.savefig('phasenverschiebung.pdf')
 print(phi(a,b))
+errX=0.1
+errY=0.001
+plt.errorbar(f,phi(a,b),xerr=errX, yerr=errY,fmt='none')
 #plt.savefig('phasenverschiebung.pdf')
 print(1.50e-6/(1/10000)*2*np.pi)
   #0.
