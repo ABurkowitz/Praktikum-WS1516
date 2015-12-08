@@ -15,7 +15,7 @@ Kondensator mit der Zeit ab. Ein solcher gedämpfter Schwingkreis ist in Abbildu
   \centering
   \includegraphics[width=0.6\textwidth]{gedaempfter_schwingkreis.png}
   \caption{Gedämpfter Schwingkreis mit einer Kapazität C, einem ohmschen Widerstand R
-  und einer Induktivität L in einer Reihenschaltung.\cite{sample}}
+  und einer Induktivität L in einer Reihenschaltung \cite{sample}}
   \label{fig:gedaempfter_schwingkreis}
 \end{figure}
 Aus der Maschenregel der Kirchhoffschen Gesetze folgt, dass sich die drei Spannungen
@@ -68,7 +68,7 @@ Frequenz $\nu$.
   \includegraphics[width=0.6\textwidth]{gedaempfte_schwingung.png}
   \caption{Darstellung einer gedämpften Schwingung (rote Kurve), deren Einhüllenden
   (gestrichelte Kurven) durch die Funktionen $f(t)=\pm e^{-2\pi\mu t}$ gegeben
-  sind\cite{sample}.}
+  sind \cite{sample}.}
   \label{fig:gedaempfte_schwingung}
 \end{figure}
 Die Amplitude der Schwinung geht wegen des Dämpfungsterms
@@ -112,7 +112,7 @@ geht, jedoch ohne ins Negative überzuschwingen.
   \includegraphics[width=0.6\textwidth]{ap_grenzfall.png}
   \caption{Dargestellt sind verschiedene Möglichkeiten des zeitlichen Verlaufs des
   Stromes bei aperiodischer Dämpfung, die gestrichelte Kurve beschreibt dabei den
-  aperiodischen Grenzfall\cite{sample}.}
+  aperiodischen Grenzfall \cite{sample}.}
   \label{fig:ap_grenzfall}
 \end{figure}
 
@@ -124,7 +124,7 @@ Schwingung ist in Abbildung \ref{fig:erz_schwingung} zu sehen.
   \centering
   \includegraphics[width=0.6\textwidth]{erzwungene_schwingung.png}
   \caption{Eine Spannungsquelle führt dem gedämpften Schwingkreis eine sinusförmige
-  Wechselspannung zu, sodass eine erzwungene Schwingung entsteht.\cite{sampel}.}
+  Wechselspannung zu, sodass eine erzwungene Schwingung entsteht \cite{sample}.}
   \label{fig:erz_schwingung}
 \end{figure}
 Die von außen angelegte Spannung führt zu einer Inhomogenität in der Differentialgleichung
@@ -177,8 +177,19 @@ an. Der Faktor $\frac{1}{\omega_0 R C}$ ist dabei die Resonanzüberhöhung oder
 Güte $q$ des Schwingkreises. Geht $R$ jetzt gegen 0, so steigt $U_\symup{C,max}$
 ins Undendliche, was dem Fall einer Resonanzkatastrophe entspricht.
 Die Breite der Resonanzkurve bestimmt dabei die Schärfe der Resonanz. Man berechnet
-dazu die Frequenzen $\omega_+$ und $\omega_-$, bei denen $U_\symup{C}$ auf
-$\frac{1}{\sqrt{2}}U_\symup{C,max}$ abgefallen ist. Für die Güte erhält man dann
+für die Güte die Frequenzen $\omega_+$ und $\omega_-$, bei denen $U_\symup{C}$ auf
+\begin{equation}
+  \frac{1}{\sqrt{2}}U_\symup{C,max}
+  \label{eqn:U0durchwurzel2}
+\end{equation}
+abgefallen ist.
+Da $\frac{R^2}{L^2} << \omega_0^2$ gilt, folgt für die Breite der Resonanzkurve
+mit Gleichung \eqref{eqn:U0durchwurzel2}
+\begin{equation}
+  \omega_+ - \omega_- \approx \frac{R}{L}.
+  \label{eqn:breite_resonanzkurve}
+\end{equation}
+Für die Güte erhält man dann
 \begin{equation}
   q = \frac{\omega_0}{\omega_+ + \omega_-}.
   \label{eqn:guete}
