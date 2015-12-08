@@ -1,6 +1,6 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-Die Werte der benutzten Schaltung mit denen gerechnet wird sind
+Die Werte der benutzten Schaltung sind
 \begin{align*}
   L=&(10.11\pm0.03)10^{-3}\si{\henry}\\
   C=&(2.098\pm0.006)10^{-9}\si{\farad}\\
@@ -10,13 +10,15 @@ Die Werte der benutzten Schaltung mit denen gerechnet wird sind
 \begin{figure}
   \centering
   \includegraphics[width=0.78\textwidth]{Thermodruck.JPG}
-  \caption{Thermodruck einer gedämpften Schwingung aus der die Werte für
-  die Tabelle \ref{fig:gedaempfteschwingung} sowie für die Ausgleichsrechnung
-  nach Gleichung \eqref{} zur Berechnung von $R_{eff}$ und $T_{ex}$.}
+  \caption{Thermodruck einer gedämpften Schwingung, aus der die Werte für
+  die Tabelle \ref{fig:Messwertegedaempfteschwingung}, sowie für die Ausgleichsrechnung
+  nach Gleichung \eqref{eqn:loesung} für die Berechnung von $R_{eff}$ und $T_{ex}$
+  stammen. Die roteingezeichneten Linien sind die Begrenzenden Funktionen.}
   \label{fig:termodruck}
 \end{figure}
-In der Folgenden Tabelle werden die abgelesenden Werte aus dem Thermodruck
-aus Abbildung\ref{fig:termodruck} aufgeführt. Die Ausgleichsrechnung nach Gleichung
+In der Tabelle \ref{fig:Messwertegedaempfteschwingung} werden die
+abgelesenden Werte aus Abbildung \ref{fig:termodruck}
+aufgeführt. Die Ausgleichsrechnung nach Gleichung
 \eqref{eqn:gedaempfte_schwingung} hat die Form $A\symup{exp}(Bt)\symup{cos}(Ct+D)+E$
 und die Fitparameter
 \begin{align*}
@@ -27,15 +29,16 @@ und die Fitparameter
   E&=7.4\pm1.2)10^{-2}\;.
 \end{align*}
 Der Fitparameter $E$ wurde hinzugefügt, da es eine Offsetspannung gibt.
-Der effektive Widerstand $R_{eff}$ ist nach Gleichung\eqref{} zu berechnen und
-die Abklingdauer $T_{ex}$ nach Gleichung \eqref{}. Die berechneten Werte sind
+Der effektive Widerstand $R_{eff}$ ist nach Gleichung \eqref{} zu berechnen und
+die Abklingdauer $T_{ex}$ nach Gleichung \eqref{eqn:abklingzeit}. Die berechneten
+Werte sind
 \begin{align*}
     R_{eff}=&111.9\pm3.3\si{\ohm}\\
     T_{ex}=&(1.81\pm0.05)10^{-4}\si{\second}\;.
 \end{align*}
 Die Werte weichen von dem verbauten Widerstand $R_1=48.1\si{\ohm}$ um $63.8\si{\ohm}$
 ab. Dies lässt sich durch den Innenwiderstand des Generator von $50\si{\ohm}$ erklären.
-In den folgenden Berechnungen mitbetrachtet.
+In den folgenden Berechnungen wird dieser Innenwiderstand mitbetrachtet.
 \begin{table}
   \centering
   \begin{tabular}{c c}
@@ -64,24 +67,16 @@ In den folgenden Berechnungen mitbetrachtet.
     315  &   0.8  \\
     \bottomrule
   \end{tabular}
-  \caption{In der Tabelle sind die aus dem Thermodruck Abgelesenden Werte.
+  \caption{In der Tabelle sind die aus dem Thermodruck Abgelesenden Werte abgebildet.
            Es sind die ersten $20$ Extrema der Schwingungskurve. Die Zeit ist
             in  $\si{\micro\second}$ angegeben und die Spannung in $\si{\volt}$.
             Bei der Spannung liegt ein Fehler von $0.1\si{\volt}$ und ber der Zeit
-            ein Fehler von $1\si{\micro\second}$ vor. Die Werte werden für die
+            ein Fehler von $0.1\si{\micro\second}$ vor. Die Werte werden für die
             Ausgleichsrechnung in \ref{fig:gedaempfteschwingung} verwendet.}
+  \label{fig:Messwertegedaempfteschwingung}
 \end{table}
-\begin{figure}
-  \centering
-  \includegraphics[width=0.78\textwidth]{dämpfungschwingung.pdf}
-  \caption{Darstellung der aus Abbildung\ref{fig:termodruck} entnommenden Werte,
-           sowie der Graph der Ausgleichsrechnung, bei der die Spannung in
-           Abhängigkeit von der Zeit gegeben ist.}
-  \label{fig:gedaempfteschwingung}
-\end{figure}
-
 Der experimentell bestimmte Widerstandswert für den aperiodischen Grenzfall
-und  der nach Gleichung \eqref{} sind
+und  der nach Gleichung \eqref{eqn:bedingung-ap-grenzfall} sind
 \begin{align*}
   R_{ap_e}=&(3350\pm10)\si{\ohm}\\
   R_{ap_t}=&(4390\pm9.0)\si{\ohm}\\
@@ -93,9 +88,10 @@ und  der nach Gleichung \eqref{} sind
 In Abbildung \ref{fig:Kondensatorspannung} sind die
 Messwerte zu der Frequenzabhängigkeit der Kondensatorspannung in Abhängigkeit
 von der Frequenz dargestellt. In Abbildung \ref{fig:Resonanzkurve} ist die
-Resonanzkurve linear dargestellt. Die aus der Abbildung \ref{fig:Kondensatorspannung}
-entnommende Resonanzfrequenz und die aus Gleichung
-\eqref{} errechnete sind
+Resonanzkurve mit linear skalierter x-Achse dargestellt. Die aus der Abbildung
+\ref{fig:Kondensatorspannung}
+entnommende Frequenz bei der der Phasenwinke $\phi=90°$ ist und die
+nach $\omega_0=\sqrt{\frac{1}{CL}}$ errechnete sind
 \begin{align*}
 \omega_{0_e}=&(33500.0\pm0.1)\si{\hertz}\\
 \omega_{0_t}=&(2.171\pm0.004)10^5\si{\hertz}\\
@@ -103,7 +99,7 @@ entnommende Resonanzfrequenz und die aus Gleichung
  &84.6\%\;.
 \end{align*}
  Die Breite der
-Resonanzkurve $\omega_+-\omega_- $ ist nach Gleichung \eqref{}
+Resonanzkurve $\omega_+-\omega_- $, ist nach Gleichung \eqref{}
  und experimentell bestimmt
 \begin{align*}
  \omega_{+_t}-\omega_{-_t}=&(5.04\pm0.016)10^4\si{\hertz}\\
@@ -111,23 +107,35 @@ Resonanzkurve $\omega_+-\omega_- $ ist nach Gleichung \eqref{}
  \text{Relativer Fehler}\\
   &80.1\%\;.
 \end{align*}
-Für $\omega_{+_e}-\omega_{-_e}$ wurden die Frequenzen $28000.0\si{\hertz}$ und
-$38000.0\si{\hertz}$ verwendet.
-Die Güte der Resonanzkurve ist nach Gleichung \eqref{} $q=3.923\pm0.009$.
+Für den experimentell bestimmten Wert von $\omega_{+_e}-\omega_{-_e}$ wurden
+die Frequenzen $28000.0\si{\hertz}$ und $38000.0\si{\hertz}$ verwendet.
+Die Güte der Resonanzkurve ist nach Gleichung \eqref{eqn:guete}
+\begin{align*}
+  q_t=&3.923\pm0.009\\
+  q_e=&3.35\pm0.000035\\
+  \text{Relativer Fehler}
+  14.6\%\;.
+\end{align*}
 \begin{figure}
   \centering
   \includegraphics[width=0.78\textwidth]{Kondensatorspannung.pdf}
-  \caption{Kondensatorspannung}
+  \caption{Abbildung der in \ref{fig:Messwerte} aufgeführten Messwerte.
+  Die normierte Kondensatorspannung $U_c/U$ wird in Abhängigkeit von der
+  Frequenz dargestellt.}
   \label{fig:Kondensatorspannung}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[width=0.78\textwidth]{Resonanzkurve.pdf}
-  \caption{Resonanzkurve}
+  \caption{Abbildung von Messwerten in der Nähe von der Phasenverschiebung $\phi=90°$.
+  In ihr ist die Resonanzkurve zu sehen. Die normierte Kondensatorspannung $U_c=U$
+  ist in abhängigkeit von der Frequenz aufgetragen.}
   \label{fig:Resonanzkurve}
 \end{figure}
-Die zu dem Diagramm zugehörigen Messwerte sind in der Tabelle \ref{fig:Messwerte}
-aufgelistet.
+Mit den Messwerten in der Tabelle \ref{fig:Messwerte} sind die  Abbildungen
+\ref{fig:Kondensatorspannung}, \ref{fig:Resonanzkurve},
+\ref{fig:phasenverschiebung} und \ref{fig:linphasenverschiebung}
+entstanden.
 \begin{table}
   \centering
   \begin{tabular}{c c c}
@@ -178,16 +186,16 @@ aufgelistet.
   \end{tabular}
   \caption{In der Tabelle sind die Frequenz $\omega$in $\si{\hertz}$, die normierte
   Kondensatorspannung und der Abstand der Nulldurchgänge $a$ in $\si{\micro\second}$
-   angegeben. Die Fehler sind
-  $\pm0.1\si{\hertz}$,$ \pm0.001$ und $\pm0.01\si{\micro\second}$.
-  }
+   angegeben. Die Fehler sind $\pm0.1\si{\hertz}$,$ \pm0.001$ und
+   $\pm0.01\si{\micro\second}$.}
 
   \label{fig:Messwerte}
 \end{table}
-In der Abblidung \ref{fig:phasenverschiebung} ist der Phasenwinkel in Abhängingkeit
-von der Frequenz dargestellt und im Bereich um $\phi=90°$ nocheinmal linear in
-Abbildung \ref{fig:linphasenverschiebung} . Die Frequenzen $\omega_{1}$ und
-$\omega_{2}$ nach Gleichung \eqref{} und experimenteller Bestimmung sind
+In der Abblidung \ref{fig:phasenverschiebung} ist der Phasenwinkel $\phi$ in Abhängingkeit
+von der Frequenz dargestellt und der Bereich um $\phi=90°$ nocheinmal mit
+linear skalierter x-Achse in Abbildung \ref{fig:linphasenverschiebung} . Die
+Frequenzen $\omega_{1}$ und
+$\omega_{2}$  sind nach Gleichung \eqref{} und experimenteller Bestimmung
 \begin{align*}
   \omega_{1_t}=&( 2.466\pm0.005)10^5\si{\hertz}\\
   \omega_{2_t}=&(1.934\pm0.004)10^5\si{\hertz}\\
@@ -197,7 +205,7 @@ $\omega_{2}$ nach Gleichung \eqref{} und experimenteller Bestimmung sind
    &87.8\%\\
    &79.8\%\;.
 \end{align*}
-Die Resonanzfrequenz wird bestimmt durch $\omega_0=\sqrt{\frac{1}{LC}}$.
+Die Resonanzfrequenz wird bestimmt durch Gleichung \eqref{eqn:resonanzfrequenz}.
 Der berechnete und der im Experiment bestimmte Wert sind
 \begin{align*}
 \omega_{res_t}=&(2.171\pm0.004)10^5\si{\hertz}\\
@@ -208,12 +216,15 @@ Der berechnete und der im Experiment bestimmte Wert sind
 \begin{figure}
   \centering
   \includegraphics[width=0.78\textwidth]{phasenverschiebung.pdf}
-  \caption{Resonanzkurve}
+  \caption{Abbildung der Phasenwinkel der Messwerte von Tabelle \ref{fig:Messwerte} in
+  abhängigkeit von der Frequenz dargestellt werden. Der zu erwartende Verlauf ist
+  ein Arkustangens.}
   \label{fig:phasenverschiebung}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[width=0.78\textwidth]{linphasenverschiebung.pdf}
-  \caption{Resonanzkurve}
+  \caption{Abbildung von Messwerten in der Nähe von der Phasenverschiebung $\phi=90°$.
+          Der Phasenwinkel $\phi$ ist in abhängigkeit von der Frequenz gegeben.}
   \label{fig:linphasenverschiebung}
 \end{figure}

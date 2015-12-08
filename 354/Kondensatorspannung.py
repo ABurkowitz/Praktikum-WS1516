@@ -17,7 +17,7 @@ f, uc , a = np.genfromtxt('messwerte_phasenverschiebung.txt', unpack=True)
 plt.plot(f, uc , 'bx', label="Kondensatorspannung")
 
 plt.xlabel(r'$Frequenz / Hz$')
-plt.ylabel(r'$Spannung / V$')
+plt.ylabel(r'$Uc/U$')
 plt.xscale('log')
 plt.tight_layout()
 plt.legend(loc='best')
@@ -29,7 +29,7 @@ R=ufloat(509.5,0.5)
 Re=R+50
 
 rdiffomega=Re/L
-romegares=unp.sqrt(1/(C*L)-(Re*L)**2/2)
+romegares=unp.sqrt(1/(C*L)-(Re/L)**2/2)
 print ('rdiffomega')
 print (rdiffomega)
 print ('romegares')
@@ -37,6 +37,10 @@ print (romegares)
 rguete=romegares/rdiffomega
 print ('rguete')
 print (rguete)
+eomegadiff=ufloat(10000,0.1)
+eomegares=ufloat(33500,0.1)
+eguete=1/eomegadiff*eomegares
+print (eguete)
 #(rdiffomega)(5.040+/-0.016)e+04
 #(romegares)(2.171+/-0.004)e+05
 #(rguete)4.309+/-0.010
