@@ -8,6 +8,7 @@ def phi(a,b):
     return (a/b)*2*np.pi
 errX=0.1
 errY=0.001
-plt.errorbar(f,uc,xerr=errX, yerr=errY,fmt='none')
-plt.plot(f,phi(a,b),'rx')
+#plt.errorbar(f,uc,xerr=errX, yerr=errY,fmt='none')
+plt.plot(f,phi(a,b),'r+')
+plt.plot(f,phi(a,b),'r.')
 plt.savefig('linphasenverschiebung.pdf')
