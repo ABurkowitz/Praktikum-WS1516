@@ -1,2 +1,0 @@
-#Frequenz in Hz   Spannung in V
-#                 Rechteck      Sägezahn    Dreieck

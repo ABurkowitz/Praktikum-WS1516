@@ -1,0 +1,6 @@
+# Nummer der Oberwelle, U_eingestellt in Volt
+1 0.609
+3 0.067
+5 0.024
+7 0.012
+9 0.008

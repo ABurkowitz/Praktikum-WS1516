@@ -1,1 +1,0 @@
-#Frequenz in Hz, Spannung in V
