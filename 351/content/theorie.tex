@@ -1,4 +1,42 @@
 \section{Theorie}
 \label{sec:Theorie}
+\subsection{Fouriersche Theorem}
+Das Fourier Theorem besagt, dass die Reihe
+\begin{equation}
+\frac{1}{2}a_0+\sum_{n=0}^\infty\left(a_n \cos(n\frac{2\pi}{T}t)+b_n\sin(n\frac{2\pi}{T}t))
+\label{fuireihe}
+\end{equation}
+eine periodische Funktion beschreibt wenn die Reihe konvergiert und für die
+Koeffizienten $a_n$ und $b_n$
+\begin{equation}
+  a_n=\frac{2}{T}\int_a^b\,\,f(t)\cos(n\frac{2\pi}{T}t)
+\end{equation}
+\begin{equation}
+  b_n=\frac{2}{T}\int_a^b\,\,f(t)\sin(n\frac{2\pi}{T}t)
+\end{equation}
+gilt. In der Fourier Entwicklung treten die Frequenz $\ny=\frac{1}{T}$, sowie ihre
+ihre ganzzahligen Vielfachen auf. Bei geraden Funktionen fallen alle $b_n$ weg
+da gilt $f(t)=f(-t)$ und dies bei sinus Funktionen nicht gegeben ist. bei
+ungeraden Funktionen fallen alle $a_n$ weg, da $f(t)=-f(-t)$ gilt und ein cosinus
+diese Bedingung nicht erfüllt. $a_n$ und $b_n$ müssen nach Gleichung
+\eqref{fuireihe} für $\(\lim\limits_{n \to \infty}$ gegen Null gehen, damit die
+Reihe Konvergiert. Ein Beispiel dafür ist in Abbildung \ref{} dargestellt. Wenn
+$f(t)$ stetig ist folgt die Gleichmäßige Konvergenz. Ist $f(t)$ unstetig so lässt
+sie sich an dieser Stelle nicht mit der Fourier-Reihe approximieren. Es tritt das
+Gibbsche Phänomen auf, das die endliche abweichung beschreibt.
+\subsection{Fourier-Transformation}
+\label{sec:Fourier-Transformation}
+Mit der Fouruer-Transformation lässt sich das gesamte Frequenzspektrum einer
+zeitabhängigen Funktion bestimmen. Die Fourier-Transformation ist definiert durch:
+\begin{equation}
+  g(\ny)= \int_{-\infty}^\infty f(t)\exp(i\ny t) mathrm{d}t
+\end{equation}
+\begin{equation}
+  f(\ny)= \frac{1}{2\pi}\int_{-\infty}^\infty f(t)\exp(i\ny t) mathrm{d}\ny
+\end{equation}
+
+
+
+
 
 \cite{sample}
