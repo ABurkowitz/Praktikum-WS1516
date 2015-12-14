@@ -1,30 +1,44 @@
 \section{Theorie}
 \label{sec:Theorie}
+Periodische Funktionen wiederholen sich nach bestimmten Zeit- bzw. Raumabständen $D$.
+Für diese gilt
+\begin{align}
+  f(x,t)=&f(x+D,t)\\
+  f(x,t)=&f(x,t+T)\;\;.
+\end{align}
+Die beiden Wichtigsten Wichtigsten Beispiele dafür sind
+\begin{align}
+f(x,t)=A\sin\left(\frac{2\pi}{T}t+\frac{2\pi}{D}x\right) \\
+f(x,t)=A\cos\left(\frac{2\pi}{T}t+\frac{2\pi}{D}x\right)
+\end{align}
+Diese Funktionen lassen sich mit der Fourier-Reihe approximieren dafür verwendet
+mand das Fourier-Theorem
 \subsection{Fouriersche Theorem}
 Das Fourier Theorem besagt, dass die Reihe
 \begin{equation}
-\frac{1}{2}a_0+\sum_{n=0}^\infty\left(a_n \cos(n\frac{2\pi}{T}t)+b_n\sin(n\frac{2\pi}{T}t)\right)
+\frac{1}{2}a_0+\sum_{n=0}^\infty\left(a_n \cos\left(\frac{2n\pi}{T}t\right)
++b_n\sin\left(\frac{2n\pi}{T}t\right)\right)
 \label{fuireihe}
 \end{equation}
-eine periodische Funktion beschreibt wenn die Reihe konvergiert und für die
+eine periodische Funktion beschreibt, wenn die Reihe konvergiert und für die
 Koeffizienten $a_n$ und $b_n$
 \begin{equation}
-  a_n=\frac{2}{T}\int_a^b\,\,f(t)\cos(n\frac{2\pi}{T}t)
+  a_n=\frac{2}{T}\int_a^b\,\,f(t)\cos\left(\frac{2n\pi}{T}t\right)
   \label{fuikoeffizient_a}
 \end{equation}
 \begin{equation}
-  b_n=\frac{2}{T}\int_a^b\,\,f(t)\sin(n\frac{2\pi}{T}t)
+  b_n=\frac{2}{T}\int_a^b\,\,f(t)\sin\left(\frac{2n\pi}{T}t\right)
   \label{fuikoeffizient_b}
 \end{equation}
 gilt. In der Fourier Entwicklung treten die Frequenz $\nu=\frac{1}{T}$, sowie ihre
-ihre ganzzahligen Vielfachen auf. Bei geraden Funktionen fallen alle $b_n$ weg
-da gilt $f(t)=f(-t)$ und dies bei sinus Funktionen nicht gegeben ist. bei
-ungeraden Funktionen fallen alle $a_n$ weg, da $f(t)=-f(-t)$ gilt und ein cosinus
+ihre ganzzahligen Vielfachen auf. Bei geraden Funktionen fallen alle $b_n$ weg,
+da gilt $f(t)=f(-t)$ und dies bei sinus Funktionen nicht gegeben ist. Bei
+ungeraden Funktionen fallen alle $a_n$ weg, da $f(t)=-f(-t)$ gilt und ein Kosinus
 diese Bedingung nicht erfüllt. $a_n$ und $b_n$ müssen nach Gleichung
 \eqref{fuireihe} für $\lim\limits_{n \to \infty}$ gegen Null gehen, damit die
 Reihe Konvergiert. Ein Beispiel dafür ist in Abbildung \ref{fig:Fouriertrafo}
 dargestellt. Wenn $f(t)$ stetig ist folgt die Gleichmäßige Konvergenz. Ist $f(t)$
-unstetig so lässt sie sich an dieser Stelle nicht mit der Fourier-Reihe
+unstetig, so lässt sie sich an dieser Stelle nicht mit der Fourier-Reihe
 approximieren. Es tritt das Gibbsche Phänomen auf, das die Abweichung beschreibt.
 \begin{figure}
   \centering
@@ -40,7 +54,7 @@ zeitabhängigen Funktion bestimmen. Die Fourier-Transformation ist definiert dur
   g(\nu)= \int_{-\infty}^\infty f(t)\exp(i\nu t) \mathrm{d}t
 \end{equation}
 Sollte $f(t)$ periodisch sein, ist $g(\nu)$ eine konvergierende Reihe von
-\delta-Funktionen wie die in Abbildung \ref{fig:Fouriertrafo}. Die Umkehrfunktion
+$\delta$-Funktionen wie die in Abbildung \ref{fig:Fouriertrafo}. Die Umkehrfunktion
 \begin{equation}
   f(t)= \frac{1}{2\pi}\int_{-\infty}^\infty g(\nu)\exp(i\nu t) \mathrm{d}\nu
 \end{equation}

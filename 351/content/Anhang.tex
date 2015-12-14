@@ -1,7 +1,7 @@
 \section{Anhang}
 \label{Anhang}
 \subsection{Dreieckspannung}
-\label{Dreieckspannung}
+\label{sec:Dreieckspannung}
 Die Dreieckspannung wird parametriesiert durch die Funktion
 \begin{equation*}
   f(t)=\left\{
@@ -11,15 +11,16 @@ Die Dreieckspannung wird parametriesiert durch die Funktion
   \end{array}
   \right.
 \end{equation*}
-wird die Funktion in \eqref{} eingesetzt erhält man
+wird die Funktion in \eqref{fuikoeffizient_a} eingesetzt erhält man
 \begin{equation*}
-  a_n=\frac{2}{T}\int^{\frac{T}{2}}_0 \;t \cos(\frac{2n \pi t}{T} ) + K dt
-  \int^0_{\frac{-T}{2}} \; t \cos(\frac{2n\pi t}{T} ) + K dt
+  a_n=\frac{2}{T}\int^{\frac{T}{2}}_0 \;t \cos\left(\frac{2n \pi t}{T} \right) + K dt
+  \int^0_{\frac{-T}{2}} \; t \cos\left(\frac{2n\pi t}{T} \right) + K dt
 \end{equation*}
 daraus folgt
 \begin{align*}
-  a_n=\frac{4K}{T}\left(\left[ \frac{T}{2n\pi}\sin(\frac{2nt\pi}{T})\right]^\frac{T}{2}_0
-  -\frac{T}{4n^2\pi^2}\left[-\cos(\frac{2nt\pi}{T})\right]^0_\frac{-T}{2} \right)
+  a_n=\frac{4K}{T}\left(\left[ \frac{T}{2n\pi}\sin(\frac{2nt\pi}{T})\right]
+  ^\frac{T}{2}_0-\frac{T}{4n^2\pi^2}\left[-\cos\left(\frac{2nt\pi}{T}\right)
+  \right]^0_\frac{-T}{2} \right)
 \end{align*}
 da dies eine gerade Funktion ist, entfallen die Koeffizienten der Sinus-Terme.
 so das für die Koeffizienten
@@ -36,7 +37,7 @@ und für ungerade n
   a_n=0.
 \end{equation*}
 \subsection{Rechteckspannung}
-\label{Rechteckspannung}
+\label{sec:Rechteckspannung}
 Die Rechteckspannung lasst sich durch die Funktion
 \begin{equation*}
   f(t)=\left\{
@@ -49,9 +50,9 @@ Die Rechteckspannung lasst sich durch die Funktion
 beschreiben. bei dieser Funktion handelt es sich um eine ungerade Funktion, daher
 sind die Koeffizienten der Kosinuns-Funktion $0$. Für die Koeffizienten gilt
 \begin{align*}
-  b_n=&\frac{2}{T}\left(\int^{\frac{T}{2}}_0\;K\sin(\frac{2nt\pi}{T})dt+
-\int^0_{\frac{-T}{2}}\;K\sin(\frac{2nt\pi}{T})dt\right)\\
-  b_n=&2\left[ \frac{K}{n\pi}\cos(\frac{2nt\pi}{T})\right]^{\frac{T}{2}}_0\\
+  b_n=&\frac{2}{T}\left(\int^{\frac{T}{2}}_0\;K\sin\left(\frac{2nt\pi}{T}\right)dt+
+\int^0_{\frac{-T}{2}}\;K\sin\left(\frac{2nt\pi}{T}\right)dt\right)\\
+  b_n=&2\left[ \frac{K}{n\pi}\cos\left(\frac{2nt\pi}{T}\right)\right]^{\frac{T}{2}}_0\\
   b_n=&\frac{2K}{n\pi}(\cos(n\pi)+1)\;.
 \end{align*}
 Daher gilt für gerade n
@@ -63,7 +64,7 @@ Daher gilt für gerade n
   b_n=0
 \end{equation}
 \subsection{Sägezahnspannung}
-\label{Saegezahnspannung}
+\label{sec:Saegezahnspannung}
 Die Sägezahnspannung ist durch folgende Funktion beschrieben.
 \begin{equation*}
   f(t)=\left\{
@@ -75,18 +76,14 @@ Die Sägezahnspannung ist durch folgende Funktion beschrieben.
 \end{equation*}
 Da es sich um eine ungerade Funktion handelt entfallen die Kosinus-Terme. Für die
 anderen gelten
-\begin{equation*}
+\begin{align*}
   b_n=\frac{2}{T}\left(\int^{\frac{T}{2}}_0\;\left(\frac{Kt}{T}-K\right)
   \sin\left(\frac{2nt\pi}{T}\right)dt +\int^0_{\frac{-T}{2}}\frac{Kt}{T}
-  \sin\left(\frac{2nt\pi}{T}\right)dt\right)
-\end{equation*}
-\begin{equation*}
+  \sin\left(\frac{2nt\pi}{T}\right)dt\right)\\
   b_n=\left[\frac{\frac{8n\pi}{T^2}\sin(\frac{2nt\pi}{T})(-\frac{4Kt}{T}+K)
-  -\cos(\frac{2nt\pi}{T}+T)}{\frac{4n\pi}{T^2}}\right]^{\frac{T}{2}}_0
-\end{equation*}
-\begin{equation*}
+  -\cos(\frac{2nt\pi}{T}+T)}{\frac{4n\pi}{T^2}}\right]^{\frac{T}{2}}_0\\
   b_n=\frac{-4K}{\pi^2n^2}(\cos(n\pi)-1)
-\end{equation*}
+\end{align*}
 so dass für die geraden n
 \begin{equation}
   b_n=0
