@@ -1,41 +1,5 @@
 \section{Anhang}
 \label{sec:Anhang}
-\subsection{Dreieckspannung}
-\label{sec:Dreieckspannung}
-Die Dreieckspannung wird parametriesiert durch die Funktion
-\begin{equation*}
-  f(t)=\left\{
-  \begin{array}{l l}
-    &\frac{4Kt}{T}+K   \;\;\;\;\;\;\frac{-T}{2}<t<0 \\
-    &\frac{-4Kt}{T}+K  \;\;\;\;\;0<t<\frac{T}{2}
-  \end{array}
-  \right.
-\end{equation*}
-wird die Funktion in \eqref{fuikoeffizient_a} eingesetzt erhält man
-\begin{equation*}
-  a_n=\frac{2}{T}\int^{\frac{T}{2}}_0 \;t \cos\left(\frac{2n \pi t}{T} \right) + K dt
-  \int^0_{\frac{-T}{2}} \; t \cos\left(\frac{2n\pi t}{T} \right) + K dt
-\end{equation*}
-daraus folgt
-\begin{align*}
-  a_n=\frac{4K}{T}\left(\left[ \frac{T}{2n\pi}\sin(\frac{2nt\pi}{T})\right]
-  ^\frac{T}{2}_0-\frac{T}{4n^2\pi^2}\left[-\cos\left(\frac{2nt\pi}{T}\right)
-  \right]^0_\frac{-T}{2} \right)\;.
-\end{align*}
-Da dies eine gerade Funktion ist, entfallen die Koeffizienten der Sinus-Terme.
-so das für die Koeffizienten
-
-\begin{equation}
-  4K\left(\frac{1}{n^2\pi^2}(\cos(n\pi)-1)\right)
-\end{equation}
-gilt. Daher sind die Koeffizienten für gerade n
-\begin{equation*}
-a_n=\frac{-8K}{n^2}
-\end{equation*}
-und für ungerade n
-\begin{equation*}
-  a_n=0.
-\end{equation*}
 \subsection{Rechteckspannung}
 \label{sec:Rechteckspannung}
 Die Rechteckspannung lasst sich durch die Funktion
@@ -50,19 +14,19 @@ Die Rechteckspannung lasst sich durch die Funktion
 beschreiben. bei dieser Funktion handelt es sich um eine ungerade Funktion, daher
 sind die Koeffizienten der Kosinuns-Funktion $0$. Für die Koeffizienten gilt
 \begin{align*}
-  b_n=&\frac{2}{T}\left(\int^{\frac{T}{2}}_0\;-K\sin\left(\frac{2nt\pi}{T}\right)dt+
-\int^0_{\frac{-T}{2}}\;K\sin\left(\frac{2nt\pi}{T}\right)dt\right)\\
+  b_n=&\frac{2}{T}\left(\int^{\frac{T}{2}}_0\;-K\sin\left(\frac{2nt\pi}{T}\right)\symup{d}t+
+\int^0_{\frac{-T}{2}}\;K\sin\left(\frac{2nt\pi}{T}\right)\symup{d}t\right)\\
   b_n=&2\left[ \frac{K}{n\pi}\cos\left(\frac{2nt\pi}{T}\right)\right]^{\frac{T}{2}}_0\\
   b_n=&\frac{2K}{n\pi}(\cos(n\pi)+1)\;.
 \end{align*}
 Daher gilt für ungerade n
-\begin{equation}
+\begin{equation*}
   b_n=\frac{4K}{n\pi}
-\end{equation}
+\end{equation*}
  und für gerade n
-\begin{equation}
+\begin{equation*}
   b_n=0
-\end{equation}
+\end{equation*}
 \subsection{Sägezahnspannung}
 \label{sec:Saegezahnspannung}
 Die Sägezahnspannung ist durch folgende Funktion beschrieben.
@@ -78,19 +42,56 @@ Da es sich um eine ungerade Funktion handelt entfallen die Kosinus-Terme. Für d
 anderen gelten
 \begin{align*}
   b_n=&\frac{2}{T}\left(\int^{\frac{T}{2}}_0\;\left(\frac{Kt}{T}-K\right)
-  \sin\left(\frac{2nt\pi}{T}\right)dt +\int^0_{\frac{-T}{2}}\frac{Kt}{T}
-  \sin\left(\frac{2nt\pi}{T}\right)dt\right)\\
+  \sin\left(\frac{2nt\pi}{T}\right)\symup{d}t +\int^0_{\frac{-T}{2}}\frac{Kt}{T}
+  \sin\left(\frac{2nt\pi}{T}\right)\symup{d}t\right)\\
   b_n=&\frac{2}{T}\left[\frac{2n\pi}{T}\left(K-\frac{Kt}{T}\right)
   \cos\left(\frac{2nt\pi}{T}\right)+\frac{2n\pi}{T}\sin\left(\frac{2nt\pi}{T}\right)
-  \right]^{\frac{T}{2}}_0+\frac{T}{2}\left[a\left(\sin\left(\frac{2nt\pi}{T}\right)
+  \right]^{\frac{T}{2}}_0\\
+  &+\frac{2}{T}\left[a\left(\sin\left(\frac{2nt\pi}{T}\right)
   -\frac{2nt\pi}{T}\cos\left(\frac{2nt\pi}{T}\right)\right)\right]^0_\frac{-T}{2}\\
   b_n=&\frac{2}{T}\left(\frac{KT}{2n\pi}\cos(n\pi)\right)
 \end{align*}
 so dass für die geraden n
-\begin{equation}
+\begin{equation*}
   b_n=\frac{K}{n\pi}
-\end{equation}
+\end{equation*}
 gilt und für die ungeraden n
-\begin{equation}
+\begin{equation*}
   b_n=\frac{-K}{n\pi}
-\end{equation}
+\end{equation*}
+\subsection{Dreieckspannung}
+\label{sec:Dreieckspannung}
+Die Dreieckspannung wird parametriesiert durch die Funktion
+\begin{equation*}
+  f(t)=\left\{
+  \begin{array}{l l}
+    &\frac{4Kt}{T}+K   \;\;\;\;\;\;\frac{-T}{2}<t<0 \\
+    &\frac{-4Kt}{T}+K  \;\;\;\;\;0<t<\frac{T}{2}
+  \end{array}
+  \right.
+\end{equation*}
+wird die Funktion in \eqref{fuikoeffizient_a} eingesetzt erhält man
+\begin{equation*}
+  a_n=\frac{2}{T}\int^{\frac{T}{2}}_0 \;t \cos\left(\frac{2n \pi t}{T} \right)
+  + K \symup{d}t \int^0_{\frac{-T}{2}} \; t \cos\left(\frac{2n\pi t}{T} \right) + K \symup{d}t
+\end{equation*}
+daraus folgt
+\begin{align*}
+  a_n=\frac{4K}{T}\left(\left[ \frac{T}{2n\pi}\sin(\frac{2nt\pi}{T})\right]
+  ^\frac{T}{2}_0-\frac{T}{4n^2\pi^2}\left[-\cos\left(\frac{2nt\pi}{T}\right)
+  \right]^0_\frac{-T}{2} \right)\;.
+\end{align*}
+Da dies eine gerade Funktion ist, entfallen die Koeffizienten der Sinus-Terme.
+so das für die Koeffizienten
+
+\begin{equation*}
+  4K\left(1-\frac{1}{n^2\pi^2}(\cos(n\pi))\right)
+\end{equation*}
+gilt. Daher sind die Koeffizienten für ungerade n
+\begin{equation*}
+a_n=\frac{8K}{n^2}
+\end{equation*}
+und für gerade n
+\begin{equation*}
+  a_n=0.
+\end{equation*}
