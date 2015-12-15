@@ -20,9 +20,9 @@ daraus folgt
 \begin{align*}
   a_n=\frac{4K}{T}\left(\left[ \frac{T}{2n\pi}\sin(\frac{2nt\pi}{T})\right]
   ^\frac{T}{2}_0-\frac{T}{4n^2\pi^2}\left[-\cos\left(\frac{2nt\pi}{T}\right)
-  \right]^0_\frac{-T}{2} \right)
+  \right]^0_\frac{-T}{2} \right)\;.
 \end{align*}
-da dies eine gerade Funktion ist, entfallen die Koeffizienten der Sinus-Terme.
+Da dies eine gerade Funktion ist, entfallen die Koeffizienten der Sinus-Terme.
 so das für die Koeffizienten
 
 \begin{equation}
@@ -50,16 +50,16 @@ Die Rechteckspannung lasst sich durch die Funktion
 beschreiben. bei dieser Funktion handelt es sich um eine ungerade Funktion, daher
 sind die Koeffizienten der Kosinuns-Funktion $0$. Für die Koeffizienten gilt
 \begin{align*}
-  b_n=&\frac{2}{T}\left(\int^{\frac{T}{2}}_0\;K\sin\left(\frac{2nt\pi}{T}\right)dt+
+  b_n=&\frac{2}{T}\left(\int^{\frac{T}{2}}_0\;-K\sin\left(\frac{2nt\pi}{T}\right)dt+
 \int^0_{\frac{-T}{2}}\;K\sin\left(\frac{2nt\pi}{T}\right)dt\right)\\
   b_n=&2\left[ \frac{K}{n\pi}\cos\left(\frac{2nt\pi}{T}\right)\right]^{\frac{T}{2}}_0\\
   b_n=&\frac{2K}{n\pi}(\cos(n\pi)+1)\;.
 \end{align*}
-Daher gilt für gerade n
+Daher gilt für ungerade n
 \begin{equation}
   b_n=\frac{4K}{n\pi}
 \end{equation}
- und für ungerade n
+ und für gerade n
 \begin{equation}
   b_n=0
 \end{equation}
@@ -77,18 +77,20 @@ Die Sägezahnspannung ist durch folgende Funktion beschrieben.
 Da es sich um eine ungerade Funktion handelt entfallen die Kosinus-Terme. Für die
 anderen gelten
 \begin{align*}
-  b_n=\frac{2}{T}\left(\int^{\frac{T}{2}}_0\;\left(\frac{Kt}{T}-K\right)
+  b_n=&\frac{2}{T}\left(\int^{\frac{T}{2}}_0\;\left(\frac{Kt}{T}-K\right)
   \sin\left(\frac{2nt\pi}{T}\right)dt +\int^0_{\frac{-T}{2}}\frac{Kt}{T}
   \sin\left(\frac{2nt\pi}{T}\right)dt\right)\\
-  b_n=\left[\frac{\frac{8n\pi}{T^2}\sin(\frac{2nt\pi}{T})(-\frac{4Kt}{T}+K)
-  -\cos(\frac{2nt\pi}{T}+T)}{\frac{4n\pi}{T^2}}\right]^{\frac{T}{2}}_0\\
-  b_n=\frac{-4K}{\pi^2n^2}(\cos(n\pi)-1)
+  b_n=&\frac{2}{T}\left[\frac{2n\pi}{T}\left(K-\frac{Kt}{T}\right)
+  \cos\left(\frac{2nt\pi}{T}\right)+\frac{2n\pi}{T}\sin\left(\frac{2nt\pi}{T}\right)
+  \right]^{\frac{T}{2}}_0+\frac{T}{2}\left[a\left(\sin\left(\frac{2nt\pi}{T}\right)
+  -\frac{2nt\pi}{T}\cos\left(\frac{2nt\pi}{T}\right)\right)\right]^0_\frac{-T}{2}\\
+  b_n=&\frac{2}{T}\left(\frac{KT}{2n\pi}\cos(n\pi)\right)
 \end{align*}
 so dass für die geraden n
 \begin{equation}
-  b_n=0
+  b_n=\frac{K}{n\pi}
 \end{equation}
 gilt und für die ungeraden n
 \begin{equation}
-  b_n=\frac{-8K}{n^2\pi^2}
+  b_n=\frac{-K}{n\pi}
 \end{equation}
