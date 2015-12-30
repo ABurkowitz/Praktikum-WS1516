@@ -19,14 +19,16 @@ sind die Koeffizienten der Kosinuns-Funktion $0$. Für die Koeffizienten gilt
   b_n=&2\left[ \frac{K}{n\pi}\cos\left(\frac{2nt\pi}{T}\right)\right]^{\frac{T}{2}}_0\\
   b_n=&\frac{2K}{n\pi}(\cos(n\pi)+1)\;.
 \end{align*}
-Daher gilt für ungerade n
+Daher gilt
 \begin{equation*}
-  b_n=\frac{4K}{n\pi}
+  \left\{
+  \begin{array}{l l}
+    &b_n=\frac{4K}{n\pi}   \;\;\;\;\;\text{n ungerade} \\
+    &b_n=0  \;\;\;\;\;\;\;\;\text{n gerade}
+  \end{array}
+  \right.
 \end{equation*}
- und für gerade n
-\begin{equation*}
-  b_n=0
-\end{equation*}
+
 \subsection{Sägezahnspannung}
 \label{sec:Saegezahnspannung}
 Die Sägezahnspannung ist durch folgende Funktion beschrieben.
@@ -34,7 +36,7 @@ Die Sägezahnspannung ist durch folgende Funktion beschrieben.
   f(t)=\left\{
   \begin{array}{l l}
     &\frac{Kt}{T}-K   \;\;\;\;\;\frac{-T}{2}<t<0 \\
-    &\frac{Kt}{T}   \;\;\;\;\;\;\;\;\;\;\;\;\;0<t<\frac{T}{2}
+    &\frac{Kt}{T}   \;\;\;\;\;\;\;\;\;\;\;\;0<t<\frac{T}{2}
   \end{array}
   \right.
 \end{equation*}
@@ -51,14 +53,16 @@ anderen gelten
   -\frac{2nt\pi}{T}\cos\left(\frac{2nt\pi}{T}\right)\right)\right]^0_\frac{-T}{2}\\
   b_n=&\frac{2}{T}\left(\frac{KT}{2n\pi}\cos(n\pi)\right)
 \end{align*}
-so dass für die geraden n
+so dass gilt
 \begin{equation*}
-  b_n=\frac{K}{n\pi}
+  \left\{
+  \begin{array}{l l}
+    &b_n=\frac{-K}{n\pi}   \;\;\;\;\;\;\text{n ungerade} \\
+    &b_n=\frac{K}{n\pi}   \;\;\;\;\;\;\;\text{n gerade}
+  \end{array}
+  \right.
 \end{equation*}
-gilt und für die ungeraden n
-\begin{equation*}
-  b_n=\frac{-K}{n\pi}
-\end{equation*}
+
 \subsection{Dreieckspannung}
 \label{sec:Dreieckspannung}
 Die Dreieckspannung wird parametriesiert durch die Funktion
@@ -87,11 +91,12 @@ so das für die Koeffizienten
 \begin{equation*}
   4K\left(1-\frac{1}{n^2\pi^2}(\cos(n\pi))\right)
 \end{equation*}
-gilt. Daher sind die Koeffizienten für ungerade n
+gilt. Daher sind die Koeffizienten
 \begin{equation*}
-a_n=\frac{8K}{n^2}
-\end{equation*}
-und für gerade n
-\begin{equation*}
-  a_n=0.
+  \left\{
+  \begin{array}{l l}
+    &a_n=\frac{8K}{n^2}   \;\;\;\;\;\text{n ungerade} \\
+    &a_n=0  \;\;\;\;\;\;\;\;\text{n gerade}
+  \end{array}
+  \right.
 \end{equation*}
