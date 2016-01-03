@@ -1,2 +1,84 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+
+Für die Berechnungen und Experimente wurden die Eigenschaften und Einstellungen
+\begin{align*}
+  L=&23.954\si{\milli\henry}  \\
+  C=&0.7932\si{\nano\farad}  \\
+  C_{sp}=&0.028\si{\nano\farad}\\
+  R=&48\si{\ohm}\\
+  \omega_{res}=&32.05\si{\kilo\hertz}
+\end{align*}
+benutzt.
+In der Tabelle \ref{tab:5a} sind für verschiedene Koppelkondensatoren die Verhältnisse
+zwischen Schwebungs- und Schwingfrequenz, durch die Anzahl der Maxima,
+in einer Schwebungsperiode angegeben. Die Theoriewerte sind durch das Verhältnis
+aus Gleichung \eqref{} gegeben.
+\begin{table}
+  \centering
+  \begin{tabular}{c c c c}
+    \toprule
+    Koppelkondensator $C_k$\si{\nano\farad} & Maxima einer Schwingung $n_{max}$& Theoriewert
+    & Abweichung \\
+    \midrule
+    12.0 & 10  & 15.6\pm2.9 & 35.8\%\\
+    10.0 & 8   & 13.2\pm2.4 & 39.4\%\\
+    8.2  & 7   & 11.0\pm2.0 & 36.4\%\\
+    6.8  & 6   &  9.3\pm1.7 & 30.7\%\\
+    4.7  & 4   &  6.7\pm1.2 & 40.3\%\\
+    2.7  & 2   &  4.2\pm0.7 & 52.3\%\\
+    \bottomrule
+  \end{tabular}
+  \caption{Anzahl der Schwingungsmaxima in einer bei den Koppelkondensatoren mit $2.2\si{\nano\farad}$ und $1.0\si{\nano\farad}$
+  waren die Maxima nicht ablesbar, weshalb diese nicht aufgeführt sind. Als
+  Ablesefehler wird $\pm1$ angenommen. }
+  \label{tab:5a}
+\end{table}
+Die Tabelle \ref{tab:5b} gibt, die errechneten und experimentell bestimmten
+Fundamentalfrequenzen, für verschiedene Koppelkondensatoren an. Berechnet wurden
+sie mit den Formeln \eqref{eqn:frequenz_puls} für $\nu^{+}$
+und \eqref{eqn:frequenz_minus} für $\nu^{-}$. Die experimentell bestimmten Werte stammen aus dem
+Versuchsaufbau nach Abblidung \ref{fig:messung1}.
+\begin{table}
+  \centering
+  \begin{tabular}{c c c c c c c}
+    \toprule
+    $C_k$\si{\nano\farad} & $\nu^{+}_E$\si{\hertz} & $\nu^{+}_T$\si{\hertz}
+    & Abweichung &$\nu^{-}_E$\si{\hertz} & $\nu^{-}_T$\si{\hertz} & Abweichung \\
+    \midrule
+    12.0 & 32050\pm10 & 35884\pm2 & 12.2\% & 39680\pm10 & 38300\pm050 & 2.13\%  \\
+    10.0 & 32050\pm10 & 35884\pm2 & 12.2\% & 40320\pm10 & 38700\pm050 & 2.59\%  \\
+    8.2  & 32050\pm10 & 35884\pm2 & 12.2\% & 41670\pm10 & 39300\pm070 & 4.46\%  \\
+    6.8  & 32050\pm10 & 35884\pm2 & 12.2\% & 43860\pm10 & 40000\pm080 & 8.16\%  \\
+    4.7  & 32050\pm10 & 35884\pm2 & 12.2\% & 47170\pm10 & 41700\pm110 & 11.69\% \\
+    2.7  & 32050\pm10 & 35884\pm2 & 12.2\% & 56180\pm10 & 45500\pm170 & 22.13\% \\
+    2.2  & 32050\pm10 & 35884\pm2 & 12.2\% & 60240\pm10 & 47400\pm200 & 25.76\% \\
+    1.0  & 32050\pm10 & 35884\pm2 & 12.2\% & 79620\pm10 & 58000\pm400 & 35.59\% \\
+    \bottomrule
+  \end{tabular}
+  \caption{2}
+  \label{tab:5b}
+\end{table}
+In der Tabelle \ref{tab:5c} werden die experimentell bestimmten Fundamentalfrequenzen
+aus der dritten Messung angegeben sowie die relative Abweichung.
+\begin{table}
+  \centering
+  \begin{tabular}{c c c c c c c}
+    \toprule
+    Koppelkondensator $C_k$ in \si{\nano\farad} & $\delta t_1$ in \si{\milli\second}
+    & $\nu^{+}_E$ \si{\hertz} & Abweichung & $\delta t_2$ in \si{\milli\second}
+    & $\nu^{-}_E$ \si{\hertz} & Abweichung\\
+    \midrule
+    12.0 & 296.0 & 33490\pm12 & 6.7\% & 720 & 39510\pm12 & 3.2\%  \\
+    10.0 & 304.0 & 33490\pm12 & 6.7\% & 540 & 40850\pm12 & 5.6\%  \\
+    8.2  & 300.0 & 33260\pm12 & 7.3\% & 508 & 42640\pm12 & 8.5\%  \\
+    6.8  & 300.0 & 33040\pm12 & 7.9\% & 432 & 43980\pm12 &10.0\%  \\
+    4.7  & 296.0 & 33490\pm12 & 6.7\% & 394 & 48220\pm12 & 1.6\%  \\
+    2.7  & 298.0 & 33490\pm12 & 6.7\% & 382 & 56700\pm12 & 2.5\%  \\
+    2.2  & 300.0 & 33930\pm12 & 5.4\% & 366 & 60270\pm12 & 2.7\%  \\
+    1.0  & 300.0 & 33040\pm12 & 7.9\% & 354 & 80350\pm13 & 3.9\%  \\
+    \bottomrule
+  \end{tabular}
+  \caption{Eigenfrequenzen des Schwingkeises}
+  \label{tab:5c}
+\end{table}
