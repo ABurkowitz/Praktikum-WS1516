@@ -1,12 +1,12 @@
 \section{Theorie}
 \label{sec:Theorie}
 \subsection{Gedämpfte Schwingung}
-Ein ungedämpfter Schwingkreis besteht aus zwei Energiespeichern: eine Kapazität C
-in Form eines Kondensators und eine Induktivität L in Form einer Spule. Befindet
+Ein ungedämpfter Schwingkreis besteht aus zwei Energiespeichern: Eine Kapazität $C$
+in Form eines Kondensators und eine Induktivität $L$ in Form einer Spule. Befindet
 sich Energie in dem System, so fliesst der Strom periodisch wechselnd von der
 Kapazität zur Induktivität und umgekehrt. In einem idealen System bleibt die Energie
 dabei erhalten.
-Fügt man diesem Schwingkreis einen ohmschen Widerstand R hinzu, so erhält man eine
+Fügt man diesem Schwingkreis einen ohmschen Widerstand $R$ hinzu, so erhält man eine
 gedämpfte Schwingung, da an dem Widerstand kontinuierlich Energie als Joulsche Wärme
 abfällt. Infolgedessen nehmen die Amplitude des Stroms und die Spannung am
 Kondensator mit der Zeit ab. Ein solcher gedämpfter Schwingkreis ist in Abbildung
@@ -37,12 +37,12 @@ lösen lässt. Für $\omega$ ergibt sich
   \omega_{1,2} = i \frac{R}{2L}\pm \sqrt{\frac{1}{L C} - \frac{R^2}{4L^2}}.
   \label{eqn:omega12}
 \end{equation}
-Führt man die Abkürzungen
+Mit den Abkürzungen
 \begin{align*}
-  \mu &= \frac{R}{4 \pi L} \text{ und }
+  \mu &= \frac{R}{4 \pi L} & &\text{ und } &
   \nu &= \frac{1}{2\pi} \sqrt{\frac{1}{L C} - \frac{R^2}{4 L^2}}
 \end{align*}
-ein, erhält man alle Lösungen mit dem Superpositionsprinzip als
+erhält man alle Lösungen mit dem Superpositionsprinzip als
 \begin{equation}
   I(t) = e^{-2 \pi \mu t} (u_1 e^{i 2 \pi \nu t} + u_2 e^{-i 2 \pi \nu t}).
   \label{eqn:loesung}
@@ -53,7 +53,7 @@ Fall 1: $\frac{1}{L C} > \frac{R^2}{4L^2}$, $\nu$ wird also reell. Dann müssen
 die Konstanten $u_1$ und $u_2$ zueinander komplex konjungiert sein und mit der
 Eulerschen Formel
 \begin{equation}
-  e^{i\phi} = \cos{\pi} + i \sin{\pi}
+  e^{i\phi} = \cos{\phi} + i \sin{\phi}
   \label{eqn:euler}
 \end{equation}
 folgt aus Gleichung \eqref{eqn:loesung}
@@ -81,7 +81,7 @@ beträgt
 und die Abklingdauer $T_\symup{ex}$, also die Zeit, nach der die Amplitude auf den
 e-ten Teil des Startwertes abgefallen ist, ist durch
 \begin{equation}
-  T_\symup{ex} = \frac{1}{2\pi\nu} = \frac{2L}{R}
+  T_\symup{ex} = \frac{1}{2\pi\mu} = \frac{2L}{R}
   \label{eqn:abklingzeit}
 \end{equation}
 gegeben. In Grafik \ref{fig:gedaempfte_schwingung} ist ein solcher Schwingfall,
@@ -143,8 +143,8 @@ erhält man
 Die Phasenverschiebung zwischen Kondensatorspannung und Erregerspannung berechnet
 sich durch
 \begin{equation}
-  \phi(\omega)=\arctan{\frac{Im(U)}{Re(U)}}
-  = \arctan{\frac{-\omega R C}{1-L C \omega^2}}.
+  \phi(\omega)=\arctan\left({\frac{Im(U)}{Re(U)}}\right)
+  = \arctan\left({\frac{-\omega R C}{1-L C \omega^2}}\right).
   \label{eqn:phasenverschiebung}
 \end{equation}
 Dieser Gleichung \eqref{eqn:phasenverschiebung} kann man entnehmen, dass die
@@ -167,7 +167,8 @@ Null geht und für $\omega \to 0$ gegen $U_0$. Bei der Resonanzfrequenz
 erreicht $U_\symup{C}$ ein Maximum, welches größer als $U_0$ sein kann.
 Es muss nun wieder zwischen zwei Fällen unterschieden werden:\newline
 Wenn $\frac{1}{L C} \gg \frac{R^2}{2 L^2}$ ist, handelt es sich um schwache Dämpfung.
-In diesem Fall nähert sich $\omega_\symup{res}$ $\omega_0$ an. Im Maximum nimmt
+In diesem Fall nähert sich die Resonanzfrequenz $\omega_\symup{res}$ der
+Eigenfrequzenz des ungedämpften System $\omega_0$ an. Im Maximum nimmt
 $U_C$ dann den Wert
 \begin{equation}
   U_\symup{C,max} = \frac{1}{\omega_0 R C} U_0
