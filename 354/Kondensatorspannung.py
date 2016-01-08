@@ -13,6 +13,15 @@ f, uc , a = np.genfromtxt('messwerte_phasenverschiebung.txt', unpack=True)
 #R1(48.1,0.1)
 #R2(509.5,0.5)
 #Rap(3.3e3)
+
+#def g(t,B,C):
+# return 1/np.sqrt((1-B*t**2)**2+t**2*C)
+def g(nu,  a_0, a_1):
+    return (1/ np.sqrt((1 - a_0 * nu ** 2) ** 2 + (nu ** 2) * a_1))
+nu = np.linspace(500, 900000, 9000)
+parameters1, pocv = curve_fit(g, f, uc, maxfev=10000)
+plt.plot(nu, g(nu,*parameters1) , 'r-')
+print(parameters1)
 errX=0.1
 errY=0.001
 plt.errorbar(f,uc,xerr=errX, yerr=errY,fmt='none')

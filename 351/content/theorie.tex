@@ -1,12 +1,13 @@
 \section{Theorie}
 \label{sec:Theorie}
-Periodische Funktionen wiederholen sich nach bestimmten Zeit- bzw. Raumabständen $D$.
+Periodische Funktionen wiederholen sich nach bestimmten Zeit- bzw. Raumabständen
+ $T$ und $D$.
 Für diese gilt
 \begin{align}
   f(x,t)=&f(x+D,t)\\
   f(x,t)=&f(x,t+T)\;\;.
 \end{align}
-Die beiden Wichtigsten Wichtigsten Beispiele dafür sind
+Die beiden wichtigsten Beispiele dafür sind
 \begin{align}
 f(x,t)=A\sin\left(\frac{2\pi}{T}t+\frac{2\pi}{D}x\right) \\
 f(x,t)=A\cos\left(\frac{2\pi}{T}t+\frac{2\pi}{D}x\right)
@@ -16,7 +17,7 @@ mand das Fourier-Theorem
 \subsection{Fouriersche Theorem}
 Das Fourier Theorem besagt, dass die Reihe
 \begin{equation}
-\frac{1}{2}a_0+\sum_{n=0}^\infty\left(a_n \cos\left(\frac{2n\pi}{T}t\right)
+f(t)=\frac{1}{2}a_0+\sum_{n=0}^\infty\left(a_n \cos\left(\frac{2n\pi}{T}t\right)
 +b_n\sin\left(\frac{2n\pi}{T}t\right)\right)
 \label{fuireihe}
 \end{equation}
@@ -30,13 +31,13 @@ Koeffizienten $a_n$ und $b_n$
   b_n=\frac{2}{T}\int_a^b\,\,f(t)\sin\left(\frac{2n\pi}{T}t\right)
   \label{fuikoeffizient_b}
 \end{equation}
-gilt. In der Fourier Entwicklung treten die Frequenz $\nu=\frac{1}{T}$, sowie ihre
+gilt. In der Fourier Entwicklung treten die Frequenz $\nu=\frac{1}{T}$, sowie
 ihre ganzzahligen Vielfachen auf. Bei geraden Funktionen fallen alle $b_n$ weg,
 da gilt $f(t)=f(-t)$ und dies bei sinus Funktionen nicht gegeben ist. Bei
 ungeraden Funktionen fallen alle $a_n$ weg, da $f(t)=-f(-t)$ gilt und ein Kosinus
 diese Bedingung nicht erfüllt. $a_n$ und $b_n$ müssen nach Gleichung
 \eqref{fuireihe} für $\lim\limits_{n \to \infty}$ gegen Null gehen, damit die
-Reihe Konvergiert. Ein Beispiel dafür ist in Abbildung \ref{fig:Fouriertrafo}
+Reihe konvergiert. Ein Beispiel dafür ist in Abbildung \ref{fig:Fouriertrafo}
 dargestellt. Wenn $f(t)$ stetig ist folgt die Gleichmäßige Konvergenz. Ist $f(t)$
 unstetig, so lässt sie sich an dieser Stelle nicht mit der Fourier-Reihe
 approximieren. Es tritt das Gibbsche Phänomen auf, das die Abweichung beschreibt.
@@ -48,7 +49,7 @@ approximieren. Es tritt das Gibbsche Phänomen auf, das die Abweichung beschreib
 \end{figure}
 \subsection{Fourier-Transformation}
 \label{sec:Fourier-Transformation}
-Mit der Fouruer-Transformation lässt sich das gesamte Frequenzspektrum einer
+Mit der Fourier-Transformation lässt sich das gesamte Frequenzspektrum einer
 zeitabhängigen Funktion bestimmen. Die Fourier-Transformation ist definiert durch:
 \begin{equation}
   g(\nu)= \int_{-\infty}^\infty f(t)\exp(i\nu t) \mathrm{d}t
@@ -58,7 +59,7 @@ $\delta$-Funktionen wie die in Abbildung \ref{fig:Fouriertrafo}. Die Umkehrfunkt
 \begin{equation}
   f(t)= \frac{1}{2\pi}\int_{-\infty}^\infty g(\nu)\exp(i\nu t) \mathrm{d}\nu
 \end{equation}
-ergibt aus dem Frequenzspektrum $g(\nu)$ die Funktion $f(t)$ wieder. In der
+ergibt aus dem Frequenzspektrum $g(\nu)$ wieder die Funktion $f(t)$. In der
 Praxis ist eine genaue Fourier-Transformation nicht möglich, da über einen unendlichen
 Zeitraum integriert werden muss. Mit endlichen Integrationsgenzen ist keine
 Periodizität mehr gegeben, dadurch ergibt sich aus der Transformation keine Reihe
@@ -67,7 +68,7 @@ Nebenmaxima zu den ursprünglichen Hauptmaxima.
 \subsection{Fourier-Analyse}
 \label{sec:Fourier-Analyse}
 Mit der Fourier-Analyse, werden Signale in Fourier-Koeffizienten aufgeteilt, mit
-denen durch die Gleichungen \eqref{fuikoeffizient_b}, \eqref{fuikoeffizient_b}
-und \eqref{fuireihe} die analysierten Schwingungen approximiert werden können.
+denen durch die Gleichungen \eqref{fuireihe}{fuikoeffizient_a}, \eqref{fuikoeffizient_a}
+und \eqref{fuikoeffizient_b} die analysierten Schwingungen approximiert werden können.
 
 \cite{sample}
