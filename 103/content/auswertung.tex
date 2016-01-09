@@ -1,0 +1,275 @@
+\section{Auswertung}
+\label{sec:Auswertung}
+\subsection{Bestimmung der Dichte}
+Um die nachfolgend berechneten Elastizitätsmoduln mit Literaturwerten vergleichen
+zu können, wird zunächst die Dichte der Stäbe bestimmt. Mit Hilfe einer Tabelle
+wird dann das Metall oder die Legierung bestimmt.
+Für Stab 1, der eine quadratische Querschnittsfläche hat, wurden folgende
+geometrische Abmessungen bestimmt:
+\begin{align*}
+  \text{Länge } l_1 &= \SI{0.60}{\meter}\\
+  \text{Breite } a &= \SI{0.01}{\meter}\\
+  \text{Masse } m_1 &= \SI{0.5025}{\kilo\gram}.\\
+  \intertext{Für Stab 2 mit einer runden Querschnittsfläche wurde}
+  \text{Länge } l_2 &= \SI{0.60}{\meter}\\
+  \text{Durchmesser } d &= \SI{0.01}{\meter}\\
+  \text{Masse } m_2 &= \SI{0.5025}{\kilo\gram}
+\end{align*}
+gemessen. Alle Messungen wurden dabei zehn Mal durchgeführt, um den Fehler des
+Mittelwerts bestimmen zu können, da jedoch immer der gleiche Wert gemessen wurde,
+ist der Fehler 0.
+Die Dichte der Probestäbe wird mit
+\begin{equation}
+  \rho = \frac{m}{V}
+  \label{eqn:dichte}
+\end{equation}
+bestimmt.
+Für die gemessene Dichte des quadratischen Stabes folgt
+\begin{equation*}
+  \rho_1 = \frac{m_1}{l_1 a^2} = \frac{\SI{0.5025}{\kilo\gram}}{\SI{0.60}{\meter}
+  (\SI{0.01}{\meter})^2} = \SI{8375}{\kilo\gram \per \cubic\meter}
+  \label{eqn:dichte_stab1}
+\end{equation*}
+und für die des runden Stabes
+\begin{equation*}
+  \rho_2 = \frac{m_2}{\pi \left(\frac{d}{2}\right)^2 l_2}
+  = \frac{\SI{0.3605}{\kilo\gram}}{\pi \left(\SI{0.005}{\meter}\right)^2 \SI{0.55}{\meter}}
+  = \SI{8346}{\kilo\gram \per \cubic\meter}.
+  \label{eqn:dichte_stab2}
+\end{equation*}
+
+Dies entspricht im Rahmen der relativen Fehler von $\Delta \rho_1 = \SI{0.3}{\percent}$
+und $\Delta \rho_2 = \SI{0.6}{\percent}$ der literaturbekannten Dichte von Messing
+(\cite[274]{geschke}, Tabelle 1: Einige Eigenschaften fester Stoffe) und legt nahe,
+dass die Stäbe aus Messing sind. Für eine Messing-Legierung mit einer Zusammensetzung
+von $\SI{60}{\percent}$ Kupfer und $\SI{38}{\percent}$ Zink ist dort eine Dichte
+von $\rho_{Messing}=\SI{8400}{\kilo\gram \per \cubic\meter}$ angegeben.
+
+\subsection{Flächenträgheitsmoment}
+Für die Berechnung des Elastizitätsmoduls werden die Flächenträgheitsmomente der
+verschiedenen Stäbe benötigt. Das Flächenträgheitsmoment $I$ wird mit der Gleichung
+(xx) berechnet.
+\subsubsection{quadratischer Stab}
+Für den Stab mit quadratischer Querschnittsfläche und einer Kantenlänge von
+$h = \SI{0.01}{\meter}$ ergibt sich
+\begin{equation}
+  I_1 = \int_{-\frac{h}{2}}^{\frac{h}{2}} \int_{-\frac{h}{2}}^{\frac{h}{2}}
+  y^2 \symup{d}x \symup{d}y
+  = h \cdot \left[\frac{1}{3} y^3\right]_{-\frac{h}{2}}^{\frac{h}{2}}
+  = \frac{h^4}{12} = \SI{8.33e-10}{\meter\tothe{4}}.
+  \label{eqn:I_quadratisch}
+\end{equation}
+\subsubsection{runder Stab}
+Weiter ergibt sich für den Stab mit runder Querschnittsfläche und dem Radius
+$R=\frac{d}{2}=\SI{0.005}{\meter}$ unter Verwendung der Polarkoordinaten
+$
+\begin{pmatrix}
+  x \\
+  y
+\end{pmatrix}
+=
+\begin{pmatrix}
+  r \sin\varphi \\
+  r \cos\varphi
+\end{pmatrix}
+$
+\begin{equation}
+  \begin{split}
+  I_2 &= \int_0^{2\pi} \int_0^R r \cdot r^2 \cos^2\!\varphi\, \symup{d}r \symup{d}\varphi
+  =\frac{R^4}{4}\left[\frac{1}{2}(\varphi + \underbrace{\sin\varphi \cos\varphi}_{=0})\right]_0^{2\pi} \\
+  &=\frac{\pi R^4}{4} = \SI{4.91e-10}{\meter\tothe{4}}
+  \end{split}
+  \label{eqn:I_rund}
+\end{equation}
+
+
+\subsection{Einseitige Einspannung}
+\subsubsection{eckiger Stab}
+In Tabelle \ref{tab:messung1} sind die Messwerte dargestellt, die zur Berechnung
+der Durchbiegung $D(x)$ nach Gleichung (xx) benötigt werden. Der Abstand des
+Messpunktes vom Einspannungspunkt ist $x$, $D_0(x)$ ist die Durchbiegung ohne
+Belastung des Stabes und $D_M(x)$ die Durchbiegung des Stabes nach Anhängen
+eines Gewichts der Masse $M_{G1} = \SI{1.0205}{\kilo\gram}$. Die effektive Länge
+des Stabes vom Einspannungspunkt bis zum freien Ende des Stabes beträgt
+$l_\text{eff} = \SI{0.49}{\meter}$.
+\begin{table}
+  \centering
+  \begin{tabular}{c c c}
+    \toprule
+    x in \si{\centi\meter} & $D_0(x)$ in \si{\milli\meter} & $D_M(x)$ in \si{\milli\meter} \\
+    \midrule
+    48.0	&	-0.28	&	4.74 \\
+    47.5	&	-0.26	&	4.69 \\
+    47.0	&	-0.24	&	4.64 \\
+    46.5	&	-0.13	&	4.58 \\
+    46.0	&	-0.22	&	4.51 \\
+    45.5	&	-0.20	&	4.45 \\
+    45.0	&	-0.19	&	4.39 \\
+    44.5	&	-0.19	&	4.32 \\
+    44.0	&	-0.17	&	4.26 \\
+    43.5	&	-0.14	&	4.20 \\
+    43.0	&	-0.14	&	4.14 \\
+    42.5	&	-0.11	&	4.08 \\
+    42.0	&	-0.11	&	4.01 \\
+    41.5	&	-0.09	&	3.94 \\
+    41.0	&	-0.08	&	3.87 \\
+    40.5	&	-0.07	&	3.81 \\
+    40.0	&	-0.05	&	3.76 \\
+    39.0	&	-0.01	&	3.65 \\
+    38.0	&	0.04	&	3.55 \\
+    37.0	&	0.08	&	3.44 \\
+    36.0	&	0.14	&	3.35 \\
+    35.0	&	0.18	&	3.28 \\
+    34.0	&	0.23	&	3.16 \\
+    33.0	&	0.28	&	3.07 \\
+    32.0	&	0.32	&	2.97 \\
+    31.0	&	0.38	&	2.90 \\
+    30.0	&	0.44	&	2.82 \\
+    28.0	&	0.55	&	2.68 \\
+    26.0	&	0.69	&	2.56 \\
+    24.0	&	0.82	&	2.45 \\
+    22.0	&	0.96	&	2.36 \\
+    20.0	&	1.10	&	2.28 \\
+    15.0	&	1.43	&	2.14 \\
+    10.0	&	1.84	&	2.19 \\
+     5.0	&	0.60	&	0.70 \\
+     2.5	&	0.85	&	0.82 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Messwerte zur Berechnung von $D(x)$ für den eckigen Stab 1 bei einseitiger
+  Einspannung.}
+  \label{tab:messung1}
+\end{table}
+
+Der Elaztizitätsmodul wird durch eine lineare Ausgleichsrechnung bestimmt. Dazu
+wird $D(x)$ gegen $L x^2 - \frac{x^3}{3}$ aufgetragen und mit Python eine lineare
+Regression der Form $f(x) = a \cdot x + b$ durchgeführt, welche für die Parameter
+$a$ und $b$ die folgenden Werte liefert:
+\begin{align*}
+  a &= \SI{0.06566(23)}{\per\squared\meter} \\
+  b &= \SI{0.57(12)e-3}{\meter}.
+\end{align*}
+Nach Gleichung (xx) wird der Elastizitätsmodul dann mit
+\begin{equation}
+  a = \frac{F}{2 E I} \iff E = \frac{F}{2 I a}
+  \label{eqn:Emodul1}
+\end{equation}
+bestimmt. Dabei ist $I$ das Flächenträgheitsmoment. Für den
+
+\subsubsection{runder Stab}
+\begin{table}
+  \centering
+  \begin{tabular}{c c c}
+    \toprule
+    x in \si{\centi\meter} & $D_0(x)$ in \si{\milli\meter} & $D_M(x)$ in \si{\milli\meter} \\
+    \midrule
+    48.0 & 1.70 & 6.25 \\
+    47.5 & 1.60 & 6.17 \\
+    47.0 & 1.60 & 6.09 \\
+    46.5 & 1.58 & 6.01 \\
+    46.0 & 1.58 & 5.92 \\
+    45.5 & 1.56 & 5.82 \\
+    45.0 & 1.55 & 5.73 \\
+    44.5 & 1.53 & 5.65 \\
+    44.0 & 1.52 & 5.57 \\
+    43.5 & 1.51 & 5.48 \\
+    43.0 & 1.49 & 5.40 \\
+    42.5 & 1.49 & 5.33 \\
+    42.0 & 1.48 & 5.26 \\
+    41.5 & 1.47 & 5.17 \\
+    41.0 & 1.45 & 5.09 \\
+    40.5 & 1.44 & 5.01 \\
+    40.0 & 1.44 & 4.94 \\
+    39.0 & 1.43 & 4.77 \\
+    38.0 & 1.42 & 4.64 \\
+    37.0 & 1.41 & 4.50 \\
+    36.0 & 1.41 & 4.38 \\
+    35.0 & 1.40 & 4.24 \\
+    34.0 & 1.40 & 4.11 \\
+    33.0 & 1.40 & 3.98 \\
+    32.0 & 1.40 & 3.85 \\
+    31.0 & 1.42 & 3.75 \\
+    30.0 & 1.43 & 3.63 \\
+    28.0 & 1.48 & 3.42 \\
+    26.0 & 1.51 & 3.25 \\
+    24.0 & 1.55 & 3.06 \\
+    22.0 & 1.61 & 2.91 \\
+    20.0 & 1.67 & 2.75 \\
+    15.0 & 1.84 & 2.50 \\
+    10.0 & 2.08 & 2.39 \\
+    5.0  & 0.61 & 0.69 \\
+    2.5  & 0.75 & 0.78 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Messwerte zur Berechnung von $D(x)$ für den runden Stab 2 bei einseitiger
+  Einspannung.}
+  \label{tab:messung2}
+\end{table}
+
+\subsection{Beidseitige Einspannung}
+
+\begin{table}
+  \centering
+  \begin{tabular}{c c c}
+    \toprule
+    x in \si{\centi\meter} & $D_0(x)$ in \si{\milli\meter} & $D_M(x)$ in \si{\milli\meter} \\
+    \midrule
+    26.6 & 1.44 & 3.52 \\
+    26.1 & 1.45 & 3.52 \\
+    25.6 & 1.44 & 3.50 \\
+    25.1 & 1.43 & 3.49 \\
+    24.6 & 1.42 & 3.47 \\
+    24.1 & 1.42 & 3.46 \\
+    23.6 & 1.42 & 3.44 \\
+    23.1 & 1.41 & 3.41 \\
+    22.6 & 1.41 & 3.39 \\
+    22.1 & 1.40 & 3.37 \\
+    21.1 & 1.39 & 3.31 \\
+    20.1 & 1.37 & 3.24 \\
+    19.1 & 1.36 & 3.27 \\
+    18.1 & 1.34 & 3.09 \\
+    17.1 & 1.32 & 3.00 \\
+    16.1 & 1.30 & 3.10 \\
+    15.1 & 1.28 & 2.80 \\
+    10.1 & 1.17 & 2.27 \\
+    5.1  & 1.08 & 1.66 \\
+    2.5  & 1.11 & 1.42 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Messwerte zur Berechnung von $D(x)$ für den rechteckigen Stab 1 bei
+  beidseitiger Einspannung.}
+  \label{tab:messung3a}
+\end{table}
+
+\begin{table}
+  \centering
+  \begin{tabular}{c c c}
+    \toprule
+    x in \si{\centi\meter} & $D_0(x)$ in \si{\milli\meter} & $D_M(x)$ in \si{\milli\meter} \\
+    \midrule
+    28.6 & 3.15 & 5.23 \\
+    29.1 & 3.15 & 5.22 \\
+    29.6 & 3.15 & 5.22 \\
+    30.1 & 3.17 & 5.23 \\
+    30.6 & 3.18 & 5.22 \\
+    31.1 & 3.18 & 5.22 \\
+    31.6 & 3.18 & 5.22 \\
+    32.1 & 3.19 & 5.21 \\
+    32.6 & 3.20 & 5.21 \\
+    33.1 & 3.21 & 5.19 \\
+    34.1 & 3.22 & 5.17 \\
+    35.1 & 3.25 & 5.14 \\
+    36.1 & 3.26 & 5.10 \\
+    37.1 & 3.29 & 5.05 \\
+    38.1 & 3.29 & 5.00 \\
+    39.1 & 3.30 & 4.94 \\
+    40.1 & 3.31 & 4.88 \\
+    45.1 & 3.37 & 4.50 \\
+    50.1 & 3.36 & 3.99 \\
+    52.5 & 3.36 & 3.70 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Messwerte zur Berechnung von $D(x)$ für den rechteckigen Stab 1 bei
+  beidseitiger Einspannung.}
+  \label{tab:messung3b}
+\end{table}
