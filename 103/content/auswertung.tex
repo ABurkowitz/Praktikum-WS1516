@@ -93,7 +93,7 @@ Der Abstand des Messpunktes vom Einspannungspunkt ist $x$, $D_0(x)$ ist die
 Durchbiegung ohne Belastung des Stabes und $D_M(x)$ die Durchbiegung des Stabes
 nach Anhängen eines Gewichts der Masse $M_{G1} = \SI{1.0205}{\kilo\gram}$. Die
 effektive Länge des Stabes vom Einspannungspunkt bis zum freien Ende des Stabes
-beträgt $l_\text{eff} = \SI{0.49}{\meter}$.
+beträgt $L = \SI{0.49}{\meter}$.
 
 Der Elaztizitätsmodul wird durch eine lineare Ausgleichsrechnung bestimmt. Dazu
 wird $D(x)$ gegen $L x^2 - \frac{x^3}{3}$ aufgetragen und mit Python eine lineare
@@ -107,19 +107,112 @@ $a$ und $b$ die folgenden Werte liefert (siehe dazu Abbildung
   \label{fig:plot_einseitig1}
 \end{figure}
 \begin{align*}
-  a &= \SI{0.06566(23)}{\per\squared\meter} \\
-  b &= \SI{0.57(12)e-3}{\meter}.
+  a &= \SI{0.0657(2)}{\per\squared\meter} \\
+  b &= \SI{0.6(1)e-3}{\meter}.
 \end{align*}
-
 Nach Gleichung (xx) wird der Elastizitätsmodul dann mit
 \begin{equation}
-  a = \frac{F}{2 E I_1} \iff E = \frac{F}{2 I_1 a}
+  a = \frac{F}{2 E I_1} \iff E = \frac{M_{G1} g}{2 I_1 a}
   \label{eqn:Emodul1}
 \end{equation}
 bestimmt. Dabei ist $I_1$ das in Abschnitt \ref{sec:Flaechentraegheitsmoment}
-berechnete Flächenträgheitsmoment. Für den
+berechnete Flächenträgheitsmoment. Für den quadratischen Stab bei einseitiger
+Einspannung ergibt sich mit Gaußscher Fehlerfortpflanzung nach Gleichung (xx),
+welche mit Python durchgeführt wurde, für den Elastizitätsmodul folgender Wert:
+\begin{align*}
+  E = \SI{91.5(3)e+9}{\newton\per\squared\meter}.
+\end{align*}
+
 
 \subsubsection{runder Stab}
-
+Die Messwerte zur Berechnung der Durchbiegung $D(x)$ des runden Stabes bei
+einseitiger Einspannung sind in Tabelle \ref{tab:messung2} im Anhang aufgeführt.
+Die Masse des Gewichts zur Belastung des Stabes beträgt $M_{G2} = \SI{0.5285}
+{\kilo\gram}$, die effektive Länge des Stabes ist wieder $L=\SI{0.49}
+{\meter}$. Analog zur Berechnung des Elastizitätmoduls des eckigen Stabes bei
+einseitiger Einspannung wird eine lineare Ausgleichsrechnung durchgeführt, welche
+in Abbildung \ref{fig:plot_einseitig2} zu sehen ist und auf die Werte
+\begin{figure}
+  \centering
+  \includegraphics[width=0.9\textwidth]{stab2_einseitig.pdf}
+  \caption{Lineare Ausgleichsrechnung für den einseitig eingespannten runden Stab.}
+  \label{fig:plot_einseitig2}
+\end{figure}
+\begin{align*}
+  a &= \SI{0.0601(2)}{\per\squared\meter} \\
+  b &= \SI{7(1)e-5}{\meter}
+\end{align*}
+für die Parameter $a$ und $b$ führt. Für den Elastizitätsmodul ergibt sich dann
+vergleichbar zu Gleichung \eqref{eqn:Emodul1} jedoch mit dem Flächenträgheitsmoment
+$I_2$
+\begin{equation}
+  E = \frac{M_{G2} g}{2 I_2 a} = \SI{87.9(3)e+9}{\newton\per\squared\meter}.
+\end{equation}
 
 \subsection{Beidseitige Einspannung}
+Die zur Berechnung verwendeten Messwerte sind im Anhang in Tabelle \ref{tab:messwerte3a}
+und \ref{tab:messwerte3b} zu finden. Bei der beidseitigen Einspannung ist zu
+beachten, dass die Abstände immer vom einen Ende des Stabes aus gemessen wurden
+und nicht jeweils vom Einspannpunkt bis zur Mitte. Deshalb müssen die Bereiche
+$0\leq x \leq \frac{L}{2}$ und $\frac{L}{2}\leq x \leq L$ getrennt berechnet 
+werden. Die effektive Stablänge bei beidseitiger Einspannung ist $L= \SI{0.553}
+{\meter}$, die Masse des angehängten Gewichts $M_{G3} = \SI{4.689} {\kilo\gram}$.
+
+\subsubsection{links - ersetzen!-}
+%\subsubsection{$0 \leq x \leq \frac{L}{2}$}
+In diesem Fall wird das Polynom $\left(3 L^2 x - 4 x^3\right)$ gegen $D(x)$
+aufgetragen und eine lineare Ausgleichsrechnung wie bei der einseitigen Einspannung
+durchgeführt. Der Graph ist in Abbildung \ref{fig:plot_beidseitig1} zu sehen.
+Für die Parameter $a$ und $b$ erhält man in diesem Fall die Werte
+\begin{align*}
+  a &= \SI{0.0122(3)}{\per\squared\meter}\\
+  b &= \SI{4(4)e-5}{\meter}.
+\end{align*}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.9\textwidth]{stab1_beidseitig_links.pdf}
+  \caption{Lineare Ausgleichsrechnung für den beidseitig eingespannten eckigen Stab.}
+  \label{fig:plot_beidseitig1}
+\end{figure}
+Für den Elastizitätsmodul folgt nach Gleichung (xx)
+\begin{equation}
+  a = \frac{F}{48 E I_1} \iff E = \frac{M_{G3} g}{48 I_1 a}
+  = \SI{95(2)e+9}{\newton\per\squared\meter}
+  \label{eqn:Emodul3}
+\end{equation}
+
+\subsubsection{rechts -ersetzten!-}
+%\subsubsection{$\frac{L}{2} \leq x \leq L$}
+Hier wird das Polynom $\left(4 x^3 - 12 L x^2 + 9 L^2 x - L^3\right)$ gegen $D(x)$
+aufgetragen und wiederum eine lineare Regression durchgeführt, die die Werte
+\begin{align*}
+  a &= \SI{0.01207(6)}{\per\squared\meter}\\
+  b &= \SI{5(1)e-5}{\meter}
+\end{align*}
+liefert. Der Graph ist in Abbildung \ref{fig:plot_beidseitig2} dargestellt. Der
+Elastizitätsmodul wird sodann mit Gleichung \eqref{eqn:Emodul3} berechnet und ergibt
+\begin{align*}
+  E = \SI{95.2(4)e+9}{\newton\per\squared\meter}
+\end{align*}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.9\textwidth]{stab1_beidseitig_rechts.pdf}
+  \caption{Lineare Ausgleichsrechnung für den beidseitig eingespannten eckigen Stab.}
+  \label{fig:plot_beidseitig2}
+\end{figure}
+
+\subsection{Vergleich mit Literaturwerten}
+Beide Stäbe bestehen aus Messing. Da die genaue Zusammensetzung der Messinglegierung
+jedoch nicht bekannt ist, kann keine relative Abweichung der berechneten
+Elastizitätsmoduln angegeben werden. Für Messing ist in der Literatur \cite[275]{geschke}
+\begin{align*}
+  E_\text{Literatur} &= 80...103\, \si{\giga\newton\per\squared\meter}
+  \intertext{angegeben. Alle berechneten Elastizitätsmoduln liegen in diesem Rahmen:}
+  E_\text{Stab 1,einseitg} &= \SI{91.5(3)e+9}{\newton\per\squared\meter}\\
+  E_\text{Stab 2,einseitg} &= \SI{87.9(3)e+9}{\newton\per\squared\meter}\\
+  E_\text{Stab 1,beidseitig1} &= \SI{95(2)e+9}{\newton\per\squared\meter}\\
+  E_\text{Stab 1,beidseitig2} &= \SI{95.2(4)e+9}{\newton\per\squared\meter}.
+\end{align*}
+Bildet man den Mittelwert der drei Elastizitätsmoduln, die für Stab 1 berechnet
+wurden, so erhält man $E_\text{Stab 1, mittel} = \SI{93.8(7)e+9}{\newton\per\squared\meter}$
+mit einer Standardabweichung von $\SI{1.2(3)e+9}{\newton\per\squared\meter}$.

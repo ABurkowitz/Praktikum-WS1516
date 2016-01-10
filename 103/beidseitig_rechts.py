@@ -20,10 +20,12 @@ def f(a,b,c):
  return ( b * a ) + c
 
 parameters1, pcov = curve_fit(f, a, dx)
-plt.plot(a,f(a,*parameters1), 'g-', label='Fit')
+a_plot = np.linspace(0.02,0.18)
+plt.xlim(0.02,0.18)
+plt.plot(a_plot,f(a_plot,*parameters1), 'g-', label='Fit')
 
 plt.plot(a,dx, 'rx', label='Messwerte')
-plt.xlabel(r'$L x^2-\frac{x^3}{3} / m^3$')
+plt.xlabel(r'$\left(4 x^3 - 12 L x^2 + 9 L^2 x - L^3\right)} / m^3$')
 plt.ylabel(r'$D(x) / m$')
 plt.tight_layout()
 plt.legend(loc='best')

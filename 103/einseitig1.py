@@ -3,6 +3,9 @@ import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from uncertainties import correlated_values, correlation_matrix
 import scipy.constants as const
+from uncertainties import ufloat
+import uncertainties.unumpy as unp
+from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 
 x, d0, dm = np.genfromtxt('messwerte_stab1_einseitig.txt', unpack=True)
 #Einheiten in SI
@@ -20,10 +23,12 @@ def f(a,b,c):
  return ( b * a ) + c
 
 parameters1, pcov = curve_fit(f, a, dx)
-plt.plot(a,f(a,*parameters1), 'g-', label='Fit')
+a_plot = np.linspace(0,0.08)
+plt.xlim(0,0.08)
+plt.plot(a_plot,f(a_plot,*parameters1), 'g-', label='Fit')
 
 plt.plot(a,dx, 'rx', label='Messwerte')
-plt.xlabel(r'$L x^2-\frac{x^3}{3} / m^3$')
+plt.xlabel(r'$\left(L x^2-\frac{x^3}{3}\right) / m^3$')
 plt.ylabel(r'$D(x) / m$')
 plt.tight_layout()
 plt.legend(loc='best')
@@ -45,8 +50,22 @@ print(pcov)
 # [ -2.45941014e-09   1.42500660e-10]]
 #
 
+#a1=ufloat(parameters1[0].n,parameters1[0].s)
+# braucht man nicht, da python, wenn man parameters1[0] schreibt, mit ufloats rechnet.
+
 #Elasitzitätsmodul:
 E = (6 * m * const.g)/(h**4*parameters1[0])
 print(E)
 
-# (9.146+/-0.032)e+10
+
+# Berechnung Mittelwert des Emoduls von Stab 1
+e1=ufloat(9.146e+10,0.032e+10)
+e2=ufloat(9.46e+10,0.20e+10)
+e3=ufloat(9.52e+10,0.04e+10)
+
+e=(e1+e2+e3)/3
+print(e)
+
+#Standardabweichung des Mittelwerts
+s=unp.sqrt(1/6 *( (e1-e)**2 + (e2-e)**2 + (e3-e)**2 ))
+print(s)
