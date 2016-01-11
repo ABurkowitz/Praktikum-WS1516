@@ -13,7 +13,7 @@ Die Werte der benutzten Schaltung sind
   \caption{Thermodruck einer gedämpften Schwingung, aus der die Werte für
   die Tabelle \ref{fig:Messwertegedaempfteschwingung}, sowie für die Ausgleichsrechnung
   nach Gleichung \eqref{eqn:loesung} für die Berechnung von $R_{\symup{eff}}$
-  und $T_{\symup{ex}}$ stammen. Die roteingezeichneten Linien sind die
+  und $T_{\symup{ex}}$ stammen. Die rot eingezeichneten Linien sind die
   begrenzenden Funktionen.}
   \label{fig:termodruck}
 \end{figure}
@@ -26,11 +26,11 @@ aufgeführt. Die Ausgleichsrechnung nach Gleichung
 \end{equation*}
 und die Fitparameter
 \begin{align*}
-  A&=A_0=-4.4\pm0.1  \\
-  B&=-2\pi\mu=(-5.5\pm0.2)10^3  \\
-  C&=-2\pi\nu=(2.099\pm0.003)10^5   \\
+  A&=(A_0=-4.4\pm0.1)\si{\volt}  \\
+  B&=-2\pi\mu=(-5.5\pm0.2)10^3\si{\second^{-1}}  \\
+  C&=-2\pi\nu=(2.099\pm0.003)10^5\si{\second^{-1}}   \\
   D&=\eta=-6.90\pm0.06  \\
-  E&=(7.4\pm1.2)10^{-2}\;.
+  E&=(7.4\pm1.2)10^{-2}\si{\volt}\;.
 \end{align*}
 Der Fitparameter $E$ wurde hinzugefügt, da es eine Offsetspannung gibt.
 Der effektive Widerstand $R_{\symup{eff}}$ ist nach Gleichung \eqref{eqn:breite_resonanzkurve}
@@ -38,11 +38,11 @@ Der effektive Widerstand $R_{\symup{eff}}$ ist nach Gleichung \eqref{eqn:breite_
 die Abklingdauer $T_{\symup{ex}}$ nach Gleichung \eqref{eqn:abklingzeit}. Die berechneten
 Werte sind
 \begin{align*}
-    R_{\symup{eff}}=&(110\pm3)\si{\ohm}\\
+    R_{\symup{eff}}=&(112\pm3)\si{\ohm}\\
     T_{\symup{ex}}=&(1.81\pm0.05)10^{-4}\si{\second}\;.
 \end{align*}
-Die Werte weichen von dem verbauten Widerstand $R_1=48.1\si{\ohm}$ um $63.8\si{\ohm}$
-ab. Dies lässt sich durch den Innenwiderstand des Generator von $50\si{\ohm}$ erklären.
+Die Werte weichen von dem verbauten Widerstand $R_1=48.1\pm0.1\si{\ohm}$ um $64\pm3\si{\ohm}$
+ab. Dies lässt sich durch den Innenwiderstand des Generator von $50\pm0.1\si{\ohm}$ erklären.
 In den folgenden Berechnungen wird dieser Innenwiderstand mitbetrachtet.
 \begin{table}
   \centering
@@ -97,17 +97,17 @@ Resonanzkurve mit linear skalierter x-Achse dargestellt. Die aus der Abbildung
 entnommende Frequenz bei der der Phasenwinke $\phi=90°$ ist und die
 nach $\omega_0=\sqrt{\frac{1}{CL}}$ errechnete sind
 \begin{align*}
-\omega_{0_e}=&(33500.0\pm0.1)\si{\hertz}\\
-\omega_{0_t}=&(2.171\pm0.004)10^5\si{\hertz}\\
-\text{Relativer Fehler}=&84.6\%\;.
+\omega_{0_t}=&(217100\pm0.004)\si{\hertz}\\
+\omega_{0_e}=&(210486.7\pm0.6)\si{\hertz}\\
+\text{Relativer Fehler}=&3.0\%\;.
 \end{align*}
  Die Breite der
 Resonanzkurve $\omega_+-\omega_- $, ist nach Gleichung \eqref{eqn:breite_resonanzkurve}
  und experimentell bestimmt
 \begin{align*}
- \omega_{+_t}-\omega_{-_t}=&(5.04\pm0.016)10^4\si{\hertz}\\
- \omega_{+_e}-\omega_{-_e}=&(10000.0\pm0.1)\si{\hertz}\\
- \text{Relativer Fehler}=&80.1\%\;.
+ \omega_{+_t}-\omega_{-_t}=&(50400\pm160)\si{\hertz}\\
+ \omega_{+_e}-\omega_{-_e}=&(31000.0\pm0.6)\si{\hertz}\\
+ \text{Relativer Fehler}=&38.5\%\;.
 \end{align*}
 Für den experimentell bestimmten Wert von $\omega_{+_e}-\omega_{-_e}$ wurden
 die Frequenzen $28.0\si{\kilo\hertz}$ und $38.0\si{\kilo\hertz}$ verwendet.
@@ -187,8 +187,8 @@ entstanden.
   \end{tabular}
   \caption{In der Tabelle sind die Frequenz $\omega$in $\si{\hertz}$, die normierte
   Kondensatorspannung und der Abstand der Nulldurchgänge $a$ in $\si{\micro\second}$
-   angegeben. Die Fehler sind $\pm0.1\si{\hertz}$,$ \pm0.001$ und
-   $\pm0.01\si{\micro\second}$.}
+  angegeben. Die Fehler sind $\delta\nu=0.1\si{\hertz}$,$ \Delta\frac{U}{U_c}0.001$
+  und $\Delta\a=0.01\si{\micro\second}$.}
   \label{fig:Messwerte}
 \end{table}
 In der Abblidung \ref{fig:phasenverschiebung} ist der Phasenwinkel $\phi$ in Abhängingkeit
@@ -197,19 +197,19 @@ linear skalierter x-Achse in Abbildung \ref{fig:linphasenverschiebung} . Die
 Frequenzen $\omega_{1}$ und
 $\omega_{2}$  sind nach Gleichung \eqref{eqn:omega12} und experimenteller Bestimmung
 \begin{align*}
-  \omega_{1_t}=&( 2.466\pm0.005)10^5\si{\hertz}\\
-  \omega_{2_t}=&(1.934\pm0.004)10^5\si{\hertz}\\
-    \text{Relativer Fehler}=&87.8\%\\
-  \omega_{1_e}=&2.98 \cdot10^4\si{\hertz}\\
-  \omega_{2_e}=&3.9 \cdot10^4\si{\hertz}\\
-  \text{Relativer Fehler}=&79.8\%\;.
+  \omega_{1_t}=&(2466000\pm5000)\si{\hertz}\\
+  \omega_{1_e}=&(1872389.5\pm0.6)\si{\hertz}\\
+  \text{Relativer Fehler}=&24.1\%\\
+  \omega_{2_t}=&(193400\pm4000)\si{\hertz}\\
+  \omega_{2_e}=&(245044.3\pm0.6)\si{\hertz}\\
+  \text{Relativer Fehler}=26.7&\%\;.
 \end{align*}
 Die Resonanzfrequenz wird bestimmt durch Gleichung \eqref{eqn:resonanzfrequenz}.
 Der berechnete und der im Experiment bestimmte Wert sind
 \begin{align*}
-\omega_{res_t}=&(2.171\pm0.004)10^5\si{\hertz}\\
-\omega_{res_e}=&(3.4\pm0.01)10^4\si{\hertz}\\
-\text{Relativer Fehler}=&84.3\%\;.
+\omega_{res_t}=&(2171000\pm4000)\si{\hertz}\\
+\omega_{res_e}=&(2136283.0\pm0.6)\si{\hertz}\\
+\text{Relativer Fehler}=&1.5\%\;.
 \end{align*}
 \begin{figure}
   \centering
