@@ -7,6 +7,7 @@ Die Werte der benutzten Schaltung sind
   R_1=&(48.1\pm0.1)\si{\ohm}\\
   R_2=&(509.5\pm0.5)\si{\ohm}\;.
 \end{align*}
+\subsection{Gedämpfte Schwingung}
 \begin{figure}
   \centering
   \includegraphics[width=0.78\textwidth]{Thermodruck.JPG}
@@ -122,7 +123,9 @@ Die Güte der Resonanzkurve ist nach Gleichung \eqref{eqn:guete}
   \includegraphics[width=0.78\textwidth]{Kondensatorspannung.pdf}
   \caption{Abbildung der in \ref{fig:Messwerte} aufgeführten Messwerte.
   Die normierte Kondensatorspannung $U_c/U$ wird in Abhängigkeit von der
-  Frequenz dargestellt.}
+  Frequenz dargestellt.Der Fit hat nach Gleichung \eqref{eqn:resonanzkurve} die Form
+  $\frac{U_c}{U_0}=\frac{1}{\sqrt{(1-A\omega^2)^2+\omega^2 B}}$
+  mit den Fitparametern $A=(210\pm4)10^{-13}\si{\second}^2$ und $B=(32\pm1)10^{-13}\si{\second}^2$.}
   \label{fig:Kondensatorspannung}
 \end{figure}
 \begin{figure}
@@ -130,7 +133,9 @@ Die Güte der Resonanzkurve ist nach Gleichung \eqref{eqn:guete}
   \includegraphics[width=0.78\textwidth]{Resonanzkurve.pdf}
   \caption{Abbildung von Messwerten in der Nähe von der Phasenverschiebung $\phi=90°$.
   In ihr ist die Resonanzkurve zu sehen. Die normierte Kondensatorspannung $U_c=U$
-  ist in abhängigkeit von der Frequenz aufgetragen.}
+  ist in abhängigkeit von der Frequenz aufgetragen. Der Fit hat nach Gleichung \eqref{eqn:resonanzkurve} die Form
+  $\frac{U_c}{U_0}=\frac{1}{\sqrt{(1-A\omega^2)^2+\omega^2 B}}$
+  mit den Fitparametern $A=(210\pm4)10^{-13}\si{\second}^2$ und $B=(32\pm1)10^{-13}\si{\second}^2$.}
   \label{fig:Resonanzkurve}
 \end{figure}
 Mit den Messwerten in der Tabelle \ref{fig:Messwerte} sind die  Abbildungen
@@ -191,6 +196,7 @@ entstanden.
   und $\Delta\a=0.01\si{\micro\second}$.}
   \label{fig:Messwerte}
 \end{table}
+\subsection{Erzwungende Schwingung}
 In der Abblidung \ref{fig:phasenverschiebung} ist der Phasenwinkel $\phi$ in Abhängingkeit
 von der Frequenz dargestellt und der Bereich um $\phi=90°$ nocheinmal mit
 linear skalierter x-Achse in Abbildung \ref{fig:linphasenverschiebung} . Die
@@ -216,13 +222,20 @@ Der berechnete und der im Experiment bestimmte Wert sind
   \includegraphics[width=0.78\textwidth]{phasenverschiebung.pdf}
   \caption{Abbildung der Phasenwinkel der Messwerte von Tabelle \ref{fig:Messwerte} in
   Abhängigkeit von der Frequenz dargestellt werden. Der zu erwartende Verlauf ist
-  ein Arkustangens.}
+  ein Arkustangens. Der Fit hat nach Gleichung \eqref{eqn:phasenverschiebung} die Form \\
+  $\phi(\omega)=(1/sqrt{(1-A\omega^2)^2+(\omega^2)B)}$
+  mit den Fitparametern \\
+  $A=(-49\pm8)10^{-7}\si{\second}^2$ und $B=(1\pm6)10^{-13}\si{\second}^2$.}
   \label{fig:phasenverschiebung}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[width=0.78\textwidth]{linphasenverschiebung.pdf}
   \caption{Abbildung von Messwerten in der Nähe von der Phasenverschiebung $\phi=90°$.
-          Der Phasenwinkel $\phi$ ist in Abhängigkeit von der Frequenz gegeben.}
+          Der Phasenwinkel $\phi$ ist in Abhängigkeit von der Frequenz gegeben.
+           Der Fit hat nach Gleichung \eqref{eqn:phasenverschiebung} die Form \\
+          $\phi(\omega)=(1/sqrt{(1-A\omega^2)^2+(\omega^2)B)}$
+          mit den Fitparametern \\
+          $A=(-49\pm8)10^{-7}\si{\second}^2$ und $\;B=(1\pm6)10^{-13}\si{\second}^2$.}
   \label{fig:linphasenverschiebung}
 \end{figure}
