@@ -1,4 +1,4 @@
-\section{Durchführung}
+\section{Aufbau und Durchführung}
 \label{sec:Durchführung}
 \subsection{Vorbereitende Justierungen}
 Zu Beginn werden die gekoppelten Schwingkreise auf die gleiche Resonanzfrequenz
@@ -6,7 +6,7 @@ abgestimmt. Dazu wird eine Schaltung wie in Abbildung \ref{fig:abstimmung}
 aufgebaut.
 \begin{figure}
   \centering
-  \includegraphics[width=0.7\textwidth]{abstimmung.png}
+  \includegraphics[width=0.5\textwidth]{abstimmung_neu.png}
   \caption{Schaltung zur Abstimmung der Resonanzfrequenz \cite{sample}.}
   \label{fig:abstimmung}
 \end{figure}
@@ -20,6 +20,7 @@ möglichst ähnlich der im festen Schwingkreis eingestellten Resonanzfrequenz is
 (jedoch nicht exakt gleich).
 
 \subsection{Verhältnis der Schwingungsfrequzenzen}
+\label{sec:verhaeltnis}
 Mit einem Rechtecksignal einer um etwa zwei Größenordnungen kleineren Frequenz
 als der Resonanzfrequenz wird der in Abbildung \ref{fig:messung1} linke Schwingkreis
 angeregt.
@@ -37,12 +38,13 @@ Schwingungsperiode abgezählt und das Verhältnis zwischen Schwingungs- und
 Schwebungsfrequzen berechnet.
 
 \subsection{Fundamentalfrequenzen in Abhänigkeit des Kopplungskondensators}
-Die Schaltung von eben wird nun mit einem Sinussignal angeregt. Nun wird die
-Generatorspannung gegenüber der Spannung im Schwingkreis mit einem Oszilloskop
-im xy-Betrieb beobachtet. Es werden für jeden Kopplungskondensator mit Hilfe
-der Lissajous-Figuren die Frequenzen $\nu^{+}$ (bei einer Phase von $\Delta \Phi = 0$,
-hier ist die Lissajous-Figur eine Gerade) und $\nu^{-}$ (bei einer Phase von
-$\Delta \Phi = \pi$, hier ist die Lissajous-Figur ein Kreis) gesucht und notiert.
+Die Schaltung aus Abschnitt \ref{sec:verhaeltnis} wird mit einem Sinussignal
+angeregt. Es wird die Generatorspannung gegenüber der Spannung im Schwingkreis
+mit einem Oszilloskop im xy-Betrieb beobachtet. Für jeden Kopplungskondensator
+werden mit Hilfe der Lissajous-Figuren die Frequenzen $\nu^{+}$ (bei einer Phase
+von $\Delta \Phi = 0$, hier ist die Lissajous-Figur eine Gerade) und $\nu^{-}$
+(bei einer Phase von $\Delta \Phi = \pi$, hier ist die Lissajous-Figur ebenfalls
+eine Gerade, jedoch an der y-Achse gespiegelt) gesucht und notiert.
 
 \subsection{Verlauf der Ströme}
 Mit dem Funktionsgenerator wird ein Sweep von $\SI{1}{\second}$ durchgeführt,

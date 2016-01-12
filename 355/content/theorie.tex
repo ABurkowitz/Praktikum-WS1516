@@ -53,9 +53,15 @@ und aus \eqref{eqn:gekoppelte_dgl_1} - \eqref{eqn:gekoppelte_dgl_2}
 \end{equation}
 Nun kann man leicht erkennen, dass dies zwei lineare homogene Differentialgleichungen
 wie die eines harmonischen Oszillators sind. Man erhält mit dem Lösungsansatz
-$x(t) = x_0 cos (\omega t)$ und $\omega_1 = \sqrt{\frac{1}{LC}}$ sowie
-$\omega_2 = \sqrt{\frac{1}{L}\left(\frac{1}{C}+\frac{2}{C_\text{K}}\right)}$ leicht die
-Lösungen
+\begin{equation}
+  x(t) = x_0 cos (\omega t)
+\end{equation}
+und
+\begin{align*}
+  \omega_1 &= \sqrt{\frac{1}{LC}} & &\text{ sowie } &
+  \omega_2 &= \sqrt{\frac{1}{L}\left(\frac{1}{C}+\frac{2}{C_\text{K}}\right)}
+\end{align*}
+leicht die Lösungen
 \begin{equation}
   \alpha(t) = \alpha_0 \cos\left(\frac{1}{\sqrt{L C}}t\right)
   \label{eqn:alpha}
@@ -126,9 +132,9 @@ Systeme mit der Frequenz $\frac{1}{2}(\nu^{+} + \nu^{-})$. Die Amplitude ändert
 sich dabei mit der Schwebungsfrequenz $\nu^{-} - \nu^{+}$. Der graphische Verlauf
 der zeitlichen Änderung der Schwingungsamplituden ist in Abbildung \ref{fig:schwebung}
 zu sehen.
-\begin{figure}
+\begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{schwebung.png}
+  \includegraphics[width=0.8\textwidth]{schwebung.png}
   \caption{Zeitlicher Verlauf der Stromamplituden bei Schwebung \cite{sample}.}
   \label{fig:schwebung}
 \end{figure}
@@ -140,7 +146,7 @@ angeregt, so dass dieser eine erzwungene Schwingung ausführt. Alle verlustbehaf
 Vorgänge werden dabei durch je einen ohmschen Widerstand pro Schwingkreis
 dargestellt. Der Aufbau eines solchen Schwingkreises ist in Abbildung
 \ref{fig:erzwungene_schwingung} zu sehen.
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{erzwungene_schwingung.png}
   \caption{Aufbau eines verlustbehafteten gekoppelten Schwingkreises mit erzwungener
