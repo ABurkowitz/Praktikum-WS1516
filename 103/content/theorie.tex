@@ -1,4 +1,100 @@
 \section{Theorie}
 \label{sec:Theorie}
-
+\subsection{Hookesches-Gesetz}
+Kräfte die an der Oberfläche eine Körpers angreifen und Gestalts- und Volumenveränderungen
+hervorrufen, werden meist auf die Flächen bezogen und als Spannung bezeichnet.
+Die senkrecht zur Oberfläche stehende Teil wird als Normalspannung $\sigma$ oder
+Druck bezeichnet. Die Komponente die parallel zu der Oberfläche steht wird Tangential
+bzw. Schubspannung genannt. Das Hookesche Gesetz:
+\begin{equation}
+  \sigma=E\frac{\Delta L}{L}
+\end{equation}
+beschreibt den, bei kleinen relativen Änderungen $\frac{\Delta L}{L}$, linearen
+zusammenhang zwischen Spannung und Deformation wie in \ref{fig:Spannung}.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.9\textwidth]{spannung.png}
+  \caption{Auswirkung einer Normalspannung auf eine stabförmige Probe \cite{sample} .}
+  \label{fig:Spannung}
+\end{figure}
+Hierbei ist E der Elastizitätsmodul der eine Materialkonstante ist.
+\subsection{Biegung bei einseitiger Einspannung}
+In der Abbildung \ref{fig:Einseitige_Einspannung} ist, die schematische Darstellung einer Biegung bei einseitiger
+Einspannung zu sehen.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{einseitige.png}
+  \caption{Schematische Darstellung der Biegung bei einseitiger Einspannung \cite{sample} .}
+  \label{fig:Einseitige_Einspannung}
+\end{figure}
+Die Durchbiegung $D(x)$ lässt sich ermitteln indem man die Drehmomente aufstellt.
+Bei der Biegung wird der eine Teil des Stabs gestaucht und der andere Teil gestreckt.
+Der Teil der Spannungsfrei ist, wird neutrale Faser genannt und ist in Abbildung \ref{fig:Einseitige_Einspannung}
+durch eine gestrichelte Linie angedeutet. Die wirkenden Kräfte an der stelle
+$Q$ sind in Abbildung \ref{fig:Drehmomente} dargestellt.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{Drehmomente.png}
+  \caption{darstellung der Drehmomente bei Q \cite{sample} .}
+  \label{fig:Drehmomente}
+\end{figure}
+ Die entgegengesetzten Druck- und
+Zugspannungen sind vom betrag gleich. Mit \eqref{eqn:moment} lässt sich das Drehmoment $M_\sigma$
+berechnen.
+\begin{equation}
+  M_\sigma=\int_Q y\sigma(y)\text{d}q
+  \label{eqn:moment}
+\end{equation}
+Es stellt sich das Gleichgewicht
+\begin{equation}
+  M_F=M_\sigma
+\end{equation}
+ein. $M_F$ ist hierbei das durch die Gewichtskraft $F$, des angehängte Gewichts,
+entstehende Drehmoment
+und ist gegeben durch
+\begin{equation}
+  M_F=F(L-x)
+\end{equation}
+Das Gleichtgewicht ist also
+\begin{equation}
+  \int_Q y\sigma(y)\text{d}q=F(L-x)
+\end{equation}
+Die Normalspannung ist dur das Hookesche-Gesetz gegeben und ist mit einer Näherung
+für geringe Kruvenkrümmungen
+\begin{equation}
+  \sigma(y)=E\frac{y}{R}=Ey\frac{\text{d}^2D}{\text{d}x^2}\;.
+\end{equation}
+so dass sich das Gleichgewicht als
+\begin{equation}
+  E\frac{\text{d}^2D}{\text{d}x^2}\int_Q y^2\text{d}q=F(L_x)
+\end{equation}
+schreiben lässt. Das Flächenträgheitsmoment $I$ ist gegeben durch
+\begin{equation}
+  I=\int_Q y^2 \text{d}q(y)\;.
+  \label{eqn:Flaechentaegheitsmoment}
+\end{equation}
+Wird Gleichung \eqref{eqn:Flaechentaegheitsmoment} integriert, erhält man die Gleichung für die Durchbiegung
+in abhängigkeit zu Abstand
+\begin{equation}
+  D(x)=\frac{F}{2EI}\left(Lx^2-\frac{x^3}{3}\right)\;\;\;\;(0\le x \le L)\,.
+\end{equation}
+\subsection{Biegung bei beidseitiger Auflage}
+Da beide Enden des stabes aufliegen, greift nun die Kraft $\frac{F}{2}$ an.
+Zu sehen ist eine schematische Darstellung in Abbildung \ref{fig:Beidseitige_Einspannung}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{Beidseitige_Einspannung.png}
+  \caption{darstellung der Drehmomente bei Q \cite{sample} .}
+  \label{fig:Beidseitige_Einspannung}
+\end{figure}
+Für die Drehmomente gelten nun
+\begin{align}
+  \frac{\text{d}^2D}{\text{d}x^2}=&-\frac{F}{EI}\frac{x}{2}\;\;(\text{für}\;0\le x \le \frac{L}{2}\\
+  \frac{\text{d}^2D}{\text{d}x^2}=&-\frac{1}{2}\frac{F}{EI}(L-x)\;\; (\text{für}\; \frac{L}{2} \le x \le L)
+\end{align}
+und damit für die Durchbiegung
+\begin{align}
+  D(x)=&\frac{F}{48EI}\left(3L^2x-4x^3\right)\;\;(\text{für}\;0\le x \le \frac{L}{2})\\
+  D(x)=&\frac{F}{48EI}\left(4x^3-12Lx^2+9L^2x-L^3\right)\;\; (\text{für}\; \frac{L}{2} \le x \le L).
+\end{align}
 \cite{sample}

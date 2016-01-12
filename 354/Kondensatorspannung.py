@@ -22,6 +22,8 @@ nu = np.linspace(500, 900000, 9000)
 parameters1, pocv = curve_fit(g, f, uc, maxfev=10000)
 plt.plot(nu, g(nu,*parameters1) , 'r-')
 print(parameters1)
+fehler= np.sqrt(np.diag(pocv))
+print(fehler)
 errX=0.1
 errY=0.001
 plt.errorbar(f,uc,xerr=errX, yerr=errY,fmt='none')
@@ -32,7 +34,7 @@ plt.ylabel(r'$Uc/U$')
 plt.xscale('log')
 plt.tight_layout()
 plt.legend(loc='best')
-plt.savefig('Kondensatorspannung.pdf')
+plt.savefig('Kondensatorspannungen.pdf')
 
 L=ufloat(10.11e-3,0.03e-3)
 C=ufloat(2.098e-9,0.006e-9)

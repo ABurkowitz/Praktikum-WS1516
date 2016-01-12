@@ -46,11 +46,13 @@ plt.legend(loc='best')
 
 plt.xscale('log')
 plt.xlabel(' $\omega \;in\; \mathrm{ kHz }$')
-plt.ylabel('$U_c/U_0$')
+plt.ylabel('$\phi \;$in$\;\mathrm{rad}$')
 #plt.plot(f,phi(a,b),'r.')
 #plt.plot(f,phi(a,b),'r+')
 
-
+print(params)
+fehler= np.sqrt(np.diag(covar))
+print(fehler)
 plt.savefig('phasenverschiebung.pdf')
 plt.show()
 print(phi(a,b))

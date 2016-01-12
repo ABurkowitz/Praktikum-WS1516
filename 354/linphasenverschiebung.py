@@ -46,7 +46,7 @@ plt.legend(loc='best')
 plt.xlim(1.6e5, 2.5e5)
 plt.xscale('log')
 plt.xlabel(' $\omega \;in\; \mathrm{ kHz }$')
-plt.ylabel('$U_c/U_0$')
+plt.ylabel('$\phi \;$in$\;\mathrm{rad}$')
 #plt.plot(f,phi(a,b),'r.')
 #plt.plot(f,phi(a,b),'r+')
 

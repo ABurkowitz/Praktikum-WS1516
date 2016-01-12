@@ -31,6 +31,8 @@ print(z)
 params, covar = curve_fit(f,x,z,p0=[L*C,R2**2*C**2])
 
 print(params)
+fehler= np.sqrt(np.diag(covar))
+print(fehler)
 x_plot = np.linspace(0, 60)
 x_plot1 = np.linspace(300, 10000000, 1000)
 plot.errorbar(x, z + (a / 10), xerr=None, yerr=(a / 10), fmt='rx', label="Kondensatorspannung")
