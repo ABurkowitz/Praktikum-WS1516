@@ -2,14 +2,15 @@
 \label{sec:Auswertung}
 
 Für die Berechnungen und Experimente wurden die Eigenschaften und Einstellungen
-\begin{align*}
-  L=&23.954\,\si{\milli\henry}  \\
-  C=&0.7932\,\si{\nano\farad}  \\
-  C_{sp}=&0.028\,\si{\nano\farad}\\
-  R=&48\,\si{\ohm}\\
-  \nu_{res}=&32.05\,\si{\kilo\hertz}
-\end{align*}
-benutzt.
+\begin{align}
+  L=&(23.954\pm0.001)\,\si{\milli\henry}  \\
+  C=&(0.7932\pm0.0001)\,\si{\nano\farad}  \\
+  C_{sp}=&(0.028\pm0.001)\,\si{\nano\farad}\\
+  R=&(48\pm1)\,\si{\ohm}\\
+  \nu=&(32.05\pm0.01)\,\si{\kilo\hertz}\\
+\end{align}
+benutzt. Hier ist $C_{sp}$ der capazitäre Anteil der der Spule $L$ und $\nu_{res}$ die eingestellte
+Frequenz.
 In der Tabelle \ref{tab:5a} sind für verschiedene Koppelkondensatoren die Verhältnisse
 zwischen Schwebungs- und Schwingfrequenz, die durch die Anzahl der Maxima
 in einer Schwebungsperiode gegeben ist, angegeben. Die Theoriewerte sind durch das
@@ -18,7 +19,7 @@ Verhältnis
   n_{max}=\frac{\nu^{+}+\nu^{-}}{2(\nu^{-}-\nu^{+})}
 \end{equation*}
 gegeben. Die Anzahl der Schwingungsmaxima in einer Periode, waren bei den
-Koppelkondensatoren mit $2.2\si{\nano\farad}$ und $1.0\si{\nano\farad}$
+Koppelkondensatoren mit $2.2 \si{\nano\farad}$ und $1.0 \si{\nano\farad}$
  nicht ablesbar, weshalb diese nicht aufgeführt sind.
 \begin{table}
   \centering
@@ -50,14 +51,14 @@ stammen aus dem Versuchsaufbau nach Abbildung \ref{fig:messung1}.
     $C_k$ in \si{\nano\farad} & $\nu^{+}_E$ in \si{\hertz} & $\nu^{+}_T$ in \si{\hertz}
     & Abweichung &$\nu^{-}_E$ in \si{\hertz} & $\nu^{-}_T$ in \si{\hertz} & Abweichung \\
     \midrule
-    12.0 & 32050\pm10 & 35884\pm2 & 12.2\% & 39680\pm10 & 38300\pm50  & 2.13\%  \\
-    10.0 & 32050\pm10 & 35884\pm2 & 12.2\% & 40320\pm10 & 38700\pm50  & 2.59\%  \\
-    8.2  & 32050\pm10 & 35884\pm2 & 12.2\% & 41670\pm10 & 39300\pm70  & 4.46\%  \\
-    6.8  & 32050\pm10 & 35884\pm2 & 12.2\% & 43860\pm10 & 40000\pm80  & 8.16\%  \\
-    4.7  & 32050\pm10 & 35884\pm2 & 12.2\% & 47170\pm10 & 41700\pm110 & 11.69\% \\
-    2.7  & 32050\pm10 & 35884\pm2 & 12.2\% & 56180\pm10 & 45500\pm170 & 22.13\% \\
-    2.2  & 32050\pm10 & 35884\pm2 & 12.2\% & 60240\pm10 & 47400\pm200 & 25.76\% \\
-    1.0  & 32050\pm10 & 35884\pm2 & 12.2\% & 79620\pm10 & 58000\pm400 & 35.59\% \\
+    12.0 & 32050\pm10 & 35884\pm2 & 10.7\% & 39680\pm10 & 38300\pm50  & 3.60\%  \\
+    10.0 & 32050\pm10 & 35884\pm2 & 10.7\% & 40320\pm10 & 38700\pm50  & 4.19\%  \\
+    8.2  & 32050\pm10 & 35884\pm2 & 10.7\% & 41670\pm10 & 39300\pm70  & 6.03\%  \\
+    6.8  & 32050\pm10 & 35884\pm2 & 10.7\% & 43860\pm10 & 40000\pm80  & 9.00\%  \\
+    4.7  & 32050\pm10 & 35884\pm2 & 10.7\% & 47170\pm10 & 41700\pm110 & 13.12\% \\
+    2.7  & 32050\pm10 & 35884\pm2 & 10.7\% & 56180\pm10 & 45500\pm170 & 23.47\% \\
+    2.2  & 32050\pm10 & 35884\pm2 & 10.7\% & 60240\pm10 & 47400\pm200 & 27.09\% \\
+    1.0  & 32050\pm10 & 35884\pm2 & 10.7\% & 79620\pm10 & 58000\pm400 & 37.28\% \\
     \bottomrule
   \end{tabular}
   \caption{Messergebnisse und berechnete Werte, für die Messung der Fundamentalschwingungen
@@ -65,7 +66,12 @@ stammen aus dem Versuchsaufbau nach Abbildung \ref{fig:messung1}.
   \label{tab:5b}
 \end{table}
 In der Tabelle \ref{tab:5c} werden die experimentell bestimmten Fundamentalfrequenzen
-aus der dritten Messung angegeben sowie die relative Abweichung.
+aus der dritten Messung angegeben sowie die relative Abweichung. Die Fundamentalfrequenzen
+berechnen sich hierbei durch
+\begin{align*}
+  f_E^-=f_s+\delta t_1(f_E-f_s)
+  f_E^-=f_s+\delta t_2(f_E-f_s)
+\end{align*}
 \begin{table}
   \centering
   \begin{tabular}{c c c c c c c}
@@ -76,14 +82,14 @@ aus der dritten Messung angegeben sowie die relative Abweichung.
     $C_k$ in \si{\nano\farad} & in \si{\milli\second} & & & in \si{\milli\second}
      & & \\
     \midrule
-    12.0 & 296 & 33490\pm12 & 6.7\% & 720 & 39510\pm12 & 3.2\%  \\
-    10.0 & 304 & 33490\pm12 & 6.7\% & 540 & 40850\pm12 & 5.6\%  \\
-    8.2  & 300 & 33260\pm12 & 7.3\% & 508 & 42640\pm12 & 8.5\%  \\
-    6.8  & 300 & 33040\pm12 & 7.9\% & 432 & 43980\pm12 &10.0\%  \\
-    4.7  & 296 & 33490\pm12 & 6.7\% & 394 & 48220\pm12 & 1.6\%  \\
-    2.7  & 298 & 33490\pm12 & 6.7\% & 382 & 56700\pm12 & 2.5\%  \\
-    2.2  & 300 & 33930\pm12 & 5.4\% & 366 & 60270\pm12 & 2.7\%  \\
-    1.0  & 300 & 33040\pm12 & 7.9\% & 354 & 80350\pm13 & 3.9\%  \\
+    12.0 & 296\pm1 & 33490\pm12 & 6.7\% & 720\pm1 & 39510\pm12 & 3.2\%   \\
+    10.0 & 304\pm1 & 33490\pm12 & 6.7\% & 540\pm1 & 40850\pm12 & 5.6\%   \\
+    8.2  & 300\pm1 & 33260\pm12 & 7.3\% & 508\pm1 & 42640\pm12 & 8.5\%   \\
+    6.8  & 300\pm1 & 33040\pm12 & 7.9\% & 432\pm1 & 43980\pm12 & 10.0\%  \\
+    4.7  & 296\pm1 & 33490\pm12 & 6.7\% & 394\pm1 & 48220\pm12 & 15.6\%  \\
+    2.7  & 298\pm1 & 33490\pm12 & 6.7\% & 382\pm1 & 56700\pm12 & 25.6\%  \\
+    2.2  & 300\pm1 & 33930\pm12 & 5.4\% & 366\pm1 & 60270\pm12 & 27.2\%  \\
+    1.0  & 300\pm1 & 33040\pm12 & 7.9\% & 354\pm1 & 80350\pm13 & 38.5\%  \\
     \bottomrule
   \end{tabular}
   \caption{Fundamentalfrequenzen des Schwingkeises}
