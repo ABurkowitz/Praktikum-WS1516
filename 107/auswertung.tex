@@ -1,0 +1,91 @@
+\section{auswertung}
+\label{auswertung}
+Die Aus der Vesuchsanleitung entnommenden Daten sind die Falllänge $\Delta x$
+die Apparaturkonstante der Kleinen Kugel $K_{kl}$ und die
+aus \ref{} entnommende Dichte von Wasser \roh_f sind
+\begin{align}
+L=(0.1,0.0001)\si{\meter}\\
+\roh_f=(0.998,0.001)\si{\kilo\grammg/\meter^(-3)}\\
+K_kl=(0.07640\pm0.00001)\si{\frac{\meter\pascal\centi\meter^3}{\gramm}}
+\end{align}
+In der Tabelle \ref{}, sind die gemessenden Werte für Fallzeit, Durchmesser der Kugeln angegeben
+\begin{table}
+  \centering
+  \begin{tabular}{c c c c}
+    \toprule
+    Durchmesser & Fallzeit & Durchmesser & Fallzeit\\
+    $d_{kl}$ in $\si{\meter}$&$t_{kl}$in $\si{\second}$&$d_{gr}$ in $\si{\meter}$& $t_{gr}$ in $\si{\second}$\\
+    \midrule
+    15.627\pm0.001  &  12.76\pm0.01  &  15.795\pm0.001  &  87.33\pm0.01
+    15.624\pm0.001  &  13.05\pm0.01  &  15.794\pm0.001  &  87.03\pm0.01
+    15.631\pm0.001  &  13.04\pm0.01  &  15.792\pm0.001  &  88.39\pm0.01
+    15.630\pm0.001  &  12.91\pm0.01  &  15.799\pm0.001  &  88.36\pm0.01
+    15.626\pm0.001  &  12.50\pm0.01  &  15.793\pm0.001  &  88.01\pm0.01
+    15.626\pm0.001  &  12.53\pm0.01  &  15.798\pm0.001  &  88.32\pm0.01
+    15.633\pm0.001  &  12.69\pm0.01  &  15.799\pm0.001  &  88.07\pm0.01
+    15.630\pm0.001  &  12.64\pm0.01  &  15.798\pm0.001  &  88.43\pm0.01
+    15.631\pm0.001  &  13.04\pm0.01  &  15.797\pm0.001  &  88.03\pm0.01
+    15.630\pm0.001  &  12.95\pm0.01  &  15.802\pm0.001  &  88.23\pm0.01
+    \bottomrule
+  \end{tabular}
+  \caption{}
+  \label{fig:Messwertegedaempfteschwingung}
+\end{table}
+Die Dichte der Kugeln, die Mittelwerte der Durchmesser und Fallzeiten sind
+\begin{align*}
+  \roh_{kl}=(2226\pm5)\si{\frac{\kilo\gramm}{\meter^{-3}}}\\
+  \roh_{gr}=(2398\pm5)\si{\frac{\kilo\gramm}{\meter^{-3}}}\\
+  d_{kl}=&(0.0156288\pm0.0000003)\si{\centi\meter}\\
+  d_{gr}=&(0.0157967\pm0.0000003)\si{\centi\meter}\\
+  t_{kl}=&(12.8110\pm0.0003)\si{\second}\\
+  t_{gr}=&(88.0200\pm0.0003)\si{\second}\;\;.
+\end{align*}
+Der nach Gleichung \eqref{} berechnete Wert der Viskosität $\eta$, die Apparaturkonstante der
+großen Kugel $K_{gr}$ nach Gleichung \eqref{} und die Reynoldszahlen $Re$ nach Gleichung
+\eqref{} sind
+\begin{equation*}
+  \eta=1202\pm5\si{\meter\pascal\second}
+  K_{gr}=0.00975\pm0.00005
+  Re_{gr}=0.01490\pm0.00007
+  Re_{kl}=0.1013\pm0.0005
+\end{equation*}
+In Abbildung \ref{fig:Viskositaet} ist dieVikosität $\log(\eta)$
+in abhängigkeit von der Temperatur dargestellt.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.78\textwidth]{Viskosität_temp.pdf}
+  \caption{}
+  \label{fig:Viskositaet}
+\end{figure}
+Die gemessenden Werte sind in Tabelle \ref{fig:viskositaet_tab} aufgelistet. Die Fit hat die Form
+nach Gleichung \eqref{} die Form
+\begin{equation}
+  \log(\eta)=log(A)+\frac{B}{T}\;\;,
+\end{equation}
+mit den Fitparametern
+\begin{align*}
+  A=20.3428628\pm4.30050338)10^2\si{\meter\pascal\second}
+  B=-177.147899\pm6.59368587)10^(-4)\si{\kelvin}
+\end{align*}
+\begin{table}
+  \centering
+  \begin{tabular}{c c c c}
+    \toprule
+    Temperatur & Fallzeit & Fallzeit & Viskosität\\
+    $T$ in $\si{\kelvin}$&$t_{kl}$ in $\si{\second}$ & $t_{gr}$ in $\si{\second}$& $\eta$ in $\si{\meter\pascal\second}$ \\
+    \midrule
+   293.15\pm0.01  &  88.03\pm0.01  &  88.23\pm0.01  &  1.204\pm0.005
+   302.65\pm0.01  &  68.90\pm0.01  &  68.23\pm0.01  &  0.936\pm0.004
+   308.65\pm0.01  &  61.18\pm0.01  &  61.95\pm0.01  &  0.841\pm0.003
+   313.15\pm0.01  &  56.80\pm0.01  &  56.66\pm0.01  &  0.775\pm0.003
+   318.15\pm0.01  &  51.56\pm0.01  &  51.69\pm0.01  &  0.705\pm0.003
+   323.65\pm0.01  &  47.29\pm0.01  &  47.69\pm0.01  &  0.649\pm0.003
+   328.15\pm0.01  &  43.90\pm0.01  &  43.83\pm0.01  &  0.599\pm0.002
+   333.15\pm0.01  &  40.61\pm0.01  &  40.80\pm0.01  &  0.556\pm0.002
+   338.15\pm0.01  &  37.66\pm0.01  &  38.01\pm0.01  &  0.517\pm0.002
+   343.15\pm0.01  &  35.49\pm0.01  &  35.21\pm0.01  &  0.483\pm0.002
+    \bottomrule
+  \end{tabular}
+  \caption{}
+  \label{fig:viskositaet_tab}
+\end{table}
