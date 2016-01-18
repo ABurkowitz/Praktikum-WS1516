@@ -5,18 +5,20 @@ geschwindigkeitsabhängige Reibungskraft $\vec{F_\text{R}}$, welche zusätzlich
 von der Berührungsfläche $A$ abhängt. Fällt eine Kugel in einer zähen Flüssigkeit,
 so wirken neben der Reibungskraft noch die Schwerkraft $\vec{F_\text{G}}$ und
 der Auftrieb $\vec{F_\text{A}}$. Dabei sind die Reibungskraft und der Auftrieb
-der Schwerkraft entegegengerichtet. Mit zunehmender Zeit nimmt die Fallgeschwindigkeit
+der Schwerkraft entgegengerichtet. Mit zunehmender Zeit nimmt die Fallgeschwindigkeit
 und damit die Reibungskraft so lange zu, bis sich ein Kräftegleichgewicht einstellt.
 Der Körper fällt dann mit konstanter Geschwindigkeit weiter.
+
 Massgeblich für das Bewegungsverhalten hierbei ist die dynamische Viskosität
 $\eta$, welche eine Materialkonstante der Flüssigkeit ist und stark von der
 Temperatur abhängt. Sie wird durch die Andradesche Gleichung
 \begin{equation}
-  \eta(T) = A \exp{\frac{B}{T}}
+  \eta(T) = A\, e^{\frac{B}{T}}
   \label{eqn:andradesche_gleichung}
 \end{equation}
 mit den Konstanten $A$ und $B$ und der Temperatur $T$ beschrieben und wird als
 dynamisch bezeichnet, da sie bei Temperaturänderung nicht konstant bleibt.
+
 Die Viskosität eines Fluids kann mit einem Kugelfall-Viskosimeter bestimmt werden.
 Dabei fällt eine Kugel mir dem Radius $r$ in einem mit einer Flüssigkeit
 gefüllten Rohr, wobei darauf geachtet werden muss, dass die Strömung laminar ist,
@@ -27,9 +29,9 @@ laminar oder turbulent ist, muss die Reynoldszahl
   \label{eqn:reynoldszahl}
 \end{equation}
 betrachtet werden. Dabei ist $\rho$ die Dichte der Flüssigeit, $v$ die
-Strömgeschwindigkeit, also die Geschwindigkeit der Kugel und $d$ eine charakteristische
-Länge, hier beispielsweise der Durchmesser des Rohres, in dem die Kugel fällt.
-Ist die Reynoldszahl kleiner als die kritische Reynoldszahl
+Strömgeschwindigkeit, also die Geschwindigkeit der Kugel, und $d$ eine
+charakteristische Länge, hier beispielsweise der Durchmesser des Rohres, in dem
+die Kugel fällt. Ist die Reynoldszahl kleiner als die kritische Reynoldszahl
 \begin{equation*}
   Re_{krit} \approx 2300,
 \end{equation*}
@@ -51,5 +53,5 @@ Kugel an der Rohrwand entlanggleiten kann. Die Viskosität lässt sich dann mit
 \end{equation}
 bestimmen, wenn die Fallzeit $t$, die Apparaturkonstante $K$, welche sowohl die
 Fallhöhe als auch die Kugelgeometrie berücksichtig, und die Dichte $\rho_\text{K}$
-der Kugel und die Dichte $\rho_\text{Fl}$ der Flüssigkeit bekannt sind.
-\cite{sample}
+der Kugel und die Dichte $\rho_\text{Fl}$ der Flüssigkeit bekannt sind
+\cite{sample}.
