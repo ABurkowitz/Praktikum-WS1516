@@ -2,13 +2,13 @@
 \label{sec:Auswertung}
 Die Aus der Vesuchsanleitung entnommenden Daten sind die Falllänge $\Delta_x$
 die Apparaturkonstante der Kleinen Kugel $K_{kl}$ und die
-aus \ref{} entnommende Dichte von Wasser $\rho_f$ sind
+aus \cite{gertzen} entnommende Dichte von Wasser $\rho_f$ sind
 \begin{align}
-L=(0.1,0.0001)\si{\meter}\\
-\rho_f=(0.998,0.001)\si{\kilo\gram\meter^(-3)}\\
-K_{kl}=(0.07640\pm0.00001)\frac{\si{\meter\pascal\centi\meter^3}}{\si{\gram}}
+L=\SI{0.1000(1)}{\meter}\\
+\rho_f=\SI[per-mode=fraction]{0.998(1)}{\kilo\gram\per\meter^3}\\
+K_{kl}=\SI[per-mode=fraction]{0.07640(1)}{\meter\pascal\centi\meter^3\per\gram}
 \end{align}
-In der Tabelle \ref{}, sind die gemessenden Werte für Fallzeit, Durchmesser der Kugeln angegeben
+In der Tabelle \ref{tab:Messung1}, sind die gemessenden Werte für Fallzeit, Durchmesser der Kugeln angegeben
 \begin{table}
   \centering
   \begin{tabular}{c c c c}
@@ -29,25 +29,26 @@ In der Tabelle \ref{}, sind die gemessenden Werte für Fallzeit, Durchmesser der
     \bottomrule
   \end{tabular}
   \caption{}
-  \label{fig:Messwertegedaempfteschwingung}
+  \label{tab:Messung1}
 \end{table}
 Die Dichte der Kugeln, die Mittelwerte der Durchmesser und Fallzeiten sind
 \begin{align*}
-  \rho_{kl}=&(2226\pm5)\si{\frac{\kilo\gram}{\meter^{3}}}\\
-  \rho_{gr}=&(2398\pm5)\si{\frac{\kilo\gram}{\meter^{3}}}\\
-  d_{kl}=&(0.0156288\pm0.0000003)\si{\centi\meter}\\
-  d_{gr}=&(0.0157967\pm0.0000003)\si{\centi\meter}\\
-  t_{kl}=&(12.8110\pm0.0003)\si{\second}\\
-  t_{gr}=&(88.0200\pm0.0003)\si{\second}\;\;.
+  \rho_{kl}=&\SI[per-mode=fraction]{2226(5)}{\kilo\gram\per\meter^3}\\
+  \rho_{gr}=&\SI[per-mode=fraction]{2398(5)}{\kilo\gram\per\meter^{3}}\\
+  d_{kl}=&\SI[per-mode=fraction]{0.0156288(3)}{\centi\meter}\\
+  d_{gr}=&\SI[per-mode=fraction]{0.0157967(3)}{\centi\meter}\\
+  t_{kl}=&\SI[per-mode=fraction]{12.8110(3)}{\second}\\
+  t_{gr}=&\SI[per-mode=fraction]{88.0200(3)}{\second}\;\;.
 \end{align*}
-Der nach Gleichung \eqref{} berechnete Wert der Viskosität $\eta$, die Apparaturkonstante der
-großen Kugel $K_{gr}$ nach Gleichung \eqref{} und die Reynoldszahlen $Re$ nach Gleichung
-\eqref{} sind
+Der nach Gleichung \eqref{eqn:bestimmung_eta} berechnete Wert der Viskosität $\eta$, die Apparaturkonstante der
+großen Kugel $K_{gr}$ nach Gleichung \eqref{eqn:bestimmung_eta} und die Reynoldszahlen $Re$ nach Gleichung
+\eqref{eqn:reynoldszahl} sind.
 \begin{align*}
-  \eta=& 1202\pm5\si{\meter\pascal\second}\\
-  K_{gr}=& 0.00975\pm0.00005\frac{\si{\meter\pascal\centi\meter^3}}{\si{\gram}}\\
-  Re_{gr}=& 14.90\pm0.07\\
-  Re_{kl}=& 101.3\pm0.5
+  \eta=&\SI{1.202(5)}{\meter\pascal\second}\\
+  K_{gr}=&\SI[per-mode=fraction]{0.00975(5)}{\meter\pascal\centi\meter^3\per\gram}\\
+  Re_{gr}=&(14.90\pm0.07)\\
+  Re_{kl}=&(101.3\pm0.5)
+  \label{eqn:etaKRE}
 \end{align*}
 In Abbildung \ref{fig:Viskositaet} ist die Viskosität $\log(\eta)$
 in abhängigkeit von der Temperatur dargestellt.
@@ -58,14 +59,14 @@ in abhängigkeit von der Temperatur dargestellt.
   \label{fig:Viskositaet}
 \end{figure}
 Die gemessenden Werte sind in Tabelle \ref{fig:viskositaet_tab} aufgelistet. Die Fit hat
-nach Gleichung \eqref{} die Form
+nach der umgestellten Gleichung \eqref{eqn:andradesche_gleichung} die Form
 \begin{equation}
   \log(\eta)=\log(A)+\frac{B}{T}\;\;,
 \end{equation}
 mit den Fitparametern
 \begin{align*}
-  A=&(20\pm4)10^2\si{\meter\pascal\second}\\
-  B=&(-177\pm6)10^{-4}\si{\kelvin}
+  A=&\SI{20(4)e2}{\meter\pascal\second}\\
+  B=&\SI[per-mode=fraction]{-177(6)e-4}{\kelvin}
 \end{align*}
 \begin{table}
   \centering
@@ -89,4 +90,3 @@ mit den Fitparametern
   \caption{}
   \label{fig:viskositaet_tab}
 \end{table}
-\cite{gertzen}

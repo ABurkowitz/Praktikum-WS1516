@@ -84,7 +84,7 @@ def f(T1n,a_0, a_1):
     return (np.log(a_0)+(a_1/T1n))
 T1x=1/T1n
 print(T1x)
-params, covar = curve_fit(f,T1x,np.log(unp.nominal_values(eta_t)),p0=[0.0000046,1600])
+params, covar = curve_fit(f,1/T1n,np.log(unp.nominal_values(eta_t)),p0=[0.0000046,1600])
 
 #lneta=np.log(unp.nominal_values(eta_t))
 x_plot1 = np.linspace(T1x[0],T1x[9], 1000)
@@ -93,10 +93,11 @@ plot.plot(1/unp.nominal_values(T1),np.log(unp.nominal_values(eta_t)), 'rx', labe
 plot.legend(loc='best')
 plot.yscale('linear')
 plot.xscale('linear')
-#plot.xlabel('$\frac{1}{\si{\kelvin}}$')
+plot.xlabel('$1/T \;1/\mathrm{ K }$')
 plot.ylabel('$\log(\eta)$')
 plot.savefig('Viskosität_temp.pdf')
 #plot.show()
+print('params')
 print(params)
 fehler= np.sqrt(np.diag(covar))
 print(fehler)
