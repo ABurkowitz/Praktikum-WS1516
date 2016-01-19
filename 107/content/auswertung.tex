@@ -1,14 +1,15 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-Die Aus der Vesuchsanleitung entnommenden Daten sind die Falllänge $\Delta_x$
-die Apparaturkonstante der Kleinen Kugel $K_{kl}$ und die
-aus \cite{gertzen} entnommende Dichte von Wasser $\rho_f$ sind
+Die aus der Vesuchsanleitung entnommenden Daten sind die Falllänge $\Delta x$
+die Apparaturkonstante der kleinen Kugel $K_{kl}$ und die
+aus der Literatur \cite{gertzen} entnommende Dichte von Wasser $\rho_f$ sind
 \begin{align}
-L=\SI{0.1000(1)}{\meter}\\
-\rho_f=\SI[per-mode=fraction]{0.998(1)}{\kilo\gram\per\meter^3}\\
-K_{kl}=\SI[per-mode=fraction]{0.07640(1)}{\meter\pascal\centi\meter^3\per\gram}
+  L=&\SI{0.1000(1)}{\meter}\\
+  \rho_f=&\SI{0.998(1)}{\kilo\gram\per\cubic\meter}\\
+  K_{kl}=&\SI{0.07640(1)}{\meter\pascal\centi\cubic\meter\per\gram}\;\;.
 \end{align}
-In der Tabelle \ref{tab:Messung1}, sind die gemessenden Werte für Fallzeit, Durchmesser der Kugeln angegeben
+In der Tabelle \ref{tab:Messung1}, sind die gemessenden Werte für Fallzeit $t$,
+ Durchmesser $d$ der Kugeln angegeben
 \begin{table}
   \centering
   \begin{tabular}{c c c c}
@@ -28,13 +29,13 @@ In der Tabelle \ref{tab:Messung1}, sind die gemessenden Werte für Fallzeit, Dur
     15.630\pm0.001  &  12.95\pm0.01  &  15.802\pm0.001  &  88.23\pm0.01\\
     \bottomrule
   \end{tabular}
-  \caption{}
+  \caption{Gemessende Zeiten und Druchmesser der Kugeln.}
   \label{tab:Messung1}
 \end{table}
 Die Dichte der Kugeln, die Mittelwerte der Durchmesser und Fallzeiten sind
 \begin{align*}
-  \rho_{kl}=&\SI[per-mode=fraction]{2226(5)}{\kilo\gram\per\meter^3}\\
-  \rho_{gr}=&\SI[per-mode=fraction]{2398(5)}{\kilo\gram\per\meter^{3}}\\
+  \rho_{kl}=&\SI[per-mode=fraction]{2226(5)}{\kilo\gram\per\cubic\meter}\\
+  \rho_{gr}=&\SI[per-mode=fraction]{2398(5)}{\kilo\gram\per\cubic\meter}\\
   d_{kl}=&\SI[per-mode=fraction]{0.0156288(3)}{\centi\meter}\\
   d_{gr}=&\SI[per-mode=fraction]{0.0157967(3)}{\centi\meter}\\
   t_{kl}=&\SI[per-mode=fraction]{12.8110(3)}{\second}\\
@@ -45,17 +46,17 @@ großen Kugel $K_{gr}$ nach Gleichung \eqref{eqn:bestimmung_eta} und die Reynold
 \eqref{eqn:reynoldszahl} sind.
 \begin{align*}
   \eta=&\SI{1.202(5)}{\meter\pascal\second}\\
-  K_{gr}=&\SI[per-mode=fraction]{0.00975(5)}{\meter\pascal\centi\meter^3\per\gram}\\
+  K_{gr}=&\SI[per-mode=fraction]{0.00975(5)}{\meter\pascal\centi\cubic\meter\per\gram}\\
   Re_{gr}=&(14.90\pm0.07)\\
   Re_{kl}=&(101.3\pm0.5)
   \label{eqn:etaKRE}
 \end{align*}
 In Abbildung \ref{fig:Viskositaet} ist die Viskosität $\log(\eta)$
-in abhängigkeit von der Temperatur dargestellt.
+in Abhängigkeit von der Temperatur dargestellt.
 \begin{figure}
   \centering
   \includegraphics[width=0.78\textwidth]{Viskosität_temp.pdf}
-  \caption{}
+  \caption{Graphische Darstellung der Messwerte zur Temperaturabhängigkeit der Viskosität.}
   \label{fig:Viskositaet}
 \end{figure}
 Die gemessenden Werte sind in Tabelle \ref{fig:viskositaet_tab} aufgelistet. Die Fit hat
@@ -66,7 +67,7 @@ nach der umgestellten Gleichung \eqref{eqn:andradesche_gleichung} die Form
 mit den Fitparametern
 \begin{align*}
   A=&\SI{20(4)e2}{\meter\pascal\second}\\
-  B=&\SI[per-mode=fraction]{-177(6)e-4}{\kelvin}
+  B=&\SI[per-mode=fraction]{-177(6)e-4}{\kelvin}\;\;.
 \end{align*}
 \begin{table}
   \centering
@@ -87,6 +88,6 @@ mit den Fitparametern
    343.15\pm0.01  &  35.49\pm0.01  &  35.21\pm0.01  &  0.483\pm0.002\\
     \bottomrule
   \end{tabular}
-  \caption{}
+  \caption{Fallzeiten und Viskositäten bei verschiedenen Temperaturen.}
   \label{fig:viskositaet_tab}
 \end{table}
