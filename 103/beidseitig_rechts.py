@@ -16,6 +16,9 @@ h=0.01
 dx=dm-d0
 a=4*x**3 - 12*L*x**2 + 9*(L**2)*x - L**3
 
+np.savetxt('werte_4.txt', dx)
+np.savetxt('beidseitig_rechts_berechnete_werte.txt', a)
+
 def f(a,b,c):
  return ( b * a ) + c
 
@@ -25,7 +28,7 @@ plt.xlim(0.02,0.18)
 plt.plot(a_plot,f(a_plot,*parameters1), 'g-', label='Fit')
 
 plt.plot(a,dx, 'rx', label='Messwerte')
-plt.xlabel(r'$\left(4 x^3 - 12 L x^2 + 9 L^2 x - L^3\right)} / m^3$')
+plt.xlabel(r'$4 x^3 - 12 L x^2 + 9 L^2 x - L^3 / m^3$')
 plt.ylabel(r'$D(x) / m$')
 plt.tight_layout()
 plt.legend(loc='best')

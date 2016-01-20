@@ -19,6 +19,10 @@ h=0.01
 dx=dm-d0
 a=0.49 * (x**2) - ((x**3) / 3)
 
+
+np.savetxt('werte_1.txt', dx)
+np.savetxt('einseitig1_berechnete_werte.txt', a)
+
 def f(a,b,c):
  return ( b * a ) + c
 
