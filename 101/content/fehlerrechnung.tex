@@ -1,0 +1,26 @@
+\section{Fehlerrechnung}
+\label{sec:Fehlerrechnung}
+Die Fehlerrechnung wird mit nachfolgenden Formeln und mit Python durchgeführt.
+Der Mittelwert wird mit
+\begin{equation}
+  \bar{x}= \frac{1}{N}\sum_{i=1}^N x_i
+  \label{eqn:mittelwert}
+\end{equation}
+berechnet und Standardabweichung des Mittelwerts berechnet sich nach
+\begin{equation}
+  \Delta\bar{x} = \sqrt{\frac{1}{n(n-1)}\sum_{i=1}^n(x_i-\bar{x_i})^2} .
+  \label{eqn:standardabweichung}
+\end{equation}
+Der Gaußsche Fehler einer Funktion $f(x_i)$, die von den fehlerbehafteten Variablen
+$x_i$ abhängt, berechnet sich nach der Formel
+\begin{equation}
+  \Delta f = \sqrt{\sum_{i=1}^N \left(\frac{\partial f}{\partial x_i}\right)^2
+  \cdot (\Delta x_i)^2}.
+  \label{eqn:fehlerfortpflanzung}
+\end{equation}
+Dabei ist $\Delta x_i$ der Fehler von $x_i$.
+Die relative Abweichung eines berechneten Wertes $x$ vom wahren Wert $x_\symup{w}$
+beträgt
+\begin{equation}
+  \Delta x_\symup{rel} = \frac{x-x_\symup{w}}{x_\symup{w}}.
+\end{equation}

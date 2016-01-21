@@ -26,8 +26,8 @@ f, uc , a = np.genfromtxt('lin_resonanzkurve.txt', unpack=True)
 #plt.legend(loc='best')
 #plt.savefig('Resonanzkurve.pdf')
 
-def f(nu,  a_0, a_1):
-    return (1 / np.sqrt((1 - a_0 * nu ** 2) ** 2 + (nu ** 2) * a_1))
+def f(nu,  a_0, a_1,a_2):
+    return (a_2 / np.sqrt((1 - a_0 * nu ** 2) ** 2 + (nu ** 2) * a_1))
 
 x, z, a = np.genfromtxt('messwerte_phasenverschiebung.txt', unpack=True)
 x=x*2*np.pi
@@ -47,15 +47,15 @@ print(z)
 #print(a)
 
 
-params, covar = curve_fit(f,x,z,p0=[L*C,R2**2*C**2])
+params, covar = curve_fit(f,x,z,p0=[L*C,R2**2*C**2,0.75])
 
 print(params)
 x_plot = np.linspace(0, 60)
-x_plot1 = np.linspace(300, 10000000, 10000)
+x_plot1 = np.linspace(300, 1000000, 10000)
 plot.errorbar(x, z + (a / 10), xerr=None, yerr=(a / 10), fmt='rx', label="Kondensatorspannung")
 
 #plot.xscale('log')
-plot.xlabel(' $\omega \;in\; \mathrm{ kHz }$')
+plot.xlabel(' $\omega \;in\; \mathrm{ Hz }$')
 plot.ylabel('$U_c/U_0$')
 plot.xlim(1.6e5, 2.5e5)
 

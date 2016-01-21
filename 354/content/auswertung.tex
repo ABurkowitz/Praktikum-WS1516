@@ -89,12 +89,19 @@ und  der nach Gleichung \eqref{eqn:bedingung-ap-grenzfall} sind
   \text{Relativer Fehler}=&24.8\%\;.
 \end{align*}
 
-
+\subsection{Erzwungende Schwingung}
 In Abbildung \ref{fig:Kondensatorspannung} sind die
 Messwerte zu der Frequenzabhängigkeit der Kondensatorspannung in Abhängigkeit
 von der Frequenz dargestellt. In Abbildung \ref{fig:Resonanzkurve} ist die
-Resonanzkurve mit linear skalierter x-Achse dargestellt. Die aus der Abbildung
-\ref{fig:Kondensatorspannung}
+Resonanzkurve mit linear skalierter x-Achse dargestellt. Der Fit  in den Abbildungen
+\ref{fig:Kondensatorspannung} und \ref{fig:Resonanzkurve} hat nach
+Gleichung \eqref{eqn:resonanzkurve} die Form
+\begin{equation}
+\frac{U_c}{U_0}=\frac{C}{\sqrt{(1-A\omega^2)^2+\omega^2 B}}
+\end{equation}
+mit den Fitparametern $A=(2187\pm3)10^{-14}\si{\second}^2$, $B=(1.621\pm)10^{-13}\si{\second}^2$ und
+$C=(7.599\pm0.0039)10^{-1}$.
+Die aus der Abbildung \ref{fig:Kondensatorspannung}
 entnommende Frequenz bei der der Phasenwinke $\phi=90°$ ist und die
 nach $\omega_0=\sqrt{\frac{1}{CL}}$ errechnete sind
 \begin{align*}
@@ -123,9 +130,7 @@ Die Güte der Resonanzkurve ist nach Gleichung \eqref{eqn:guete}
   \includegraphics[width=0.78\textwidth]{Kondensatorspannung.pdf}
   \caption{Abbildung der in \ref{fig:Messwerte} aufgeführten Messwerte.
   Die normierte Kondensatorspannung $U_c/U$ wird in Abhängigkeit von der
-  Frequenz dargestellt.Der Fit hat nach Gleichung \eqref{eqn:resonanzkurve} die Form
-  $\frac{U_c}{U_0}=\frac{1}{\sqrt{(1-A\omega^2)^2+\omega^2 B}}$
-  mit den Fitparametern $A=(210\pm4)10^{-13}\si{\second}^2$ und $B=(32\pm1)10^{-13}\si{\second}^2$.}
+  Frequenz dargestellt.}
   \label{fig:Kondensatorspannung}
 \end{figure}
 \begin{figure}
@@ -133,9 +138,7 @@ Die Güte der Resonanzkurve ist nach Gleichung \eqref{eqn:guete}
   \includegraphics[width=0.78\textwidth]{Resonanzkurve.pdf}
   \caption{Abbildung von Messwerten in der Nähe von der Phasenverschiebung $\phi=90°$.
   In ihr ist die Resonanzkurve zu sehen. Die normierte Kondensatorspannung $U_c=U$
-  ist in abhängigkeit von der Frequenz aufgetragen. Der Fit hat nach Gleichung \eqref{eqn:resonanzkurve} die Form
-  $\frac{U_c}{U_0}=\frac{1}{\sqrt{(1-A\omega^2)^2+\omega^2 B}}$
-  mit den Fitparametern $A=(210\pm4)10^{-13}\si{\second}^2$ und $B=(32\pm1)10^{-13}\si{\second}^2$.}
+  ist in abhängigkeit von der Frequenz aufgetragen.}
   \label{fig:Resonanzkurve}
 \end{figure}
 Mit den Messwerten in der Tabelle \ref{fig:Messwerte} sind die  Abbildungen
@@ -196,7 +199,6 @@ entstanden.
   und $\Delta\a=0.01\si{\micro\second}$.}
   \label{fig:Messwerte}
 \end{table}
-\subsection{Erzwungende Schwingung}
 In der Abblidung \ref{fig:phasenverschiebung} ist der Phasenwinkel $\phi$ in Abhängingkeit
 von der Frequenz dargestellt und der Bereich um $\phi=90°$ nocheinmal mit
 linear skalierter x-Achse in Abbildung \ref{fig:linphasenverschiebung} . Die
