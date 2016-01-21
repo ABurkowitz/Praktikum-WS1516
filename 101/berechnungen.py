@@ -12,8 +12,10 @@ r=0.14885
 # Winkel: Grad in rad umrechnen:
 #phi = (2*np.pi*phi)/360
 phi = np.deg2rad(phi)
+print(phi)
+phi_u = unp.uarray(phi,0.087)
 
-D1 = (F*r)/phi
+D1 = (F*r)/phi_u
 print('Winkelrichtgroesse D (statisch):')
 D1_mittel = np.mean(D1)
 print(D1_mittel)
@@ -26,6 +28,7 @@ T/=5
 # Haelfte der Zylinderlaenge noch draufaddieren, da der Abstand bis zum Beginn
 # des Zylinders gemessen wurde h/2 = 1.485 cm
 a+=1.485
+print(a)
 # cm in m
 a/=100
 
@@ -63,6 +66,15 @@ D2 = 4 * np.pi**2 * (m1 + m2) * (1/parameters1[0])
 print('Winkelrichtgroesse D (dynamisch):')
 print(D2)
 
+
+# Eigentraegheitsmoment:
+R1=ufloat(0.01723,0.00001)
+R2=ufloat(0.01737,0.00003)
+h1=ufloat(0.02972,0.00002)
+h2=ufloat(0.02973,0.00002)
+
+I_D=m1*(R1**2/4 + h1**2/12) + m2*(R2**2/4 + h2**2/12) - (parameters1[1]/parameters1[0])*(m1+m2)
+print(I_D)
 # Ausgabe
 #859.8+/-14.9
 #6.0+/-0.4
