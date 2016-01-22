@@ -159,3 +159,163 @@ Fehlerfortpflanzung mit Python folgt für das Eigenträgheitsmoment
 \begin{align*}
   I_\text{D} = \SI{-3.0(2)e-3}{\kilo\gram\squared\meter}.
 \end{align*}
+
+\subsection{Trägheitsmoment zweier verschiedener Körper}
+Es werden die Trägheitsmomente zweier Zylinder theoretisch über die Abmessungen
+und die Masse der Körper berechnet, sowie über die Schwingungsdauer bestimmt.
+Der erste Zylinder (schwarz) rotiert dabei senkrecht stehend um seine
+Schwerpunktsachse, der zweite Zylinder (weiß) rotiert liegend ebenfalls um seine
+Schwerpunktsachse.
+Die Abmessungen der Zylinder sind in Tabelle \ref{tab:abmessungen_zylinder}
+dargestellt, die Messwerte der Schwingungsperiode in Tabelle
+\ref{tab:messwerte_zylinder}.
+\begin{table}
+  \centering
+  \begin{tabular}{c| c c}
+    \toprule
+        & Zylinder 1 & Zylinder 2 \\
+    \midrule
+    Masse $m$ in \si{\kilo\gram} & 1.0739 & 1.5254 \\
+    & & \\
+    Durchmesser          & 7.97 & 8.01  \\
+    in \si{\centi\meter} & 7.94 & 8.01  \\
+                         & 7.945 & 8.00  \\
+    & & \\
+    Höhe                 & 13.98 & 13.95 \\
+    in \si{\centi\meter} & 14.01 & 13.95 \\
+                         & 14.01 & 13.97 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Abmessungen der zwei Zylinder, deren Trägheitsmoment bestimmt wird.}
+  \label{tab:abmessungen_zylinder}
+\end{table}
+
+\begin{table}
+  \centering
+  \begin{tabular}{c c c c}
+    \toprule
+    \multicolumn{2}{c}{Zylinder 1} & \multicolumn{2}{c}{Zylinder 2}\\
+    5 $T$ in \si{\second} & 1 $T$ in \si{\second} & 5 $T$ in \si{\second} &
+    1 $T$ in \si{\second} \\
+    \midrule
+    8.35 & 1.670 & 11.67 & 2.334 \\
+    8.35 & 1.670 & 11.44 & 2.288 \\
+    8.30 & 1.660 & 11.84 & 2.368 \\
+    8.33 & 1.666 & 11.75 & 2.350 \\
+    8.29 & 1.658 & 11.64 & 2.328 \\
+    8.50 & 1.700 & 11.46 & 2.292 \\
+    8.33 & 1.666 & 11.53 & 2.306 \\
+    8.46 & 1.692 & 11.58 & 2.316 \\
+    8.46 & 1.692 & 11.75 & 2.350 \\
+    8.27 & 1.654 & 11.52 & 2.304 \\
+    \midrule
+    8.36 & 1.673 & 11.62 & 2.324 \\
+    0.03 & 0.005 &  0.04 & 0.009 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Messwerte von fünf Perioden (5$T$) und berechnete Werte für eine Periode
+  (1$T$) der zwei Zylinder. In der vorletzten Zeile stehen die Mittelwerte, in
+  der letzten Zeile die Standardabweichung.}
+  \label{tab:messwerte_zylinder}
+\end{table}
+
+\subsubsection{Trägheitsmoment des stehenden Zylinders}
+Das Trägheitsmoment wird mit
+\begin{equation}
+  I_\text{Z,stehend} = \frac{1}{2} m R^2
+  \label{eqn:I_zstehend-theo}
+\end{equation}
+berechnet. Aus Tabelle \ref{tab:abmessungen_zylinder} ergibt sich der Radius
+\begin{align*}
+  R_\text{Z1} = \SI{0.03975(5)}{\meter},
+\end{align*}
+sodass mit den anderen Werten aus Tabelle \ref{tab:abmessungen_zylinder} und der
+Gleichung \eqref{eqn:I_zstehend-theo} für das theoretisch berechnete
+Trägheitsmoment des ersten Zylinders folgt:
+\begin{align*}
+  I_\text{Z1,theo} = \SI{8.48(2)e-4}{\squared\kilo\gram\meter}.
+\end{align*}
+
+Wird das Trägheitsmoment über die Schwingungsdauer experimentell bestimmt, so
+wird die Gleichung (xx) mit dem Gesamtträgheitsmoment $I_\text{ges} = I_\text{D}
++ I_\text{Z1,exp}$ zu
+\begin{equation}
+  I_\text{Z1,exp} = \frac{T^2 D}{4 \pi^2} - I_\text{D}
+  \label{eqn:I_zstehend-exp}
+\end{equation}
+umgeformt.
+
+
+\subsubsection{Trägheitsmoment des liegenden Zylinders}
+
+\subsection{Trägheitsmoment einer Holzpuppe in zwei verschiedenen Stellungen}
+
+\begin{table}
+  \centering
+  \begin{tabular}{c c c c c c c c}
+    \toprule
+    \multicolumn{2}{l}{Arme} & \multicolumn{2}{l}{Beine} & \multicolumn{2}{l}{Torso}
+    & \multicolumn{2}{l}{Kopf} \\
+    Länge & Breite & Länge & Breite & Länge & Breite & Länge & Breite \\
+    \midrule
+    13.68 & 1.60 & 14.27 & 2.00 & 9.72 & 3.60 & 4.65 & 3.10 \\
+    13.76 & 1.50 & 14.00 & 1.65 & 9.85 & 3.70 & 4.63 & 2.52 \\
+    13.74 & 1.15 & 14.68 & 1.63 & 9.78 & 3.90 & 4.64 & 1.98 \\
+    13.88 & 1.60 & 14.72 & 2.01 & 9.69 & 4.18 & 4.64 & 2.81 \\
+    13.79 & 1.29 & 13.96 & 1.53 & 9.68 & 4.16 & 4.58 & 3.10 \\
+    13.63 & 1.16 & 14.65 & 1.59 & 9.83 & 4.14 & 4.72 & 2.68 \\
+    \midrule
+    13.75 & 1.38 & 14.4 & 1.74 & 9.76 & 3.9 & 4.64 & 2.7 \\
+    0.04  & 0.09 & 0.1  & 0.09 & 0.03 & 0.1 & 0.02 & 0.2 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Abmessungen der kleinen Holzpuppe. In der vorletzten Zeile stehen die
+  Mittelwerte, in der letzten die Standardabweichungen.}
+  \label{tab:abmessungen_puppe}
+\end{table}
+
+\begin{table}
+  \centering
+  \begin{tabular}{c| c c c c}
+    \toprule
+     & Arme & Beine & Torso & Kopf \\
+    \midrule
+    Volumen in \si{\cubic\meter} & \num{4.13e-5} & \num{6.80e-5} & \num{11.94e-5}
+    & \num{2.66e-5} \\
+    Anteil an der Gesamtmasse & 0.162 & 0.266 & 0.468 & 0.104 \\
+    Masse in \si{\kilo\gram} & 0.0259 & 0.0427 & 0.0749 & 0.0167 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Massenverteilung der Gesamtmasse auf die Körperteile.}
+  \label{tab:massenverteilung}
+\end{table}
+
+\begin{table}
+  \centering
+  \begin{tabular}{c c c c}
+    \toprule
+    \multicolumn{2}{c}{Haltung 1: angelegte Arme} & \multicolumn{2}{c}
+    {Haltung 2: abgesteckte Arme} \\
+    5 $T$ in \si{\second} & 1 $T$ in \si{\second} & 5 $T$ in \si{\second} &
+    1 $T$ in \si{\second} \\
+    \midrule
+    2.01 & 0.402 & 3.32 & 0.664 \\
+    1.83 & 0.366 & 3.15 & 0.630 \\
+    1.83 & 0.366 & 3.20 & 0.640 \\
+    2.03 & 0.406 & 3.24 & 0.648 \\
+    1.76 & 0.352 & 3.15 & 0.630 \\
+    1.72 & 0.344 & 3.26 & 0.652 \\
+    1.76 & 0.352 & 3.30 & 0.660 \\
+    1.70 & 0.340 & 2.96 & 0.592 \\
+    1.80 & 0.360 & 3.13 & 0.626 \\
+    2.00 & 0.400 & 3.21 & 0.642 \\
+    \midrule
+    1.84 & 0.369 & 3.19 & 0.638 \\
+    0.04 & 0.008 & 0.03 & 0.007 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Messwerte von fünf Perioden (5$T$) und berechnete Werte für eine Periode
+  (1$T$) der Puppe in zwei verschiedenen Haltungen. In der vorletzten Zeile stehen
+  die Mittelwerte, in der letzten Zeile die Standardabweichung.}
+  \label{tab:messwerte_puppe}
+\end{table}
