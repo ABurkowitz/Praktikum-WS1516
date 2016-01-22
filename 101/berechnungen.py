@@ -80,9 +80,10 @@ print()
 
 # Winkelrichtgroesse der zwei Methoden mitteln:
 D=(D1_mittel+D2)/2
+print(D)
 
 # Berechnung des Trägheitsmoments von Zylinder 1
-m_Z1 = 1.0739
+m_Z1 = 1.9739
 r_Z1 = ufloat(0.03975,0.00005)
 T1 = ufloat(1.673,0.005)
 
@@ -90,11 +91,14 @@ I_Z1t = 0.5 * m_Z1 * r_Z1**2
 print('I_Z1 theoretisch:')
 print(I_Z1t)
 
-I_Z1e = (T1**2 * D) / (4*np.pi**2) - I_D
+I_Z1e = (T1**2 * D) / (4*np.pi**2)
 print('I_Z1 experimentell:')
 print(I_Z1e)
 print()
 
+deltaI_Z1 = (I_Z1e-I_Z1t)/I_Z1t
+print(deltaI_Z1)
+print()
 
 # Berechnung des Trägheitsmoments von Zylinder 2
 m_Z2 = 1.5254
@@ -106,11 +110,14 @@ I_Z2t = m_Z2 * ((r_Z2**2 / 4)+(h_Z2**2/12))
 print('I_Z2 theoretisch:')
 print(I_Z2t)
 
-I_Z2e = (T2**2 * D) / (4*np.pi**2) - I_D
+I_Z2e = (T2**2 * D) / (4*np.pi**2)
 print('I_Z2 experimentell:')
 print(I_Z2e)
 print()
 
+deltaI_Z2 = (I_Z2e-I_Z2t)/I_Z2t
+print(deltaI_Z2)
+print()
 
 
 # Ausgabe

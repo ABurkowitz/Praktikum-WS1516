@@ -159,6 +159,9 @@ Fehlerfortpflanzung mit Python folgt für das Eigenträgheitsmoment
 \begin{align*}
   I_\text{D} = \SI{-3.0(2)e-3}{\kilo\gram\squared\meter}.
 \end{align*}
+Ein negatives Trägheitsmoment der Drillachse ist physikalisch nicht sinnvoll,
+daher wird angenommen, dass das Eigenträgheitsmoment so gering ist, dass es
+in den folgenden Rechnungen vernachlässigt werden kann.
 
 \subsection{Trägheitsmoment zweier verschiedener Körper}
 Es werden die Trägheitsmomente zweier Zylinder theoretisch über die Abmessungen
@@ -175,7 +178,7 @@ dargestellt, die Messwerte der Schwingungsperiode in Tabelle
     \toprule
         & Zylinder 1 & Zylinder 2 \\
     \midrule
-    Masse $m$ in \si{\kilo\gram} & 1.0739 & 1.5254 \\
+    Masse $m$ in \si{\kilo\gram} & 1.9739 & 1.5254 \\
     & & \\
     Durchmesser          & 7.97 & 8.01  \\
     in \si{\centi\meter} & 7.94 & 8.01  \\
@@ -220,9 +223,9 @@ dargestellt, die Messwerte der Schwingungsperiode in Tabelle
 \end{table}
 
 \subsubsection{Trägheitsmoment des stehenden Zylinders}
-Das Trägheitsmoment wird mit
+Das Trägheitsmoment des stehenden Zylinders wird mit
 \begin{equation}
-  I_\text{Z,stehend} = \frac{1}{2} m R^2
+  I_\text{Z,stehend} = \frac{1}{2} m_1 R_\text{Z1}^2
   \label{eqn:I_zstehend-theo}
 \end{equation}
 berechnet. Aus Tabelle \ref{tab:abmessungen_zylinder} ergibt sich der Radius
@@ -233,7 +236,7 @@ sodass mit den anderen Werten aus Tabelle \ref{tab:abmessungen_zylinder} und der
 Gleichung \eqref{eqn:I_zstehend-theo} für das theoretisch berechnete
 Trägheitsmoment des ersten Zylinders folgt:
 \begin{align*}
-  I_\text{Z1,theo} = \SI{8.48(2)e-4}{\squared\kilo\gram\meter}.
+  I_\text{Z1,theo} = \SI{1.559(4)e-3}{\squared\kilo\gram\meter}.
 \end{align*}
 
 Wird das Trägheitsmoment über die Schwingungsdauer experimentell bestimmt, so
@@ -243,10 +246,51 @@ wird die Gleichung (xx) mit dem Gesamtträgheitsmoment $I_\text{ges} = I_\text{D
   I_\text{Z1,exp} = \frac{T^2 D}{4 \pi^2} - I_\text{D}
   \label{eqn:I_zstehend-exp}
 \end{equation}
-umgeformt.
+mit der Mittelung der Winkelrichtgrößen
+\begin{align*}
+  D = \frac{D_\text{stat}+ D_\text{dyn}}{2} = \SI{0.0234(2)}{\newton\meter}
+\end{align*}
+umgeformt. Es ergibt sich der Wert mit der Periodendauer $T$ aus Tabelle
+\ref{tab:messwerte_zylinder}
+\begin{align*}
+  I_\text{Z1,exp} = \SI{1.66(2)e-3}{\squared\kilo\gram\meter}.
+\end{align*}
+Dies entspricht einer relativen Abweichung von $\Delta I_\text{Z1} = \SI{6(1)}
+{\percent}$ nach Gleichung \eqref{eqn:rel_abweichung}.
 
 
 \subsubsection{Trägheitsmoment des liegenden Zylinders}
+Das Trägheitsmoment des liegenden Zylinders wird mit
+\begin{equation}
+  I_\text{Z2,liegend} = m_2 \left(\frac{R_\text{Z2}^2}{4}
+  +\frac{h_\text{Z2}^2}{12}\right)
+  \label{eqn:I_zliegend-theo}
+\end{equation}
+berechnet. Aus Tabelle \ref{tab:abmessungen_zylinder} folgt für den Radius und
+die Höhe des zweiten Zylinders
+\begin{align*}
+  R_\text{Z2} &= \SI{0.04003(2)}{\meter} \text{ und } \\
+  h_\text{Z2} &= \SI{0.1396(7)}{\meter}.
+\end{align*}
+Mit der Gleichung \eqref{eqn:I_zliegend-theo} und der Masse aus Tabelle
+\ref{tab:abmessungen_zylinder} ergibt sich für das theoretisch berechnete
+Trägheitsmoment des zweiten Zylinders
+\begin{align*}
+  I_\text{Z2,theo} = \SI{3.087(3)e-3}{\squared\kilo\gram\meter}.
+\end{align*}
+
+Die Berechnung des Trägheitsmoments des liegenden Zylinders über die
+Schwingungsdauer erfolgt analog zur Berechnung für den stehenden Zylinder nach
+Gleichung \eqref{eqn:I_zstehend-exp}, jedoch mit der Periodendauer des
+zweiten Zylinders aus Tabelle \ref{tab:messwerte_zylinder}.
+Für das experimentell bestimmte Trägheitsmoment des zweiten Zylinders ergibt
+sich
+\begin{align*}
+  I_\text{Z2,exp} = \SI{3.20(4)e-3}.
+\end{align*}
+Dies entspricht einer relativen Abweichung von $\Delta I_\text{Z2} = \SI{4(1)}
+{\percent}$ nach Gleichung \eqref{eqn:rel_abweichung}.
+
 
 \subsection{Trägheitsmoment einer Holzpuppe in zwei verschiedenen Stellungen}
 
