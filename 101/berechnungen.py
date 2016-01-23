@@ -82,6 +82,9 @@ print()
 D=(D1_mittel+D2)/2
 print(D)
 
+deltaD=(D1_mittel-D2)/D1_mittel
+print(deltaD)
+
 # Berechnung des Trägheitsmoments von Zylinder 1
 m_Z1 = 1.9739
 r_Z1 = ufloat(0.03975,0.00005)
