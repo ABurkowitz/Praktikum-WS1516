@@ -119,6 +119,48 @@ deltaI_Z2 = (I_Z2e-I_Z2t)/I_Z2t
 print(deltaI_Z2)
 print()
 
+# Trägheitsmomente der Puppe
+# Massen der Körperteile
+mA=0.0259
+mB=0.0427
+mT=0.0749
+mK=0.0167
+
+# Radien der Körperteile
+rA=ufloat(0.0069,0.00045)
+rB=ufloat(0.0087,0.00045)
+rT=ufloat(0.0195,0.0005)
+rK=ufloat(0.0135,0.001)
+
+# Haltung 1
+I_P1t=0.5*(2*mA*rA**2 + 2*mB*rB**2 + mT*rT**2 + mK*rK**2)+2*mA*(rA+rT)**2 + 2*mB*rB**2
+print('Haltung 1, theoretisch:')
+print(I_P1t)
+
+Tp1=ufloat(0.3688,0.00786)
+I_P1e=Tp1**2*D/(4*np.pi**2)
+print('Haltung 1, experimentell:')
+print(I_P1e)
+
+deltaI_P1 = (I_P1e-I_P1t)/I_P1t
+print(deltaI_P1)
+print()
+
+# Haltung 2
+hA=ufloat(0.1375,0.0004)
+I_P2t= 0.5*(2*mB*rB**2 + mT*rT**2 + mK*rK**2)+2*mA*((rA**2/4)+(hA**2/12)+((hA/2)+rT)**2) + 2*mB*rB**2
+print('Haltung 2, theoretisch:')
+print(I_P2t)
+
+Tp2=ufloat(0.6384,0.00655)
+I_P2e=Tp2**2*D/(4*np.pi**2)
+print('Haltung 2, experimentell:')
+print(I_P2e)
+
+deltaI_P2 = (I_P2e-I_P2t)/I_P2t
+print(deltaI_P2)
+print()
+
 
 # Ausgabe
 #[ 1.57079633  1.74532925  2.0943951   2.61799388  3.14159265  3.4906585

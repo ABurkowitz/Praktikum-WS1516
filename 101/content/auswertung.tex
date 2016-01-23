@@ -293,7 +293,11 @@ Dies entspricht einer relativen Abweichung von $\Delta I_\text{Z2} = \SI{4(1)}
 
 
 \subsection{Trägheitsmoment einer Holzpuppe in zwei verschiedenen Stellungen}
-
+Zur Berechnung des Trägheitsmoments der Holzpuppe in zwei verschiedenen Haltungen
+werden die einzelnen Körperteile der Puppe durch Zylinder genähert. Die Abmessungen
+der Körperteile der Puppe sind in Tabelle \ref{tab:abmessungen_puppe} aufgelistet.
+Dabei wurden die Messwerte für Arme und Beine jeweils an beiden Armen bzw. Beinen
+aufgenommen und zu einem Arm- oder Beinzylinder gemittelt.
 \begin{table}
   \centering
   \begin{tabular}{c c c c c c c c}
@@ -318,6 +322,9 @@ Dies entspricht einer relativen Abweichung von $\Delta I_\text{Z2} = \SI{4(1)}
   \label{tab:abmessungen_puppe}
 \end{table}
 
+Aus der Gesamtmasse $m_\text{ges} = \SI{0.16024}{\kilo\gram}$ der Puppe wird
+die Massenverteilung der Gesamtmasse auf die Körperteile je nach Volumen berechnet.
+Das Ergebnis ist in Tabelle \ref{tab:massenverteilung} eingetragen.
 \begin{table}
   \centering
   \begin{tabular}{c| c c c c}
@@ -333,6 +340,69 @@ Dies entspricht einer relativen Abweichung von $\Delta I_\text{Z2} = \SI{4(1)}
   \caption{Massenverteilung der Gesamtmasse auf die Körperteile.}
   \label{tab:massenverteilung}
 \end{table}
+
+\subsubsection{Haltung 1: angelegte Arme}
+Das Gesamtträgheitsmoment ergibt sich aus der Addition der Einzelträgheitsmomente
+zweier Arme ($I_\text{A}$), zweier Beine ($I_\text{B}$), des Torsos ($I_\text{T}$)
+und des Kopfes ($I_\text{K}$):
+\begin{align*}
+  I_\text{Puppe,theo} &= 2 I_\text{A} + 2 I_\text{B} + I_\text{T} + I_\text{K} \text{ mit }\\
+  I_\text{A} &= \frac{1}{2} m_\text{A} R_\text{A}^2 + m_\text{A} (R_\text{A}+R_\text{T})^2\\
+  I_\text{B} &= \frac{1}{2} m_\text{B} R_\text{B}^2 + m_\text{B} R_\text{B}^2\\
+  I_\text{T} &= \frac{1}{2} m_\text{T} R_\text{T}^2\\
+  I_\text{K} &= \frac{1}{2} m_\text{K} R_\text{K}^2.\\
+\end{align*}
+Die Radien sind dabei jeweils die Hälfte der in Tabelle \ref{tab:abmessungen_puppe}
+angegebenen Breiten der Körperteile, also
+\begin{align*}
+  R_\text{A} &= \SI{0.0069(5)}{\meter}\\
+  R_\text{B} &= \SI{0.0087(5)}{\meter}\\
+  R_\text{T} &= \SI{0.0195(5)}{\meter}\\
+  R_\text{K} &= \SI{0.014(1)}{\meter},\\
+\end{align*}
+die Höhe der Zylinder ist durch die Länge der Körperteile gegeben.
+Für das theoretisch berechnete Trägheitsmoment der Puppe in Haltung 1 ergibt sich
+\begin{align*}
+  I_\text{Puppe1,theo} = \SI{6.3(3)e-5}{\squared\kilo\gram\meter}.
+\end{align*}
+
+Wird das Trägheitsmoment über die Schwingungsdauer wie in Gleichung
+\eqref{eqn:I_zstehend-exp} berechnet, so ergibt sich mit der gemittelten
+Schwingungsdauer aus von
+\begin{align*}
+  T_\text{P1} &= \SI{0.369(8)}{\second} \\
+  \intertext {aus Tabelle \ref{tab:messwerte_puppe} für das Trägheitsmoment }
+  I_\text{Puppe1,exp} &= \SI{8.1(4)e-5}{\squared\kilo\gram\meter}.
+\end{align*}
+Dieser Wert weicht von dem theoretisch berechneten Wert um $\SI{28(8)}{\percent}$
+ab.
+
+\subsubsection{Haltung 2:abgestreckte Arme}
+Im Vergleich zur ersten Haltung mit angelegten Armen ändert sich nur das
+Trägheitsmoment der Arme, da die Zylinder jetzt liegen und um den Abstand
+$a=\frac{h_\text{A}}{2}+R_\text{T}$ verschoben sind. Mit dem Satz von Steiner
+(Gleichung (xx)) folgt für das Trägheitsmoment der Arme:
+\begin{align*}
+  I_\text{A} &= m_\text{A}\left(\frac{R_\text{A}^2}{4} + \frac{h_\text{A}^2}{12}
+  +\left(\frac{h_\text{A}}{2} + R_\text{T}\right)^2\right)
+\end{align*}
+und es ergibt sich für das theoretisch berechnete Trägheitsmoment der Puppe in
+der zweiten Haltung:
+\begin{align*}
+  I_\text{Puppe2,theo} = \SI{5.11(6)e-4}{\squared\kilo\gram\meter}.
+\end{align*}
+
+\noindent Mit der Schwingungsdauer von
+\begin{align*}
+  T_\text{P2} &= \SI{0.638(7)}{\second}
+\end{align*}
+nach Tabelle \ref{tab:messwerte_puppe} ergibt sich für das experimentell aus der
+Schwingungsdauer nach Gleichung \eqref{eqn:I_zstehend-exp} berechnete Trägheitsmoment
+der Puppe in Haltung 2
+\begin{align*}
+  I_\text{Puppe2,exp} = \SI{2.41(5)e-4}{\squared\kilo\gram\meter},
+\end{align*}
+mit einer relativen Abweichung von $\SI{53(1)}{\percent}$.
 
 \begin{table}
   \centering
