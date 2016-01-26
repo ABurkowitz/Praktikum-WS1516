@@ -7,8 +7,8 @@ from uncertainties import ufloat
 from cmath import sqrt
 
 
-def f(nu,  a_0, a_1,a_2):
-    return (a_2 / np.sqrt((1 - a_0 * nu ** 2) ** 2 + (nu ** 2) * a_1))
+def f(nu,  a_0, a_1,a_2,a_3):
+    return (a_2/np.sqrt((1-a_0*nu**2)**2+(nu**2)*a_1)+a_3)
 
 x, z, a = np.genfromtxt('messwerte_phasenverschiebung.txt', unpack=True)
 x=x*2*np.pi
@@ -28,7 +28,7 @@ print(z)
 #print(a)
 
 
-params, covar = curve_fit(f,x,z,p0=[L*C,R2**2*C**2,0.75])
+params, covar = curve_fit(f,x,z,p0=[L*C,R2**2*C**2,0.75,0])
 
 print(params)
 fehler= np.sqrt(np.diag(covar))

@@ -32,12 +32,11 @@ ph=(0,0,0,0,0.09424777,0.19603538,0.24881414,0.42474333,0.41494156,0.47500881,
     0.7115079,0.75398224,0.8022371,0.89598222,1.02918575,1.22522113,
     1.12594681,1.28553971,1.47340695,1.62357508,1.69080517,1.87364586,
     1.80327418,1.99051311,2.18529185,2.19660158,2.25440689,2.56353961,
-    2.63893783,2.89026524,3.01592895,3.0787608,3.01592895,3.16460154,3.1)
-#2.76460154,0)
-def g(ome,  a_0, a_1):
-    return (1.5*np.arctan(-ome*a_0/(1-a_1*ome**2)))
+    2.63893783,2.89026524,3.01592895,3.0787608,3.11592895,3.16460154,3.1)
+def g(ome,a_1,a_0,a_2,a_3):
 
-params, covar = curve_fit(g,w,ph,p0=[T0,T1])
+    return (a_2*np.arctan(a_0*(ome-a_1))+a_3)
+params, covar = curve_fit(g,w,ph,p0=[40.000,0.00001,1,0])
 x_plot1 = np.linspace(300, 3000000, 100000)
 plt.plot(x_plot1, g(x_plot1, *params), 'b-', label="Fit")
 plt.errorbar(w, phi(a,b) + (a / 10), xerr=None, yerr=(a / 10), fmt='rx', label="Phasenverschiebung")
@@ -45,7 +44,7 @@ plt.legend(loc='best')
 #plt.tight_layout(pad=0, h_pad=1.1, w_pad=1.08)
 plt.xlim(1.6e5, 2.5e5)
 plt.xscale('log')
-plt.xlabel(' $\omega \;in\; \mathrm{ kHz }$')
+plt.xlabel(' $\omega \;in\; \mathrm{ Hz }$')
 plt.ylabel('$\phi \;$in$\;\mathrm{rad}$')
 #plt.plot(f,phi(a,b),'r.')
 #plt.plot(f,phi(a,b),'r+')

@@ -97,10 +97,15 @@ Resonanzkurve mit linear skalierter x-Achse dargestellt. Der Fit  in den Abbildu
 \ref{fig:Kondensatorspannung} und \ref{fig:Resonanzkurve} hat nach
 Gleichung \eqref{eqn:resonanzkurve} die Form
 \begin{equation}
-\frac{U_c}{U_0}=\frac{C}{\sqrt{(1-A\omega^2)^2+\omega^2 B}}
+U_c=\frac{A}{\sqrt{(1-B\omega^2)^2+\omega^2 C}}+D
 \end{equation}
-mit den Fitparametern $A=(2187\pm3)10^{-14}\si{\second}^2$, $B=(1.621\pm)10^{-13}\si{\second}^2$ und
-$C=(7.599\pm0.0039)10^{-1}$.
+mit den Fitparametern
+\begin{align*}
+ A=&(7.46\pm0.05)10^{-1}\si{\volt}\\
+ B=&(2.190\pm0.003)10^{-11}\si{\second}^2\\
+ C=&(1.58\pm0.02)10^{-12}\si{\second}^2\\
+ D=&(2.2\pm0.7)10^{-2}\si{\volt}\;\;.
+\end{align*}
 Die aus der Abbildung \ref{fig:Kondensatorspannung}
 entnommende Frequenz bei der der Phasenwinke $\phi=90°$ ist und die
 nach $\omega_0=\sqrt{\frac{1}{CL}}$ errechnete sind
@@ -145,7 +150,7 @@ Mit den Messwerten in der Tabelle \ref{fig:Messwerte} sind die  Abbildungen
 \ref{fig:Kondensatorspannung}, \ref{fig:Resonanzkurve},
 \ref{fig:phasenverschiebung} und \ref{fig:linphasenverschiebung}
 entstanden.
-\begin{table}ra
+\begin{table}
   \centering
   \begin{tabular}{c c c}
     \toprule
@@ -195,15 +200,26 @@ entstanden.
   \end{tabular}
   \caption{In der Tabelle sind die Frequenz $\omega$in $\si{\hertz}$, die normierte
   Kondensatorspannung und der Abstand der Nulldurchgänge $a$ in $\si{\micro\second}$
-  angegeben. Die Fehler sind $\delta\nu=0.1\si{\hertz}$,$ \Delta\frac{U}{U_c}0.001$
-  und $\Delta\a=0.01\si{\micro\second}$.}
+  angegeben. Die Fehler sind $\Delta\nu=0.1\si{\hertz}$, $ \Delta\frac{U}{U_c}=0.001$
+  und $\Delta a=0.01\si{\micro\second}$.}
   \label{fig:Messwerte}
 \end{table}
 In der Abblidung \ref{fig:phasenverschiebung} ist der Phasenwinkel $\phi$ in Abhängingkeit
 von der Frequenz dargestellt und der Bereich um $\phi=90°$ nocheinmal mit
-linear skalierter x-Achse in Abbildung \ref{fig:linphasenverschiebung} . Die
-Frequenzen $\omega_{1}$ und
-$\omega_{2}$  sind nach Gleichung \eqref{eqn:omega12} und experimenteller Bestimmung
+linear skalierter x-Achse in Abbildung \ref{fig:linphasenverschiebung} .
+Die zugehörigen Fits haben nach Gleichung die Form
+\begin{equation}
+  \phi(\omega)=(A\arctan(B(\omega-C))+D)
+\end{equation}
+  mit den Fitparametern
+\begin{align*}
+  A=&(1.06\pm0.01)\\
+  B=&(3.4\pm0.1)10^{-5}\si{\second}\\
+  C=&(2.125\pm0.006)10^{5}\si{\second}^{-1}\\
+  D=&(1.51\pm0.01)\;\;.
+\end{align*}
+Die Frequenzen $\omega_{1}$ und $\omega_{2}$  sind nach Gleichung \eqref{eqn:omega12}
+und experimenteller Bestimmung
 \begin{align*}
   \omega_{1_t}=&(2466000\pm5000)\si{\hertz}\\
   \omega_{1_e}=&(1872389.5\pm0.6)\si{\hertz}\\
@@ -224,20 +240,13 @@ Der berechnete und der im Experiment bestimmte Wert sind
   \includegraphics[width=0.78\textwidth]{phasenverschiebung.pdf}
   \caption{Abbildung der Phasenwinkel der Messwerte von Tabelle \ref{fig:Messwerte} in
   Abhängigkeit von der Frequenz dargestellt werden. Der zu erwartende Verlauf ist
-  ein Arkustangens. Der Fit hat nach Gleichung \eqref{eqn:phasenverschiebung} die Form \\
-  $\phi(\omega)=(1/sqrt{(1-A\omega^2)^2+(\omega^2)B)}$
-  mit den Fitparametern \\
-  $A=(-49\pm8)10^{-7}\si{\second}^2$ und $B=(1\pm6)10^{-13}\si{\second}^2$.}
+  ein Arkustangens.}
   \label{fig:phasenverschiebung}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[width=0.78\textwidth]{linphasenverschiebung.pdf}
   \caption{Abbildung von Messwerten in der Nähe von der Phasenverschiebung $\phi=90°$.
-          Der Phasenwinkel $\phi$ ist in Abhängigkeit von der Frequenz gegeben.
-           Der Fit hat nach Gleichung \eqref{eqn:phasenverschiebung} die Form \\
-          $\phi(\omega)=(1/sqrt{(1-A\omega^2)^2+(\omega^2)B)}$
-          mit den Fitparametern \\
-          $A=(-49\pm8)10^{-7}\si{\second}^2$ und $\;B=(1\pm6)10^{-13}\si{\second}^2$.}
+          Der Phasenwinkel $\phi$ ist in Abhängigkeit von der Frequenz gegeben.}
   \label{fig:linphasenverschiebung}
 \end{figure}
