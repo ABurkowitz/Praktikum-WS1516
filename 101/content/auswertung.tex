@@ -10,8 +10,8 @@ bestimmt, das Eigenträgheitsmoment nur mit der dynamischen Methode.
 \subsubsection{statische Methode}
 Mit einem Federkraftmesser wird die Rückstellkraft $F$ der Torsionsfeder bei festem
 Abstand $r$ von der Drehachse in Abhängigkeit des Drehwinkels $\varphi$ gemessen.
-Die Messwerte sowie die nach Gleichung (xx) berechnete Winkelrichtgröße $D$ sind
-in Tabelle \ref{tab:statisch} zu aufgeführt.
+Die Messwerte sowie die nach Gleichung \eqref{eqn:Winkelrichtgroesse} berechnete
+Winkelrichtgröße $D$ sind in Tabelle \ref{tab:statisch} zu aufgeführt.
 \begin{table}[H]
   \centering
   \begin{tabular}{c c c c}
@@ -35,7 +35,7 @@ in Tabelle \ref{tab:statisch} zu aufgeführt.
   Methode.}
   \label{tab:statisch}
 \end{table}
-Für die Drehwinkel wird ein Ablesefehler von $\SI{5}{\degree} = \SI{0.087}{\radian}$
+\noindent Für die Drehwinkel wird ein Ablesefehler von $\SI{5}{\degree} = \SI{0.087}{\radian}$
 angenommen. Es wird der Mittelwert der Winkelrichtgröße nach Gleichung
 \eqref{eqn:mittelwert} berechnet. Der Fehler ergibt sich mit Gaußscher
 Fehlerfortpflanzung wie in Gleichung \eqref{eqn:fehlerfortpflanzung}. Damit ergibt
@@ -48,13 +48,12 @@ sich für die Winkelrichtgröße nach der statischen Methode
 Bei der dynamischen Methode wird die Schwingungsdauer $T$ für verschiedene Abstände
 $a$ der Massen von der Drehachse gemessen. Die Messwerte sind in Tabelle
 \ref{tab:dynamisch} dargestellt. Es wird $T^2$ gegen $a^2$ aufgetragen (siehe
-Grafik \ref{fig:linreg_dynamisch}) und eine lineare Regression der Form
+Grafik \ref{fig:ausgleichsrechnung}) und eine lineare Regression der Form
 $y = b \cdot x + c$ mit Python durchgeführt.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{dynamisch.pdf}
-  \caption{Graph zur linearen Ausgleichsrechnung nach Gleichung
-  \eqref{eqn:ausgleichsrechnung}.}
+  \caption{Graph zur linearen Ausgleichsrechnung nach Gleichung \eqref{eqn:ausgleichsrechnung}.}
 \end{figure}
 Dies liefert mit den Messwerten aus Tabelle \ref{tab:messwerte_dynamisch} die
 Parameter
@@ -86,7 +85,7 @@ Parameter
   \label{tab:messwerte_dynamisch}
 \end{table}
 
-Die Gleichung (xx) lässt sich mit dem Gesamträgheitsmoment $I_\text{ges} =
+Die Gleichung \eqref{eqn:Periodetorrosion} lässt sich mit dem Gesamträgheitsmoment $I_\text{ges} =
 I_\text{D} + I_\text{Z1} + I_\text{Z2}$ und den Trägheitsmomenten der Zylinder,
 \begin{align*}
   I_\text{Z1} &= m_1 \left(\frac{R_1^2}{4}+\frac{h_1^2}{12}\right)+m_1 a^2 \text{ und }\\
@@ -135,8 +134,7 @@ der linearen Regression und den Massen $m_1$ und $m_2$ aus der Tabelle
   \caption{Abmessungen der zwei verwendeten Gewichte (beides Zylinder).}
   \label{tab:gewichte}
 \end{table}
-
-Das Eigenträgheitsmoment wird aus dem y-Achsenabschnitt der linearen
+\noindent Das Eigenträgheitsmoment wird aus dem y-Achsenabschnitt der linearen
 Ausgleichsrechnung \eqref{eqn:ausgleichsrechnung} mit der Gleichung
 \begin{equation}
   I_\text{D} = m_1\left(\frac{R_1^2}{4} + \frac{h_1^2}{12}\right) + m_2 \left(
@@ -238,10 +236,9 @@ Trägheitsmoment des ersten Zylinders folgt:
 \begin{align*}
   I_\text{Z1,theo} = \SI{1.559(4)e-3}{\squared\kilo\gram\meter}.
 \end{align*}
-
 Wird das Trägheitsmoment über die Schwingungsdauer experimentell bestimmt, so
-wird die Gleichung (xx) mit dem Gesamtträgheitsmoment $I_\text{ges} = I_\text{D}
-+ I_\text{Z1,exp}$ zu
+wird die Gleichung \eqref{eqn:Periodetorrosion} mit dem Gesamtträgheitsmoment
+$I_\text{ges} = I_\text{D} + I_\text{Z1,exp}$ zu
 \begin{equation}
   I_\text{Z1,exp} = \frac{T^2 D}{4 \pi^2} - I_\text{D}
   \label{eqn:I_zstehend-exp}
@@ -365,7 +362,6 @@ Für das theoretisch berechnete Trägheitsmoment der Puppe in Haltung 1 ergibt s
 \begin{align*}
   I_\text{Puppe1,theo} = \SI{6.3(3)e-5}{\squared\kilo\gram\meter}.
 \end{align*}
-
 Wird das Trägheitsmoment über die Schwingungsdauer wie in Gleichung
 \eqref{eqn:I_zstehend-exp} berechnet, so ergibt sich mit der gemittelten
 Schwingungsdauer aus von
@@ -381,7 +377,7 @@ ab.
 Im Vergleich zur ersten Haltung mit angelegten Armen ändert sich nur das
 Trägheitsmoment der Arme, da die Zylinder jetzt liegen und um den Abstand
 $a=\frac{h_\text{A}}{2}+R_\text{T}$ verschoben sind. Mit dem Satz von Steiner
-(Gleichung (xx)) folgt für das Trägheitsmoment der Arme:
+(Gleichung \eqref{eqn:steiner}) folgt für das Trägheitsmoment der Arme:
 \begin{align*}
   I_\text{A} &= m_\text{A}\left(\frac{R_\text{A}^2}{4} + \frac{h_\text{A}^2}{12}
   +\left(\frac{h_\text{A}}{2} + R_\text{T}\right)^2\right)
