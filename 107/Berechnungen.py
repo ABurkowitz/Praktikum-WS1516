@@ -80,10 +80,14 @@ print(eta_t)
 T1n=unp.nominal_values(T1)
 #def f(T1n,a_0, a_1):
 #    return (a_0* np.exp(a_1/T1n))
-def f(T1n,a_0, a_1):
-    return (np.log(a_0)+(a_1/T1n))
+def f(T,a_0, a_1):
+    return (np.log(a_0)+(a_1*T))
 T1x=1/T1n
-print(T1x)
+lneta=unp.log(eta_t/1000)
+print('Tx')
+print(1/T1)
+print('ln eta')
+print(lneta)
 params, covar = curve_fit(f,1/T1n,np.log(unp.nominal_values(eta_t)),p0=[0.0000046,1600])
 
 #lneta=np.log(unp.nominal_values(eta_t))
@@ -97,7 +101,7 @@ plot.xscale('linear')
 plot.xlabel('$1/T \;1/\mathrm{ K }$')
 plot.ylabel('$\log(\eta)$')
 plot.savefig('Viskosität_temp.pdf')
-#plot.show()
+plot.show()
 print('params')
 print(params)
 fehler= np.sqrt(np.diag(covar))

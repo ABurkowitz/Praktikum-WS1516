@@ -135,7 +135,11 @@ Die Güte der Resonanzkurve ist nach Gleichung \eqref{eqn:guete}
   \includegraphics[width=0.78\textwidth]{Kondensatorspannung.pdf}
   \caption{Abbildung der in \ref{fig:Messwerte} aufgeführten Messwerte.
   Die normierte Kondensatorspannung $U_c/U$ wird in Abhängigkeit von der
-  Frequenz dargestellt.}
+  Frequenz dargestellt. Der Fit hat die Form
+    $U_c=\frac{A}{\sqrt{(1-B\omega^2)^2+\omega^2 C}}+D$
+    mit den Fitparametern
+    $A=(7.46\pm0.05)10^{-1}\si{\volt}$, $B=(2.190\pm0.003)10^{-11}\si{\second}^2$,
+    $C=(1.58\pm0.02)10^{-12}\si{\second}^2$ und $D=(2.2\pm0.7)10^{-2}\si{\volt}$\;.}
   \label{fig:Kondensatorspannung}
 \end{figure}
 \begin{figure}
@@ -143,7 +147,11 @@ Die Güte der Resonanzkurve ist nach Gleichung \eqref{eqn:guete}
   \includegraphics[width=0.78\textwidth]{Resonanzkurve.pdf}
   \caption{Abbildung von Messwerten in der Nähe von der Phasenverschiebung $\phi=90°$.
   In ihr ist die Resonanzkurve zu sehen. Die normierte Kondensatorspannung $U_c=U$
-  ist in abhängigkeit von der Frequenz aufgetragen.}
+  ist in abhängigkeit von der Frequenz aufgetragen. Der Fit hat die Form
+    $U_c=\frac{A}{\sqrt{(1-B\omega^2)^2+\omega^2 C}}+D$
+    mit den Fitparametern
+    $A=(7.46\pm0.05)10^{-1}\si{\volt}$, $B=(2.190\pm0.003)10^{-11}\si{\second}^2$,
+    $C=(1.58\pm0.02)10^{-12}\si{\second}^2$ und $D=(2.2\pm0.7)10^{-2}\si{\volt}$\;.}
   \label{fig:Resonanzkurve}
 \end{figure}
 Mit den Messwerten in der Tabelle \ref{fig:Messwerte} sind die  Abbildungen
@@ -240,13 +248,22 @@ Der berechnete und der im Experiment bestimmte Wert sind
   \includegraphics[width=0.78\textwidth]{phasenverschiebung.pdf}
   \caption{Abbildung der Phasenwinkel der Messwerte von Tabelle \ref{fig:Messwerte} in
   Abhängigkeit von der Frequenz dargestellt werden. Der zu erwartende Verlauf ist
-  ein Arkustangens.}
+  ein Arkustangens. Der Fit hat die Form\\
+    $\phi(\omega)=(A\arctan(B(\omega-C))+D)$
+    mit den Fitparametern\\
+    $A=(1.06\pm0.01)$, $B=(3.4\pm0.1)10^{-5}\si{\second}$,
+    $C=(2.125\pm0.006)10^{5}\si{\second}^{-1}$ und $D=(1.51\pm0.01)$\;.}
   \label{fig:phasenverschiebung}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[width=0.78\textwidth]{linphasenverschiebung.pdf}
   \caption{Abbildung von Messwerten in der Nähe von der Phasenverschiebung $\phi=90°$.
-          Der Phasenwinkel $\phi$ ist in Abhängigkeit von der Frequenz gegeben.}
+          Der Phasenwinkel $\phi$ ist in Abhängigkeit von der Frequenz gegeben.
+          Der Fit hat die Form
+            $\phi(\omega)=(A\arctan(B(\omega-C))+D)$
+            mit den Fitparametern
+            $A=(1.06\pm0.01)$, $B=(3.4\pm0.1)10^{-5}\si{\second}$,
+            $C=(2.125\pm0.006)10^{5}\si{\second}^{-1}$ und $D=(1.51\pm0.01)$\;.}
   \label{fig:linphasenverschiebung}
 \end{figure}

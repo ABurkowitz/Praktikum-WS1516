@@ -54,7 +54,7 @@ def g(ome,a_1,a_0,a_2,a_3):
 
 params, covar = curve_fit(g,w,ph,p0=[40.000,0.00001,1,0])
 #x_plot1 = np.linspace(-10, 10, 1000)
-x_plot1 = np.linspace(300, 9000000, 100000)
+x_plot1 = np.linspace(1000, 9000000, 100000)
 #plt.plot(x_plot1, g(x_plot1, *params), 'b-', label="Fit")
 plt.errorbar(w, phi(a,b) + (a / 10), xerr=None, yerr=(a / 10), fmt='rx', label="Phasenverschiebung")
 #plt.errorbar(w, phi(a,b) + (a / 10), xerr=None, yerr=(a / 10), fmt='rx', label="Phasenverschiebung")

@@ -1,12 +1,13 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 Die aus der Vesuchsanleitung entnommenden Daten sind die Falllänge $\Delta x$
-die Apparaturkonstante der kleinen Kugel $K_{kl}$ und die
-aus der Literatur \cite{geschke} entnommende Dichte von Wasser $\rho_f$ sind
+die Apparaturkonstante der kleinen Kugel $K_{\text{kl}}$ und die
+aus der Literatur \cite{geschke} entnommende Dichte von Wasser $\rho_{\text{f}}$ sind
+
 \begin{align*}
   L=&\SI{0.1000(1)}{\meter}\\
-  \rho_f=&\SI{0.998(1)}{\kilo\gram\per\cubic\meter}\\
-  K_{kl}=&\SI{0.07640(1)}{\meter\pascal\centi\cubic\meter\per\gram}\;\;.
+  \rho_{\text{f}}=&\SI{0.998(1)}{\kilo\gram\per\cubic\meter}\\
+  K_{\text{kl}}=&\SI{0.07640(1)}{\meter\pascal\centi\cubic\meter\per\gram}\;\;.
 \end{align*}
 In der Tabelle \ref{tab:Messung1}, sind die gemessenden Werte für Fallzeit $t$,
  Durchmesser $d$ der Kugeln angegeben.
@@ -15,7 +16,7 @@ In der Tabelle \ref{tab:Messung1}, sind die gemessenden Werte für Fallzeit $t$,
   \begin{tabular}{c c c c}
     \toprule
     Durchmesser & Fallzeit & Durchmesser & Fallzeit\\
-    $d_{kl}$ in $\si{\meter}$&$t_{kl}$in $\si{\second}$&$d_{gr}$ in $\si{\meter}$& $t_{gr}$ in $\si{\second}$\\
+    $d_{\text{kl}}$ in $\si{\meter}$&$t_{\text{kl}}$in $\si{\second}$&$d_{\text{gr}}$ in $\si{\meter}$& $t_{\text{gr}}$ in $\si{\second}$\\
     \midrule
     15.627\pm0.001  &  12.76\pm0.01  &  15.795\pm0.001  &  87.33\pm0.01\\
     15.624\pm0.001  &  13.05\pm0.01  &  15.794\pm0.001  &  87.03\pm0.01\\
@@ -34,21 +35,21 @@ In der Tabelle \ref{tab:Messung1}, sind die gemessenden Werte für Fallzeit $t$,
 \end{table}
 Die Dichte der Kugeln, die Mittelwerte der Durchmesser und Fallzeiten sind
 \begin{align*}
-  \rho_{kl}=&\SI[per-mode=fraction]{2226(5)}{\kilo\gram\per\cubic\meter}\\
-  \rho_{gr}=&\SI[per-mode=fraction]{2398(5)}{\kilo\gram\per\cubic\meter}\\
-  d_{kl}=&\SI[per-mode=fraction]{0.0156288(3)}{\centi\meter}\\
-  d_{gr}=&\SI[per-mode=fraction]{0.0157967(3)}{\centi\meter}\\
-  t_{kl}=&\SI[per-mode=fraction]{12.8110(3)}{\second}\\
-  t_{gr}=&\SI[per-mode=fraction]{88.0200(3)}{\second}\;\;.
+  \rho_{\text{kl}}=&\SI[per-mode=fraction]{2226(5)}{\kilo\gram\per\cubic\meter}\\
+  \rho_{\text{gr}}=&\SI[per-mode=fraction]{2398(5)}{\kilo\gram\per\cubic\meter}\\
+  d_{\text{kl}}=&\SI[per-mode=fraction]{0.0156288(3)}{\centi\meter}\\
+  d_{\text{gr}}=&\SI[per-mode=fraction]{0.0157967(3)}{\centi\meter}\\
+  t_{\text{kl}}=&\SI[per-mode=fraction]{12.8110(3)}{\second}\\
+  t_{\text{gr}}=&\SI[per-mode=fraction]{88.0200(3)}{\second}\;\;.
 \end{align*}
 Der nach Gleichung \eqref{eqn:bestimmung_eta} berechnete Wert der Viskosität $\eta$, die Apparaturkonstante der
-großen Kugel $K_{gr}$ nach umgestellter Gleichung \eqref{eqn:bestimmung_eta} und die Reynoldszahlen $Re$ nach Gleichung
+großen Kugel $K_{\text{gr}}$ nach umgestellter Gleichung \eqref{eqn:bestimmung_eta} und die Reynoldszahlen $Re$ nach Gleichung
 \eqref{eqn:reynoldszahl} sind
 \begin{align*}
   \eta=&\SI{1.202(5)}{\meter\pascal\second}\\
-  K_{gr}=&\SI[per-mode=fraction]{0.00975(5)}{\meter\pascal\centi\cubic\meter\per\gram}\\
-  Re_{gr}=&(14.90\pm0.07)\\
-  Re_{kl}=&(101.3\pm0.5)\;\;.
+  K_{\text{gr}}=&\SI[per-mode=fraction]{0.00975(5)}{\meter\pascal\centi\cubic\meter\per\gram}\\
+  Re_{\text{gr}}=&(14.90\pm0.07)\\
+  Re_{\text{kl}}=&(101.3\pm0.5)\;\;.
   \label{eqn:etaKRE}
 \end{align*}
 In Abbildung \ref{fig:Viskositaet} ist die Viskosität $\log(\eta)$
@@ -62,32 +63,33 @@ in Abhängigkeit von der Temperatur dargestellt.
 Die gemessenden Werte sind in Tabelle \ref{fig:viskositaet_tab} aufgelistet. Die Fit hat
 nach der umgestellten Gleichung \eqref{eqn:andradesche_gleichung} die Form
 \begin{equation}
-  \log(\eta)=\log(A)+\frac{B}{T}\;\;,
+  \ln(\eta)=\ln(A)+\frac{B}{T}\;\;,
 \end{equation}
 mit den Fitparametern
 \begin{align*}
-  A=&\SI{20(4)e2}{\meter\pascal\second}\\
-  B=&\SI[per-mode=fraction]{-177(6)e-4}{\kelvin}\;\;.
+  A=&\SI{2.5(3)e-3}{\meter\pascal\second}\\
+  B=&\SI[per-mode=fraction]{ 1.80(4)e3}{\kelvin}\;\;.
 \end{align*}
 \begin{table}
   \centering
-  \begin{tabular}{c c c c}
+  \begin{tabular}{c c c c c}
     \toprule
-    Temperatur & Fallzeit & Fallzeit & Viskosität\\
-    $T$ in $\si{\kelvin}$&$t_{kl}$ in $\si{\second}$ & $t_{gr}$ in $\si{\second}$& $\eta$ in $\si{\meter\pascal\second}$ \\
+    Temperatur & Fallzeit & Viskosität & Werte der X-Achse & Werte der Y-Achse\\
+    $T$ in $\si{\kelvin}$& $t_{\text{gr}}$ in $\si{\second}$& $\frac{\eta}{10^3}$ in $\si{\pascal\second}$ &
+    $\frac{1}{T}$ in $\frac{1}{10^3\si{\kelvin}}$ & $\ln(\frac{\eta}{\si{\pascal\second}})$\\
     \midrule
-   293.15\pm0.01  &  88.03\pm0.01  &  88.23\pm0.01  &  1.204\pm0.005\\
-   302.65\pm0.01  &  68.90\pm0.01  &  68.23\pm0.01  &  0.936\pm0.004\\
-   308.65\pm0.01  &  61.18\pm0.01  &  61.95\pm0.01  &  0.841\pm0.003\\
-   313.15\pm0.01  &  56.80\pm0.01  &  56.66\pm0.01  &  0.775\pm0.003\\
-   318.15\pm0.01  &  51.56\pm0.01  &  51.69\pm0.01  &  0.705\pm0.003\\
-   323.65\pm0.01  &  47.29\pm0.01  &  47.69\pm0.01  &  0.649\pm0.003\\
-   328.15\pm0.01  &  43.90\pm0.01  &  43.83\pm0.01  &  0.599\pm0.002\\
-   333.15\pm0.01  &  40.61\pm0.01  &  40.80\pm0.01  &  0.556\pm0.002\\
-   338.15\pm0.01  &  37.66\pm0.01  &  38.01\pm0.01  &  0.517\pm0.002\\
-   343.15\pm0.01  &  35.49\pm0.01  &  35.21\pm0.01  &  0.483\pm0.002\\
+   293.15\pm0.01  &  88.23\pm0.01  &  1.204\pm0.005  &  3.411 \pm0.001  &   6.722\pm0.004\\
+   302.65\pm0.01  &  68.23\pm0.01  &  0.936\pm0.004  &  3.304 \pm0.001  &  -6.973\pm0.004\\
+   308.65\pm0.01  &  61.95\pm0.01  &  0.841\pm0.003  &  3.239 \pm0.001  &  -7.081\pm0.004\\
+   313.15\pm0.01  &  56.66\pm0.01  &  0.775\pm0.003  &  3.194 \pm0.001  &  -7.163\pm0.004\\
+   318.15\pm0.01  &  51.69\pm0.01  &  0.705\pm0.003  &  3.1427\pm0.0010  &  -7.257\pm0.004\\
+   323.65\pm0.01  &  47.69\pm0.01  &  0.649\pm0.003  &  3.0893\pm0.0010  &  -7.341\pm0.004\\
+   328.15\pm0.01  &  43.83\pm0.01  &  0.599\pm0.002  &  3.0469\pm0.0009  &  -7.420\pm0.004\\
+   333.15\pm0.01  &  40.80\pm0.01  &  0.556\pm0.002  &  3.0012\pm0.0009  &  -7.495\pm0.004\\
+   338.15\pm0.01  &  38.01\pm0.01  &  0.517\pm0.002  &  2.9568\pm0.0009  &  -7.568\pm0.004\\
+   343.15\pm0.01  &  35.21\pm0.01  &  0.483\pm0.002  &  2.9138\pm0.0008  &  -7.636\pm0.004\\
     \bottomrule
   \end{tabular}
-  \caption{Fallzeiten und Viskositäten bei verschiedenen Temperaturen.}
+  \caption{Fallzeiten und Viskositäten bei verschiedenen Temperaturen, sowie .}
   \label{fig:viskositaet_tab}
 \end{table}
