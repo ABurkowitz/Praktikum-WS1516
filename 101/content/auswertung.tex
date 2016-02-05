@@ -47,13 +47,14 @@ sich für die Winkelrichtgröße nach der statischen Methode
 \subsubsection{dynamische Methode}
 Bei der dynamischen Methode wird die Schwingungsdauer $T$ für verschiedene Abstände
 $a$ der Massen von der Drehachse gemessen. Die Messwerte sind in Tabelle
-\ref{tab:dynamisch} dargestellt. Es wird $T^2$ gegen $a^2$ aufgetragen (siehe
+\ref{tab:messwerte_dynamisch} dargestellt. Es wird $T^2$ gegen $a^2$ aufgetragen (siehe
 Grafik \ref{fig:ausgleichsrechnung}) und eine lineare Regression der Form
 $y = b \cdot x + c$ mit Python durchgeführt.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{dynamisch.pdf}
   \caption{Graph zur linearen Ausgleichsrechnung nach Gleichung \eqref{eqn:ausgleichsrechnung}.}
+  \label{fig:ausgleichsrechnung}
 \end{figure}
 Dies liefert mit den Messwerten aus Tabelle \ref{tab:messwerte_dynamisch} die
 Parameter
@@ -137,8 +138,8 @@ der linearen Regression und den Massen $m_1$ und $m_2$ aus der Tabelle
 \noindent Das Eigenträgheitsmoment wird aus dem y-Achsenabschnitt der linearen
 Ausgleichsrechnung \eqref{eqn:ausgleichsrechnung} mit der Gleichung
 \begin{equation}
-  I_\text{D} = m_1\left(\frac{R_1^2}{4} + \frac{h_1^2}{12}\right) + m_2 \left(
-  \frac{R_2^2}{4}+\frac{h_2^2}{12}\right) - \frac{c}{b}\, (m_1 + m_2)
+  I_\text{D} = - m_1\left(\frac{R_1^2}{4} + \frac{h_1^2}{12}\right) - m_2 \left(
+  \frac{R_2^2}{4}+\frac{h_2^2}{12}\right) + \frac{c}{b}\, (m_1 + m_2)
   \label{eqn:eigentraegheitsmoment}
 \end{equation}
 berechnet. Mit den Werten aus Tabelle \ref{tab:gewichte}, aus der sich insbesondere
@@ -155,11 +156,11 @@ und die Höhen der Zylinder
 ergeben, und den Parametern $b$ und $c$ der linearen Ausgleichsrechnung sowie
 Fehlerfortpflanzung mit Python folgt für das Eigenträgheitsmoment
 \begin{align*}
-  I_\text{D} = \SI{-3.0(2)e-3}{\kilo\gram\squared\meter}.
+  I_\text{D} = \SI{3.0(2)e-3}{\kilo\gram\squared\meter}.
 \end{align*}
-Ein negatives Trägheitsmoment der Drillachse ist physikalisch nicht sinnvoll,
-daher wird angenommen, dass das Eigenträgheitsmoment so gering ist, dass es
-in den folgenden Rechnungen vernachlässigt werden kann.
+Da das Eigenträgheitsmoment größer als die theoretisch berechneten Trägheitsmomente
+der Körper ist, ist das Ergebnis nicht sehr sinnvoll, sodass das Eigenträgheitsmoment
+in den nachfolgenden Rechnungen nicht eingerechnet wird.
 
 \subsection{Trägheitsmoment zweier verschiedener Körper}
 Es werden die Trägheitsmomente zweier Zylinder theoretisch über die Abmessungen
@@ -373,7 +374,7 @@ Schwingungsdauer aus von
 Dieser Wert weicht von dem theoretisch berechneten Wert um $\SI{28(8)}{\percent}$
 ab.
 
-\subsubsection{Haltung 2:abgestreckte Arme}
+\subsubsection{Haltung 2: abgestreckte Arme}
 Im Vergleich zur ersten Haltung mit angelegten Armen ändert sich nur das
 Trägheitsmoment der Arme, da die Zylinder jetzt liegen und um den Abstand
 $a=\frac{h_\text{A}}{2}+R_\text{T}$ verschoben sind. Mit dem Satz von Steiner

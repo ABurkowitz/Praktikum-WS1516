@@ -73,7 +73,7 @@ R2=ufloat(0.01737,0.00003)
 h1=ufloat(0.02972,0.00002)
 h2=ufloat(0.02973,0.00002)
 
-I_D=m1*(R1**2/4 + h1**2/12) + m2*(R2**2/4 + h2**2/12) - (parameters1[1]/parameters1[0])*(m1+m2)
+I_D= - m1*(R1**2/4 + h1**2/12) - m2*(R2**2/4 + h2**2/12) + (parameters1[1]/parameters1[0])*(m1+m2)
 print('Eigentraegheitsmoment:')
 print(I_D)
 print()
