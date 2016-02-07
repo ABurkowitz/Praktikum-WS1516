@@ -24,18 +24,18 @@ def g(t,A,B):
 
 x = np.linspace(0.0026, 0.0032,1000)
 parameters1, pocv = curve_fit(g, 1/T, lnp, maxfev=10000)
-plt.plot(x, g(x,*parameters1) , 'r-')
+plt.plot(x, g(x,*parameters1) , 'r-', label="Fit")
 errX=0.0000001
 errY=0.0000001
-plt.errorbar(1/T,lnp,xerr=errX, yerr=errY,fmt='none')
-plt.plot(1/T, lnp , 'b.', label="Messwerte")
+plt.errorbar(1/T,lnp,xerr=errX, yerr=errY,fmt='none', label="Messwerte")
+#plt.plot(1/T, lnp , 'b.', label="Messwerte")
 print('parameter')
 print(parameters1)
 fehler= np.sqrt(np.diag(pocv))
 print(fehler)
 plt.xlabel(r'Temperaturkehrwert $1/T$ in 1/K')
-plt.ylabel(r'  log $p$')
-plt.xlim(0.0026,0.0032)
+plt.ylabel(r'  log $p/p_0$')
+plt.xlim(0.0026,0.0031)
 #plt.xscale('log')
 plt.tight_layout()
 plt.legend(loc='best')

@@ -1,11 +1,12 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-In Tabelle \ref{tab:messung1} sind die Gemessenden Wertepaare für die Messreihe $p<1\si{\bar}$
+\subsection{Messung p < 1bar}
+In Tabelle \ref{tab:messung1} sind die gemessenen Wertepaare für die Messreihe $p<1\si{\bar}$
 angegeben. In Abbildung \ref{fig:fit1} wird der Dampfdruck logarithmisch in Abhängigkeit
 zum Kehrwert der Temperatur aufgetragen. Der dazugehörige Fit hat nach Gleichung
 \eqref{eqn:loesung_dgl} die Form
 \begin{equation}
-  \ln p=-\frac{A}{RT}+B
+  \ln \frac{p}{p_0}=-\frac{A}{RT}+B
 \end{equation}
 mit den Fitparametern
 \begin{align*}
@@ -14,7 +15,7 @@ mit den Fitparametern
 \end{align*}
 Damit ist die gemittelte Verdampfungswärme $L=\SI{3.94(6)e4}{\frac{\joule}{\mol}}$.
 Die äußere Verdampfungswärme $L_a$ ist die benötigte Energie um das Volumen eines
-Mols einer Flüssigleit auf das Volumen des Gases zu vergrößern. Daher ergibt sich
+Mols einer Flüssigkeit auf das Volumen des Gases zu vergrößern. Daher ergibt sich
 mit dem Wert $T=373\si{\kelvin}$ die äußere Verdampfungswärme
 \begin{equation}
   L_a=pV=RT=\SI{3102.540674(6)}{\frac{\joule}{\mol}}\;\;.
@@ -23,9 +24,11 @@ Die innere Verdampfungswärme ist damit
 \begin{equation}
   L_i=L-L_a=\SI{3.63(6)e4}{\frac{\joule}{\mol}}\;\;.
 \end{equation}
-um die innere Verdampfungswärme $L_i$ für ein Molekül zu erhalten, muss das Ergebnis
-durch ein $\si{\mol}$ geteilt werden. So das für ein Molekül die innere Verdampfungswärme
-in Electronenvolt $L_i=\SI{0.376(6)}{\electronvolt}$ ist.
+Die relative Abweichung zum Literaturwert \cite{Hahne} von $L_i=\SI{38466}{\frac{\joule}{\mol}}$
+ist $5.6\%$.
+Um die innere Verdampfungswärme $L_i$ für ein Molekül zu erhalten, muss das Ergebnis
+durch $\SI{1}{\mol}$ geteilt werden, so dass für ein Molekül die innere Verdampfungswärme
+in Elektronenvolt $L_i=\SI{0.376(6)}{\electronvolt}$ ist.
 \begin{table}
   \centering
   \begin{tabular}{c c c c}
@@ -50,7 +53,7 @@ in Electronenvolt $L_i=\SI{0.376(6)}{\electronvolt}$ ist.
     365.15  &   766  &    &  \\
     368.15  &   845  &    &  \\
     371.15  &   956  &    &  \\
-   1374.15  &  1047  &    &  \\
+    374.15  &  1047  &    &  \\
     \bottomrule
   \end{tabular}
   \caption{Dampfdruck und Temperatur mit einer Messungenauigkeit von
@@ -63,19 +66,20 @@ in Electronenvolt $L_i=\SI{0.376(6)}{\electronvolt}$ ist.
   \caption{Fit und Messwerte im Niedrigdruckbereich.}
   \label{fig:fit1}
 \end{figure}
-In Tabelle \ref{tab:messung2} sind die gemessenden Wertetupel für die Messreihe
+\subsection{Messung  15bar > p > 1bar}
+In Tabelle \ref{tab:messung2} sind die gemessenen Wertetupel für die Messreihe
 $p>1\si{\bar}$ angegeben. In Abbildung \ref{fig:fit2} wird der Dampfdruck in Abhängigkeit
-von der Temperatur aufgetragen. Die Temperaturabhängige Verdampfungswärme
-ergibt sich bei Vernachlässigung von $V_F$, durch die Umformungen
+von der Temperatur aufgetragen. Die temperaturabhängige Verdampfungswärme
+ergibt sich bei Vernachlässigung von $V_F$ durch die Umformungen
 \begin{align}
-  RT=&\left(p+\frac{a}{V_D^2}V_D\right)\\
-  V_D=&\frac{RT}{2p}\sqrt{\frac{R^2T^2}{4p^2}-\frac{a}{p}}\;\;,
+  RT=&\left(p+\frac{a}{V_D^2}V_D\right),\\
+  V_D=&\frac{RT}{2p}\pm\sqrt{\frac{R^2T^2}{4p^2}-\frac{a}{p}}\;\;
 \end{align}
-und dem einsetzen in Gleichung \eqref{eqn:clausius_vereinfacht} durch
+und dem Einsetzen in Gleichung \eqref{eqn:clausius_vereinfacht} durch
 \begin{align}
-  L=&\frac{T}{p}\left[\frac{RT}{2p}\pm\sqrt{\frac{R^2T^2}{4p^2}-\frac{a}{p}}\right]\frac{\text{d}p}{\text{d}T}\;\;.
+  L=&\frac{T}{p}\left(\frac{RT}{2p}\pm\sqrt{\frac{R^2T^2}{4p^2}-\frac{a}{p}}\right)\frac{\text{d}p}{\text{d}T}\;\;.
 \end{align}
-Die Konstante ist $a=0.9\si{\frac{\joule\meter^3}{\mol^2}}$ . Um den Differentialquotienten $\frac{\text{d}p}{\text{d}T}$ zu berchnen wird
+Die Konstante ist $a=0.9\si{\frac{\joule\meter^3}{\mol^2}}$ . Um den Differentialquotienten $\frac{\text{d}p}{\text{d}T}$ zu berechnen wird
 mit den Wertepaaren aus Tabelle \ref{tab:messung2} ein Ausgleichspolynom 3.Grades
 erstellt. Der Fit hat die Form
 \begin{equation}
@@ -83,8 +87,8 @@ erstellt. Der Fit hat die Form
 \end{equation}
 mit den Fitparametern
 \begin{align*}
-  A=&\SI{-6(3)e-1}{\frac{\pascal}{\kelvin}}\\
-  B=&\SI{ 8(3)e2}{\frac{\pascal}{\kelvin}}\\
+  A=&\SI{-6(3)e-1}{\frac{\pascal}{\kelvin^3}}\\
+  B=&\SI{ 8(3)e2}{\frac{\pascal}{\kelvin^2}}\\
   C=&\SI{-3(1)e5 }{\frac{\pascal}{\kelvin}}\\
   D=&\SI{ 5(2)e7 }{\pascal}\;\;.
 \end{align*}
@@ -92,9 +96,9 @@ Der Differentialquotient $\frac{\text{d}p}{\text{d}T}$ hat damit die Form
 \begin{equation*}
   3AT^2+2BT+C\;\;.
 \end{equation*}
-Die Temperaturabhängige Verdampfungswärme ist demnach
+Die temperaturabhängige Verdampfungswärme ist demnach
 \begin{equation*}
-  L(T)=\left[\frac{RT}{2}\pm\sqrt{\left(\frac{RT}{2}\right)^2-a(AT^3+BT^2+CT+D)}\right]
+  L(T)=\left(\frac{RT}{2}\pm\sqrt{\left(\frac{RT}{2}\right)^2-a(AT^3+BT^2+CT+D)}\right)
   \frac{3AT^3+2BT^2+CT}{AT^3+BT^2+CT+D}\;\;.
   \label{eqn:Verdampfungswaerme_t}
 \end{equation*}
@@ -104,7 +108,7 @@ Die Temperaturabhängige Verdampfungswärme ist demnach
   \begin{tabular}{c c c }
     \toprule
     Temperatur & Druck gemessen & Druck ohne Offset\\
-    $T$ in $\si{\kelvin}$ & $p_m$ in $ 10^2\si{\bar}$ &$p$ in $ 10^2\si{\bar}$ \\
+    $T$ in $\si{\kelvin}$ & $p_m$ in $ 10^5\si{\pascal}$ &$p$ in $ 10^5\si{\pascal}$ \\
     \midrule
     373.15  &  -5.74  &  1.00  \\
     374.15  &  -5.68  &  1.06  \\
@@ -135,7 +139,8 @@ Die Temperaturabhängige Verdampfungswärme ist demnach
     399.15  &  -4.14  &  2.60  \\
     \bottomrule
   \end{tabular}
-  \caption{}
+  \caption{Dampfdruck und Temperatur mit einer Messungenauigkeit von
+  $\Delta T=0.1\si{\kelvin}$ und $\Delta p=1000 \si{\pascal}$.}
   \label{tab:messung2}
 \end{table}
 \begin{figure}
@@ -144,9 +149,19 @@ Die Temperaturabhängige Verdampfungswärme ist demnach
   \caption{Ausgleichspolynom und Messwerte im Hochdruckbereich..}
   \label{fig:fit2}
 \end{figure}
-Setzt man in Gleichung \eqref{eqn:Verdampfungswaerme_t} die Gemessenden Temperaturwerte ein erhält man
+Setzt man in Gleichung \eqref{eqn:Verdampfungswaerme_t} die gemessenen Temperaturwerte ein, so erhält man
 die temperaturabhängige Verdampfungswärme, die in den Abbildungen \ref{fig:fit3} und \ref{fig:fit4}
 dargestellt ist.
+Die relative Abweichung der Verdampfungswärme von dem Literaturwert \cite{Hahne}
+\\$L=40.657\si{\frac{\kilo\joule}{\mol}}$
+bei $T=373\si{\kelvin}$ ist bei
+\begin{align*}
+\text{positiver Wurzel}&\\
+&6.5\%\\
+\text{und bei negativer Wurzel}&\\
+&100.0\%\;\;.\\
+\end{align*}
+
 \begin{figure}
   \centering
   \includegraphics[width=0.82\textwidth]{verdampfungwaerme3.pdf}

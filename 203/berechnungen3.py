@@ -40,9 +40,11 @@ plt.xlabel(r'Temperatur $T$ in K')
 plt.ylabel(r'Verdampfungswärme  $L$  in $10^3$J/mol')
 #plt.xscale('log')
 plt.tight_layout()
-
-
-
+print('relaticve abweichung')
+print((43.30490639-40.657)/40.657)
+print((0.00407553-40.657)/40.657)
+print(-3102.540674+42482/2+40657/2)
+print((36300-38466)/38466)
 print(T)
 
 Lp=((R*T)/2+np.sqrt(((R*T/2)**2)-a*(parameters1[0]*T**3+parameters1[1]*T**2+parameters1[2]*T+parameters1[3])))
@@ -53,8 +55,8 @@ Lp=Lp/1000
 #Lp=((R*T)/2+np.sqrt((R*T/2)**2-a*(parameters1[0]*T**3+parameters1[1]*T**2+parameters1[2]*T+parameters1[3])))
 #Lp=Lp*(parameters1[0]*T**3+parameters1[1]*T**2+parameters1[2]*T)/(parameters1[0]*T**3+parameters1[1]*T**2+parameters1[2]*T+parameters1[3])
 print(Lp)
-plt.errorbar(T,Lp,xerr=errX, yerr=errY,fmt='none')
-plt.plot(T, Lp , 'b.', label="Verdampfungswärme")
+plt.errorbar(T,Lp,xerr=errX, yerr=errY,fmt='none', label="Verdampfungswärme")
+#plt.plot(T, Lp , 'b.', label="Verdampfungswärme")
 plt.legend(loc='best')
 plt.savefig('verdampfungwaerme3.pdf')
 #plt.show()
